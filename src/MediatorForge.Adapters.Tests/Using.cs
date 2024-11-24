@@ -1,0 +1,10 @@
+﻿global using AutoBogus;
+global using FluentAssertions;
+global using Moq;
+global using Xunit;
+global using Microsoft.Extensions.Logging;
+global using MediatorForge.CQRS.Behaviors;
+global using MediatorForge.CQRS.Interfaces;
+global using MediatR;
+global using MediatorForge.CQRS.Exceptions;
+global using MediatorForge.Utilities;
