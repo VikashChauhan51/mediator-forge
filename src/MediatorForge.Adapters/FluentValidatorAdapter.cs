@@ -16,7 +16,7 @@ public class FluentValidatorAdapter<TRequest>(FluentValidation.IValidator<TReque
     /// Asynchronously validates the specified request.
     /// </summary>
     /// <param name="request">The request to be validated.</param>
-    /// <returns>A task that represents the asynchronous validation operation. The task result contains the validation result.</returns>
+    /// <returns>A task that represents the asynchronous validation operation. The task result contains the <see cref="ValidationResult"/>.</returns>
     public async Task<ValidationResult> ValidateAsync(TRequest request)
     {
         var validationResult = await fluentValidator.ValidateAsync(request);

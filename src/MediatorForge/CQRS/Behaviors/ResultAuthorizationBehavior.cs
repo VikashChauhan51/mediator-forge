@@ -2,21 +2,45 @@
 using MediatorForge.Results;
 using MediatorForge.CQRS.Exceptions;
 using MediatR;
+using Microsoft.Extensions.Logging;
 
 namespace MediatorForge.CQRS.Behaviors;
-public class ResultAuthorizationBehavior<TRequest, TResponse>(IEnumerable<IAuthorizer<TRequest>> validators) : IPipelineBehavior<TRequest, Result<TResponse>>
+
+/// <summary>
+/// Represents a pipeline behavior that handles authorization for a request, returning a <see cref="Result{T}"/> if authorization fails.
+/// </summary>
+/// <typeparam name="TRequest">The type of the request.</typeparam>
+/// <typeparam name="TResponse">The type of the response.</typeparam>
+public class ResultAuthorizationBehavior<TRequest, TResponse>
+    (IEnumerable<IAuthorizer<TRequest>> validators,
+    ILogger<ResultAuthorizationBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, Result<TResponse>>
     where TRequest : IRequest<Result<TResponse>>, IRequest
 {
 
+    /// <summary>
+    /// Handles the authorization of the request and proceeds to the next delegate if authorization succeeds.
+    /// </summary>
+    /// <param name="request">The request to be authorized.</param>
+    /// <param name="next">The next delegate in the pipeline.</param>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A task that represents the asynchronous operation. The task result contains the response from the next delegate in the pipeline or a failed <see cref="Result{T}"/> if authorization fails.</returns>
     public async Task<Result<TResponse>> Handle(TRequest request, RequestHandlerDelegate<Result<TResponse>> next, CancellationToken cancellationToken)
     {
-        foreach (var validator in validators)
+        if (validators != null)
         {
-            var validationResult = await validator.AuthorizeAsync(request);
-            if (!validationResult.IsAuthorized)
+            // Log the start of authorization
+            logger.LogInformation("Authorizing request={Request}", typeof(TRequest).Name);
+
+            foreach (var validator in validators)
             {
-                var validationException = new AuthorizationException(validationResult.Errors);
-                return Result<TResponse>.Fail(validationException);
+                var authorizationResult = await validator.AuthorizeAsync(request);
+                if (!authorizationResult.IsAuthorized)
+                {
+                    // Log the authorization failure event
+                    logger.LogWarning("Authorization failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, authorizationResult.Errors);
+                    var validationException = new AuthorizationException(authorizationResult.Errors);
+                    return Result<TResponse>.Fail(validationException);
+                }
             }
         }
 
