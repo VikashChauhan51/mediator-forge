@@ -1,11 +1,10 @@
-﻿using MediatorForge.CQRS.Exceptions;
-using MediatorForge.CQRS.Interfaces;
+﻿using MediatorForge.CQRS.Interfaces;
 using MediatorForge.Results;
+using MediatorForge.CQRS.Exceptions;
 using MediatR;
 
 namespace MediatorForge.CQRS.Behaviors;
-
-public class ResultValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators) : IPipelineBehavior<TRequest, Result<TResponse>>
+public class ResultAuthorizationBehavior<TRequest, TResponse>(IEnumerable<IAuthorizer<TRequest>> validators) : IPipelineBehavior<TRequest, Result<TResponse>>
     where TRequest : IRequest<Result<TResponse>>, IRequest
 {
 
@@ -13,10 +12,10 @@ public class ResultValidationBehavior<TRequest, TResponse>(IEnumerable<IValidato
     {
         foreach (var validator in validators)
         {
-            var validationResult = await validator.ValidateAsync(request);
-            if (!validationResult.IsValid)
+            var validationResult = await validator.AuthorizeAsync(request);
+            if (!validationResult.IsAuthorized)
             {
-                var validationException = new ValidationException(validationResult.Errors);
+                var validationException = new AuthorizationException(validationResult.Errors);
                 return Result<TResponse>.Fail(validationException);
             }
         }
@@ -24,4 +23,3 @@ public class ResultValidationBehavior<TRequest, TResponse>(IEnumerable<IValidato
         return await next();
     }
 }
-

@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatorForge.CQRS;
+namespace MediatorForge.CQRS.Notifications;
 
 /// <summary>
 /// Handle INotification.

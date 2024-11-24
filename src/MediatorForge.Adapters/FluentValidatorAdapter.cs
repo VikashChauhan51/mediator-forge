@@ -1,27 +1,32 @@
-﻿using MediatR;
+﻿using MediatorForge.CQRS.Interfaces;
+using MediatorForge.Utilities;
+using MediatR;
 
 namespace MediatorForge.Adapters;
 
-public class FluentValidatorAdapter<TRequest> : CQRS.IValidator<TRequest>
+/// <summary>
+/// Adapter class to integrate FluentValidation validators with the custom validation system.
+/// </summary>
+/// <typeparam name="TRequest">The type of the request to be validated.</typeparam>
+public class FluentValidatorAdapter<TRequest>(FluentValidation.IValidator<TRequest> fluentValidator) : IValidator<TRequest>
     where TRequest : IRequest
 {
-    private readonly FluentValidation.IValidator<TRequest> _fluentValidator;
 
-    public FluentValidatorAdapter(FluentValidation.IValidator<TRequest> fluentValidator)
+    /// <summary>
+    /// Asynchronously validates the specified request.
+    /// </summary>
+    /// <param name="request">The request to be validated.</param>
+    /// <returns>A task that represents the asynchronous validation operation. The task result contains the validation result.</returns>
+    public async Task<ValidationResult> ValidateAsync(TRequest request)
     {
-        _fluentValidator = fluentValidator;
-    }
-
-    public async Task<Results.ValidationResult> ValidateAsync(TRequest request)
-    {
-        var validationResult = await _fluentValidator.ValidateAsync(request);
+        var validationResult = await fluentValidator.ValidateAsync(request);
 
         if (validationResult.IsValid)
         {
-            return Results.ValidationResult.Success;
+            return ValidationResult.Success;
         }
 
-        var errors = validationResult.Errors.Select(e => e.ErrorMessage);
-        return Results.ValidationResult.Failure(errors);
+        var errors = validationResult.Errors.Select(e => new ValidationError(e.PropertyName, e.ErrorMessage, e.AttemptedValue));
+        return ValidationResult.Failure(errors);
     }
 }

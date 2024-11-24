@@ -4,16 +4,18 @@ using MediatR;
 
 namespace MediatorForge.CQRS.Behaviors;
 
-public class OptionValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators) : IPipelineBehavior<TRequest, Option<TResponse>>
+
+public class OptionAuthorizationBehavior<TRequest, TResponse>(IEnumerable<IAuthorizer<TRequest>> authorizers) : IPipelineBehavior<TRequest, Option<TResponse>>
     where TRequest : IRequest<Option<TResponse>>, IRequest
 {
 
+
     public async Task<Option<TResponse>> Handle(TRequest request, RequestHandlerDelegate<Option<TResponse>> next, CancellationToken cancellationToken)
     {
-        foreach (var validator in validators)
+        foreach (var authorizer in authorizers)
         {
-            var validationResult = await validator.ValidateAsync(request);
-            if (!validationResult.IsValid)
+            var authorizationResult = await authorizer.AuthorizeAsync(request);
+            if (!authorizationResult.IsAuthorized)
             {
                 return Option<TResponse>.None;
             }
@@ -22,4 +24,3 @@ public class OptionValidationBehavior<TRequest, TResponse>(IEnumerable<IValidato
         return await next();
     }
 }
-

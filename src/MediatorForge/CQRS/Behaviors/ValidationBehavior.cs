@@ -1,5 +1,6 @@
-﻿using MediatR;
-using System.ComponentModel.DataAnnotations;
+﻿using MediatorForge.CQRS.Exceptions;
+using MediatorForge.CQRS.Interfaces;
+using MediatR;
 
 namespace MediatorForge.CQRS.Behaviors;
 
@@ -15,7 +16,7 @@ public class ValidationBehavior<TRequest, TResponse>
             var validationResult = await validator.ValidateAsync(request);
             if (!validationResult.IsValid)
             {
-                throw new ValidationException(string.Join(", ", validationResult.Errors));
+                throw new ValidationException(validationResult.Errors);
             }
         }
 
