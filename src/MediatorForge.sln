@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorForge", "MediatorFo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorForge.Adapters", "MediatorForge.Adapters\MediatorForge.Adapters.csproj", "{27B85231-6B6E-4FE8-806E-45544CF6B928}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorForge.Tests", "MediatorForge.Tests\MediatorForge.Tests.csproj", "{00B7E114-A2C1-464C-88F0-62D3CCE65534}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MediatorForge.Adapters.Tests", "MediatorForge.Adapters.Tests\MediatorForge.Adapters.Tests.csproj", "{9895A8EF-D47E-4664-A420-B1B73086A4D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{27B85231-6B6E-4FE8-806E-45544CF6B928}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{27B85231-6B6E-4FE8-806E-45544CF6B928}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{27B85231-6B6E-4FE8-806E-45544CF6B928}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00B7E114-A2C1-464C-88F0-62D3CCE65534}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00B7E114-A2C1-464C-88F0-62D3CCE65534}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00B7E114-A2C1-464C-88F0-62D3CCE65534}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00B7E114-A2C1-464C-88F0-62D3CCE65534}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9895A8EF-D47E-4664-A420-B1B73086A4D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9895A8EF-D47E-4664-A420-B1B73086A4D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9895A8EF-D47E-4664-A420-B1B73086A4D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9895A8EF-D47E-4664-A420-B1B73086A4D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
