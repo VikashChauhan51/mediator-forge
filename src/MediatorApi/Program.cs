@@ -1,4 +1,6 @@
+using MediatorApi.Commands;
 using MediatorForge;
+using MediatorForge.CQRS.Interfaces;
 using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,7 +13,7 @@ builder.Services.AddLogging();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatorForge(Assembly.GetExecutingAssembly());
-
+builder.Services.AddTransient<IValidator<CreateItemCommand>, CreateItemCommandValidator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

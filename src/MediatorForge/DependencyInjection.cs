@@ -1,4 +1,5 @@
 ﻿using MediatorForge.CQRS.Behaviors;
+using MediatorForge.CQRS.Commands;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -27,7 +28,7 @@ public static class DependencyInjection
             configuration.AddOpenBehavior(typeof(ResultAuthorizationBehavior<,>));
             configuration.AddOpenBehavior(typeof(OptionAuthorizationBehavior<,>));
             configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
-            configuration.AddOpenBehavior(typeof(ResultValidationBehavior<,>));
+            configuration.AddBehavior(typeof(IResultPipelineBehavior<,>),typeof(ResultValidationBehavior<,>));
             configuration.AddOpenBehavior(typeof(OptionValidationBehavior<,>));
         });
 

@@ -1,16 +1,18 @@
-﻿using MediatorForge.CQRS.Exceptions;
+﻿using MediatorForge.CQRS.Commands;
+using MediatorForge.CQRS.Exceptions;
 using MediatorForge.CQRS.Interfaces;
+using MediatorForge.CQRS.Queries;
 using MediatorForge.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace MediatorForge.CQRS.Behaviors;
 
-public class ResultValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TRequest>> validators,
-    ILogger<ResultValidationBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, Result<TResponse>>
-    where TRequest : IRequest<Result<TResponse>>, IRequest
+public class ResultValidationBehavior<TRequest, TResponse>
+    (IEnumerable<IValidator<TRequest>> validators,
+    ILogger<ResultValidationBehavior<TRequest, TResponse>> logger) : IResultPipelineBehavior<TRequest, TResponse>
+    where TRequest : IResultCommand<TResponse>
 {
-
     public async Task<Result<TResponse>> Handle(TRequest request, RequestHandlerDelegate<Result<TResponse>> next, CancellationToken cancellationToken)
     {
         if (validators != null)
@@ -32,4 +34,3 @@ public class ResultValidationBehavior<TRequest, TResponse>(IEnumerable<IValidato
         return await next();
     }
 }
-

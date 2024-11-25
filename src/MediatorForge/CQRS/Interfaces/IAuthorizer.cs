@@ -8,7 +8,6 @@ namespace MediatorForge.CQRS.Interfaces;
 /// </summary>
 /// <typeparam name="TRequest">The type of the request to authorize.</typeparam>
 public interface IAuthorizer<in TRequest>
-    where TRequest : IRequest
 {
     /// <summary>
     /// Asynchronously authorizes the specified request.

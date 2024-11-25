@@ -8,7 +8,6 @@ namespace MediatorForge.CQRS.Interfaces;
 /// </summary>
 /// <typeparam name="TRequest">The type of the request to validate.</typeparam>
 public interface IValidator<in TRequest>
-    where TRequest : IRequest
 {
     /// <summary>
     /// Asynchronously validates the specified request.
