@@ -25,11 +25,7 @@ public static class DependencyInjection
             configuration.RegisterServicesFromAssemblies(assembly);
             configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
             configuration.AddOpenBehavior(typeof(AuthorizationBehavior<,>));
-            configuration.AddOpenBehavior(typeof(ResultAuthorizationBehavior<,>));
-            configuration.AddOpenBehavior(typeof(OptionAuthorizationBehavior<,>));
             configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
-            configuration.AddBehavior(typeof(IResultPipelineBehavior<,>),typeof(ResultValidationBehavior<,>));
-            configuration.AddOpenBehavior(typeof(OptionValidationBehavior<,>));
         });
 
         return services;

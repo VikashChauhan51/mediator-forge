@@ -12,12 +12,9 @@ public class FluentValidatorAdapter<TRequest>(FluentValidation.IValidator<TReque
     where TRequest : IRequest
 {
 
-    /// <summary>
-    /// Asynchronously validates the specified request.
-    /// </summary>
-    /// <param name="request">The request to be validated.</param>
+    /// <inheritdoc/>
     /// <returns>A task that represents the asynchronous validation operation. The task result contains the <see cref="ValidationResult"/>.</returns>
-    public async Task<ValidationResult> ValidateAsync(TRequest request)
+    public async Task<ValidationResult> ValidateAsync(TRequest request, CancellationToken cancellationToken = default)
     {
         var validationResult = await fluentValidator.ValidateAsync(request);
 

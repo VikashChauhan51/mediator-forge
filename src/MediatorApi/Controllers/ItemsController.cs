@@ -3,6 +3,7 @@ using MediatR;
 using MediatorApi.Commands;
 using MediatorApi.Notifications;
 using MediatorApi.Queries;
+using MediatorForge.CQRS.Exceptions;
 
 namespace MediatorApi.Controllers;
 
@@ -23,17 +24,19 @@ public class ItemsController : ControllerBase
         var result = await _mediator.Send(command);
 
         return await result.Match<Task<IActionResult>>
-            (
-              onSuccess: async id =>
-              {
-                  await _mediator.Publish(new ItemCreatedNotification { ItemId = id });
-                  return Ok(id);
-              },
-              onFailure: error =>
-              {
-                  return Task.FromResult<IActionResult>(BadRequest(error));
-              }
-            );
+ (
+        async id =>
+     {
+         await _mediator.Publish(new ItemCreatedNotification { ItemId = id });
+         return Ok(id);
+     },
+     () =>
+     {
+
+         return Task.FromResult<IActionResult>(BadRequest());
+     }
+ );
+
 
     }
 

@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents a validation error with a property name, error message, and attempted value.
 /// </summary>
-public class ValidationError(string PropertyName, string ErrorMessage, object? AttemptedValue = null)
+public record ValidationError(string PropertyName, string ErrorMessage, object? AttemptedValue = null)
 {
     /// <summary>
     /// Returns a string that represents the current object.

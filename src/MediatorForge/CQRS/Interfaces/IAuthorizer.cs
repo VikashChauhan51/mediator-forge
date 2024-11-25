@@ -13,8 +13,9 @@ public interface IAuthorizer<in TRequest>
     /// Asynchronously authorizes the specified request.
     /// </summary>
     /// <param name="request">The request to authorize.</param>
+    /// <param name="cancellationToken">The request cancellation token.</param>
     /// <returns>A task that represents the asynchronous authorization operation. The task result contains the <see cref="AuthorizationResult"/>.</returns>
-    Task<AuthorizationResult> AuthorizeAsync(TRequest request);
+    Task<AuthorizationResult> AuthorizeAsync(TRequest request, CancellationToken cancellationToken = default);
 }
 
 

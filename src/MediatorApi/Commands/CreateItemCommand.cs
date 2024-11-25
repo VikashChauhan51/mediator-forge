@@ -5,7 +5,7 @@ using MediatorForge.Utilities;
 
 namespace MediatorApi.Commands;
 
-public class CreateItemCommand : IResultCommand<Guid>
+public class CreateItemCommand : ICommand<Option<Guid>>
 {
     public string Name { get; set; }
     public string Description { get; set; }
@@ -14,19 +14,22 @@ public class CreateItemCommand : IResultCommand<Guid>
 
 public class CreateItemCommandValidator : IValidator<CreateItemCommand>
 {
-    public Task<ValidationResult> ValidateAsync(CreateItemCommand request)
+    public Task<ValidationResult> ValidateAsync(CreateItemCommand request, CancellationToken cancellationToken = default)
     {
 
-        return Task.FromResult(ValidationResult.Success);
+        return Task.FromResult(ValidationResult.Failure( new List<ValidationError>()
+        {
+            new ValidationError("test","required","")
+        }));
     }
 }
-public class CreateItemCommandHandler : IResultCommandHandler<CreateItemCommand, Guid>
+public class CreateItemCommandHandler : ICommandHandler<CreateItemCommand, Option<Guid>>
 {
-    public async Task<Result<Guid>> Handle(CreateItemCommand request, CancellationToken cancellationToken)
+    public async Task<Option<Guid>> Handle(CreateItemCommand request, CancellationToken cancellationToken)
     {
         // Business logic to create an item and return its ID
         var itemId = Guid.NewGuid();
-        return Result<Guid>.Succ(itemId);
+        return Option<Guid>.Some(itemId);
     }
 }
 
