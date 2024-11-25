@@ -22,13 +22,13 @@ public static class DependencyInjection
         services.AddMediatR((configuration) =>
         {
             configuration.RegisterServicesFromAssemblies(assembly);
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ResultAuthorizationBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(OptionAuthorizationBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ValidationBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(ResultValidationBehavior<,>));
-            configuration.AddBehavior(typeof(IPipelineBehavior<,>), typeof(OptionValidationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(LoggingBehavior<,>));
+            configuration.AddOpenBehavior(typeof(AuthorizationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(ResultAuthorizationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(OptionAuthorizationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(ResultValidationBehavior<,>));
+            configuration.AddOpenBehavior(typeof(OptionValidationBehavior<,>));
         });
 
         return services;
