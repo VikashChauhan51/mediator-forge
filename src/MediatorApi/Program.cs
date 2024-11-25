@@ -14,6 +14,8 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddMediatorForge(Assembly.GetExecutingAssembly());
 builder.Services.AddTransient<IValidator<CreateItemCommand>, CreateItemCommandValidator>();
+builder.Services.AddTransient<IValidator<CreateItemOptionCommand>, CreateItemOptionCommandValidator>();
+builder.Services.AddTransient<IValidator<CreateItemResultCommand>, CreateItemResultCommandValidator>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

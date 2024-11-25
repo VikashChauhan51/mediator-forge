@@ -33,24 +33,19 @@ public class ValidationBehavior<TRequest, TResponse>
             // Log the validation failure event
             logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, failures);
             var validationException = new ValidationException(failures);
-
             var responseType = typeof(TResponse);
-            if (responseType.IsGenericType)
-            {
-                var genericTypeDefinition = responseType.GetGenericTypeDefinition();
+            return responseType.IsGenericType
+               ? responseType.GetGenericTypeDefinition() switch
+               {
+                   var genericType when genericType == typeof(Result<>) =>
+                       (TResponse)Activator.CreateInstance(typeof(Result<>).MakeGenericType(responseType.GenericTypeArguments), validationException)!,
 
-                if (genericTypeDefinition == typeof(Result<>))
-                {
-                    return (TResponse)Activator.CreateInstance(typeof(Result<>).MakeGenericType(responseType.GenericTypeArguments), validationException)!;
-                }
+                   var genericType when genericType == typeof(Option<>) =>
+                       (TResponse)Activator.CreateInstance(typeof(Option<>).MakeGenericType(responseType.GenericTypeArguments))!,
 
-                if (genericTypeDefinition == typeof(Option<>))
-                {
-                    return (TResponse)Activator.CreateInstance(typeof(Option<>).MakeGenericType(responseType.GenericTypeArguments))!;
-                }
-            }
-
-            throw validationException;
+                   _ => throw validationException
+               }
+               : throw validationException;
         }
 
 

@@ -22,22 +22,7 @@ public class ItemsController : ControllerBase
     public async Task<IActionResult> CreateItem([FromBody] CreateItemCommand command)
     {
         var result = await _mediator.Send(command);
-
-        return await result.Match<Task<IActionResult>>
- (
-        async id =>
-     {
-         await _mediator.Publish(new ItemCreatedNotification { ItemId = id });
-         return Ok(id);
-     },
-     () =>
-     {
-
-         return Task.FromResult<IActionResult>(BadRequest());
-     }
- );
-
-
+        return Ok(result);
     }
 
     [HttpGet("{id}")]
@@ -48,11 +33,11 @@ public class ItemsController : ControllerBase
 
         return result.Match<IActionResult>
             (
-              onSuccess: item =>
+              item =>
               {
                   return Ok(item);
               },
-              onFailure: error =>
+              error =>
               {
                   return NotFound();
               }

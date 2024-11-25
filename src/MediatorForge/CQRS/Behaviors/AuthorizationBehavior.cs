@@ -1,5 +1,6 @@
 ﻿using MediatorForge.CQRS.Exceptions;
 using MediatorForge.CQRS.Interfaces;
+using MediatorForge.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
@@ -11,7 +12,7 @@ namespace MediatorForge.CQRS.Behaviors;
 /// <typeparam name="TRequest">The type of the request.</typeparam>
 /// <typeparam name="TResponse">The type of the response.</typeparam>
 public class AuthorizationBehavior<TRequest, TResponse>
-    (IEnumerable<IAuthorizer<TRequest>> authorizers,
+    (IAuthorizer<TRequest> authorizer,
     ILogger<AuthorizationBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, TResponse>
     where TRequest : IRequest<TResponse>, IRequest
 {
@@ -25,21 +26,31 @@ public class AuthorizationBehavior<TRequest, TResponse>
     /// <returns>A task that represents the asynchronous operation. The task result contains the response from the next delegate in the pipeline.</returns>
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        if (authorizers != null)
-        {
-            // Log the start of authorization
-            logger.LogInformation("Authorizing request={Request}", typeof(TRequest).Name);
 
-            foreach (var authorizer in authorizers)
-            {
-                var authorizationResult = await authorizer.AuthorizeAsync(request);
-                if (!authorizationResult.IsAuthorized)
+        // Log the start of authorization
+        logger.LogInformation("Authorizing request={Request}", typeof(TRequest).Name);
+        var authorizationResult = await authorizer?.AuthorizeAsync(request, cancellationToken);
+        if (authorizationResult != null &&
+            !authorizationResult.IsAuthorized)
+        {
+            // Log the authorization failure event
+            logger.LogWarning("Authorization failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, authorizationResult.Errors);
+            var validationException = new AuthorizationException(authorizationResult.Errors);
+            var responseType = typeof(TResponse);
+
+            return responseType.IsGenericType
+                ? responseType.GetGenericTypeDefinition() switch
                 {
-                    // Log the authorization failure event
-                    logger.LogWarning("Authorization failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, authorizationResult.Errors);
-                    throw new AuthorizationException(authorizationResult.Errors);
+                    var genericType when genericType == typeof(Result<>) =>
+                        (TResponse)Activator.CreateInstance(typeof(Result<>).MakeGenericType(responseType.GenericTypeArguments), validationException)!,
+
+                    var genericType when genericType == typeof(Option<>) =>
+                        (TResponse)Activator.CreateInstance(typeof(Option<>).MakeGenericType(responseType.GenericTypeArguments))!,
+
+                    _ => throw validationException
                 }
-            }           
+                : throw validationException;
+
         }
 
         // Proceed to the next delegate in the pipeline
