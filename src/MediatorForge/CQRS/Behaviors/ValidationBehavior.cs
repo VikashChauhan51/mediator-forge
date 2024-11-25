@@ -34,22 +34,25 @@ public class ValidationBehavior<TRequest, TResponse>
             logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, failures);
             var validationException = new ValidationException(failures);
 
-            // Check if the TResponse type is Result<>
-            if (typeof(TResponse).GetGenericTypeDefinition() == typeof(Result<>))
+            var responseType = typeof(TResponse);
+            if (responseType.IsGenericType)
             {
-                // Return a failure result
-                return (TResponse)Activator.CreateInstance(typeof(Result<>).MakeGenericType(typeof(TResponse).GenericTypeArguments), validationException)!;
-            }
+                var genericTypeDefinition = responseType.GetGenericTypeDefinition();
 
-            // Check if the TResponse type is Option<>
-            if (typeof(TResponse).IsGenericType && typeof(TResponse).GetGenericTypeDefinition() == typeof(Option<>))
-            {
-                // Return Option<TResponse>.None for failure case
-                return (TResponse)Activator.CreateInstance(typeof(Option<>).MakeGenericType(typeof(TResponse).GenericTypeArguments))!;
+                if (genericTypeDefinition == typeof(Result<>))
+                {
+                    return (TResponse)Activator.CreateInstance(typeof(Result<>).MakeGenericType(responseType.GenericTypeArguments), validationException)!;
+                }
+
+                if (genericTypeDefinition == typeof(Option<>))
+                {
+                    return (TResponse)Activator.CreateInstance(typeof(Option<>).MakeGenericType(responseType.GenericTypeArguments))!;
+                }
             }
 
             throw validationException;
         }
+
 
         return await next();
     }
