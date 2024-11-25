@@ -14,21 +14,26 @@ public class ValidationBehavior<TRequest, TResponse>
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
-        if (validators != null)
+        // Log the start of validation
+        logger.LogInformation("Validating request={Request}", typeof(TRequest).Name);
+        var validationResults = validators?.Any() == true ? await Task.WhenAll(
+            validators
+            .Select(validator =>
+            validator.ValidateAsync(request)
+            )) : null;
+
+        var failures = validationResults?
+               .Where(r => !r.IsValid)
+               .SelectMany(r => r.Errors)
+               .ToList();
+
+        if (failures != null)
         {
-            // Log the start of validation
-            logger.LogInformation("Validating request={Request}", typeof(TRequest).Name);
-            foreach (var validator in validators)
-            {
-                var validationResult = await validator.ValidateAsync(request);
-                if (!validationResult.IsValid)
-                {
-                    // Log the validation failure event
-                    logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, validationResult.Errors);
-                    throw new ValidationException(validationResult.Errors);
-                }
-            }
+            // Log the validation failure event
+            logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, failures);
+            throw new ValidationException(failures);
         }
+
         return await next();
     }
 }
