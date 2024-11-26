@@ -1,5 +1,4 @@
 ﻿using MediatorForge.Utilities;
-using System.Runtime.Serialization;
 
 namespace MediatorForge.CQRS.Exceptions;
 

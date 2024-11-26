@@ -1,5 +1,4 @@
-﻿
-namespace MediatorForge.Results;
+﻿namespace MediatorForge.Results;
 
 /// <summary>
 /// Represents an option type that can contain a value or be empty (None).
@@ -115,8 +114,13 @@ public readonly struct Option<T> : IEquatable<Option<T>>, IComparable<Option<T>>
     /// </summary>
     /// <param name="obj">The object to compare with this instance.</param>
     /// <returns><c>true</c> if the specified object is equal to this instance; otherwise, <c>false</c>.</returns>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
+        if (obj is null)
+        {
+            return base.Equals(obj);
+        }
+
         return obj is Option<T> other && Equals(other);
     }
 

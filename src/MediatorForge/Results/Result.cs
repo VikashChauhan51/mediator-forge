@@ -1,5 +1,4 @@
-﻿
-namespace MediatorForge.Results;
+﻿namespace MediatorForge.Results;
 
 /// <summary>
 /// Represents the result of an operation that can succeed or fail.
@@ -107,8 +106,13 @@ public readonly struct Result<T> : IEquatable<Result<T>>, IComparable<Result<T>>
     /// </summary>
     /// <param name="obj">The object to compare with this instance.</param>
     /// <returns><c>true</c> if the specified object is equal to this instance; otherwise, <c>false</c>.</returns>
-    public override bool Equals(object obj)
+    public override bool Equals(object? obj)
     {
+        if (obj is null)
+        {
+            return base.Equals(obj);
+        }
+
         return obj is Result<T> other && Equals(other);
     }
 
