@@ -45,6 +45,7 @@ public class ItemsResultController : ControllerBase
                          g => g.Select(e => e.ErrorMessage).ToArray())
                      })),
                      AuthorizationException => Task.FromResult<IActionResult>(Forbid()),
+                     UnauthorizedAccessException => Task.FromResult<IActionResult>(Challenge()),
                      _ => Task.FromResult<IActionResult>(BadRequest(error))
                  };
              }

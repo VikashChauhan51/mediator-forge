@@ -65,22 +65,16 @@ public class ErrorHandlerMiddleware
 
         if (exception is ValidationException validation)
         {
-            problemDetails.Errors = validation.Errors?
-                .GroupBy(x => x.PropertyName)
-                .ToDictionary(
-                    g => g.Key,
-                    g => g.Select(e => e.ErrorMessage).ToArray()
-                );
-        }
-
-        if (exception is AuthorizationException authorization)
-        {
-            problemDetails.Errors = authorization.Errors?
-                .GroupBy(x => x.Code)
-                .ToDictionary(
-                    g => g.Key,
-                    g => g.Select(e => e.Message).ToArray()
-                );
+            Dictionary<string, string[]>? dictionary = validation.Errors?
+                            .GroupBy(x => x.PropertyName)
+                            .ToDictionary(
+                                g => g.Key,
+                                g => g.Select(e => e.ErrorMessage).ToArray()
+                            );
+            if (dictionary != null)
+            {
+                problemDetails.Errors = dictionary;
+            }
         }
 
         await context.Response.WriteAsJsonAsync(problemDetails);
