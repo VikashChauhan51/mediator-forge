@@ -276,5 +276,45 @@ public class ResultTests
         result.Exception.Should().BeOfType<AuthorizationException>();
         ((AuthorizationException)result.Exception!).Errors.Should().BeEquivalentTo(errors);
     }
+
+    [Fact]
+    public void Result_Match_ShouldInvokeOnSuccessAction_WhenResultIsSuccessful()
+    {
+        // Arrange
+        var value = "test value";
+        var result = new Result<string>(value);
+        var successActionInvoked = false;
+        var failureActionInvoked = false;
+
+        // Act
+        result.Match(
+            onSuccess: v => successActionInvoked = true,
+            onFailure: e => failureActionInvoked = true
+        );
+
+        // Assert
+        successActionInvoked.Should().BeTrue();
+        failureActionInvoked.Should().BeFalse();
+    }
+
+    [Fact]
+    public void Result_Match_ShouldInvokeOnFailureAction_WhenResultIsFailure()
+    {
+        // Arrange
+        var exception = new InvalidOperationException("test error");
+        var result = new Result<string>(exception);
+        var successActionInvoked = false;
+        var failureActionInvoked = false;
+
+        // Act
+        result.Match(
+            onSuccess: v => successActionInvoked = false,
+            onFailure: e => failureActionInvoked = true
+        );
+
+        // Assert
+        successActionInvoked.Should().BeFalse();
+        failureActionInvoked.Should().BeTrue();
+    }
 }
 

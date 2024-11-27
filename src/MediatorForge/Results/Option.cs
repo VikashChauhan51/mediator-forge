@@ -49,6 +49,24 @@ public readonly struct Option<T> : IEquatable<Option<T>>, IComparable<Option<T>>
         return IsSome ? onSome(_value!) : onNone();
     }
 
+
+    /// <summary>
+    /// Executes one of the specified functions based on whether this instance contains a value.
+    /// </summary>
+    /// <param name="onSome">The function to execute if this instance contains a value.</param>
+    /// <param name="onNone">The function to execute if this instance does not contain a value.</param>
+    public void Match(Action<T> onSome, Action onNone)
+    {
+        if (IsSome)
+        {
+            onSome(_value!);
+        }
+        else
+        {
+            onNone();
+        }
+    }
+
     /// <summary>
     /// Executes the specified action if this instance contains a value.
     /// </summary>

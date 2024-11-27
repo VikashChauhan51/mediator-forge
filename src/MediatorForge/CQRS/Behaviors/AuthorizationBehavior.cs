@@ -14,7 +14,8 @@ namespace MediatorForge.CQRS.Behaviors;
 public class AuthorizationBehavior<TRequest, TResponse>
     (IAuthorizer<TRequest> authorizer,
     ILogger<AuthorizationBehavior<TRequest, TResponse>> logger) : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : IRequest<TResponse>, IRequest
+    where TRequest : notnull, IRequest<TResponse>
+    where TResponse : notnull
 {
 
     /// <summary>

@@ -1,53 +1,137 @@
-﻿
+﻿using MediatorForge.CQRS.Commands;
+using MediatorForge.Results;
 
-namespace MediatorForge.Adapters.Tests.Tests;
+namespace MediatorForge.Tests;
 
-//[Trait("Category", "Unit")]
-//public class AuthorizationBehaviorTests
-//{
-//    private readonly Mock<ILogger<AuthorizationBehavior<TestRequest, TestResponse>>> _loggerMock;
-//    private readonly Mock<IAuthorizer<TestRequest>> _authorizerMock;
-//    private readonly AuthorizationBehavior<TestRequest, TestResponse> _authorizationBehavior;
+[Trait("Category", "Unit")]
+public class AuthorizationBehaviorTests
+{
+    private readonly Mock<IAuthorizer<TestRequest>> _authorizerMock;
+    private readonly Mock<ILogger<AuthorizationBehavior<TestRequest, TestResponse>>> _loggerMock;
+    private readonly AuthorizationBehavior<TestRequest, TestResponse> _behavior;
+    private readonly TestRequest _testRequest;
+    private readonly RequestHandlerDelegate<TestResponse> _next;
 
-//    public AuthorizationBehaviorTests()
-//    {
-//        _loggerMock = new Mock<ILogger<AuthorizationBehavior<TestRequest, TestResponse>>>();
-//        _authorizerMock = new Mock<IAuthorizer<TestRequest>>();
-//        var authorizers = new List<IAuthorizer<TestRequest>> { _authorizerMock.Object };
-//        _authorizationBehavior = new AuthorizationBehavior<TestRequest, TestResponse>(authorizers, _loggerMock.Object);
-//    }
+    public AuthorizationBehaviorTests()
+    {
+        _authorizerMock = new Mock<IAuthorizer<TestRequest>>();
+        _loggerMock = new Mock<ILogger<AuthorizationBehavior<TestRequest, TestResponse>>>();
+        _behavior = new AuthorizationBehavior<TestRequest, TestResponse>(_authorizerMock.Object, _loggerMock.Object);
+        _testRequest = new TestRequest { RequestData = "Sample data" };
+        _next = Mock.Of<RequestHandlerDelegate<TestResponse>>();
+    }
 
-//    [Fact]
-//    public async Task Handle_AuthorizationSucceeds_ShouldCallNextDelegate()
-//    {
-//        // Arrange
-//        var request = AutoFaker.Generate<TestRequest>();
-//        var nextDelegate = new Mock<RequestHandlerDelegate<TestResponse>>();
-//        nextDelegate.Setup(nd => nd()).ReturnsAsync(new TestResponse());
-//        _authorizerMock.Setup(a => a.AuthorizeAsync(request)).ReturnsAsync(new AuthorizationResult { IsAuthorized = true });
+    [Fact]
+    public async Task Handle_ShouldProceedToNextDelegate_WhenAuthorizationSucceeds()
+    {
+        // Arrange
+        var authorizationResult =  AuthorizationResult.Success;
+        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(authorizationResult);
 
-//        // Act
-//        var result = await _authorizationBehavior.Handle(request, nextDelegate.Object, CancellationToken.None);
+        // Act
+        var response = await _behavior.Handle(_testRequest, _next, CancellationToken.None);
 
-//        // Assert
-//        result.Should().NotBeNull();
-//        nextDelegate.Verify(nd => nd(), Times.Once);
-//    }
+        // Assert
+        response.Should().BeSameAs(Mock.Get(_next).Object);
+        _loggerMock.Verify(log => log.LogInformation(It.IsAny<string>(), It.IsAny<object[]>()), Times.Once);
+    }
 
-//    [Fact]
-//    public async Task Handle_AuthorizationFails_ShouldThrowAuthorizationException()
-//    {
-//        // Arrange
-//        var request = AutoFaker.Generate<TestRequest>();
-//        var nextDelegate = new Mock<RequestHandlerDelegate<TestResponse>>();
-//        var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Error", "Not authorized") };
-//        _authorizerMock.Setup(a => a.AuthorizeAsync(request)).ReturnsAsync(new AuthorizationResult { IsAuthorized = false, Errors = authorizationErrors });
+    [Fact]
+    public async Task Handle_ShouldReturnFailureResult_WhenAuthorizationFails_AndTResponseIsResult()
+    {
+        // Arrange
+        var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Code", "Message") };
+        var authorizationResult = AuthorizationResult.Failure(authorizationErrors);
+        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(authorizationResult);
 
-//        // Act
-//        Func<Task> act = async () => await _authorizationBehavior.Handle(request, nextDelegate.Object, CancellationToken.None);
+        // Act
+        var result = await _behavior.Handle(_testRequest, _next, CancellationToken.None);
 
-//        // Assert
-//        await act.Should().ThrowAsync<AuthorizationException>();
-//        nextDelegate.Verify(nd => nd(), Times.Never);
-//    }
-//}
+        // Assert
+        result.Should().BeOfType<Result<TestResponse>>();
+        ((Result<TestResponse>)(object)result).IsSuccess.Should().BeFalse();
+        ((Result<TestResponse>)(object)result).Exception.Should().BeOfType<AuthorizationException>();
+    }
+
+    [Fact]
+    public async Task Handle_ShouldReturnOptionNone_WhenAuthorizationFails_AndTResponseIsOption()
+    {
+        // Arrange
+        var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Code", "Message") };
+        var authorizationResult = AuthorizationResult.Failure(authorizationErrors);
+        var _authorizerMock = new Mock<IAuthorizer<TestRequestOption>>();
+        var _testRequest = new TestRequestOption { RequestData = "Sample data" };
+        var _loggerMock = new Mock<ILogger<AuthorizationBehavior<TestRequestOption, Option<TestResponse>>>>();
+        var _next = Mock.Of<RequestHandlerDelegate<Option<TestResponse>>>();
+        var behavior = new AuthorizationBehavior<TestRequestOption, Option<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
+        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(authorizationResult);
+
+        // Act
+        var result = await behavior.Handle(_testRequest, _next, CancellationToken.None);
+
+        // Assert
+        result.Should().BeOfType<Option<TestResponse>>();
+        ((Option<TestResponse>)(object)result).IsSome.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task Handle_ShouldReturnResultError_WhenAuthorizationFails_AndTResponseIsResult()
+    {
+        // Arrange
+        var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Code", "Message") };
+        var authorizationResult = AuthorizationResult.Failure(authorizationErrors);
+        var _authorizerMock = new Mock<IAuthorizer<TestRequestResult>>();
+        var _testRequest = new TestRequestResult { RequestData = "Sample data" };
+        var _loggerMock = new Mock<ILogger<AuthorizationBehavior<TestRequestResult, Result<TestResponse>>>>();
+        var _next = Mock.Of<RequestHandlerDelegate<Result<TestResponse>>>();
+        var behavior = new AuthorizationBehavior<TestRequestResult, Result<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
+        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(authorizationResult);
+
+        // Act
+        var result = await behavior.Handle(_testRequest, _next, CancellationToken.None);
+
+        // Assert
+        result.Should().BeOfType<Result<TestResponse>>();
+        ((Result<TestResponse>)(object)result).IsSuccess.Should().BeFalse();
+    }
+
+    [Fact]
+    public async Task Handle_ShouldThrowException_WhenAuthorizationFails_AndTResponseIsNotResultOrOption()
+    {
+        // Arrange
+        var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Code", "Message") };
+        var authorizationResult = AuthorizationResult.Failure(authorizationErrors);
+        var behavior = new AuthorizationBehavior<TestRequest, TestResponse>(_authorizerMock.Object, _loggerMock.Object);
+        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
+            .ReturnsAsync(authorizationResult);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<AuthorizationException>(() => behavior.Handle(_testRequest, _next, CancellationToken.None));
+    }
+
+}
+
+public class TestRequest : ICommand<TestResponse>
+{
+    public string RequestData { get; set; }
+}
+
+public class TestRequestOption : ICommand<Option<TestResponse>>
+{
+    public string RequestData { get; set; }
+}
+
+public class TestRequestResult : ICommand<Result<TestResponse>>
+{
+    public string RequestData { get; set; }
+}
+
+public class TestResponse
+{
+    public string ResponseData { get; set; }
+}
+

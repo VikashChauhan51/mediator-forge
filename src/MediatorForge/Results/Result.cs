@@ -149,6 +149,24 @@ public readonly struct Result<T> : IEquatable<Result<T>>, IComparable<Result<T>>
         return IsSuccess ? onSuccess(this.value!) : onFailure(this.exception!);
     }
 
+
+    /// <summary>
+    /// Executes one of the specified functions based on whether the result is successful or failed.
+    /// </summary>
+    /// <param name="onSuccess">The function to execute if the result is successful.</param>
+    /// <param name="onFailure">The function to execute if the result is failed.</param>
+    public void Match(Action<T> onSuccess, Action<Exception> onFailure)
+    {
+        if (IsSuccess)
+        {
+            onSuccess(this.value!);
+        }
+        else
+        {
+            onFailure(this.exception!);
+        }
+    }
+
     /// <summary>
     /// Executes the specified action if the result is successful.
     /// </summary>

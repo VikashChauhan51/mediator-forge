@@ -1,4 +1,6 @@
 ﻿using MediatorForge.CQRS.Exceptions;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 namespace MediatorApi;
 
 public class ErrorHandlerMiddleware
@@ -28,7 +30,6 @@ public class ErrorHandlerMiddleware
     {
         _logger.LogError(exception, "An unhandled exception has occurred");
 
-        context.Response.ContentType = "application/problem+json";
         var statusCode = exception switch
         {
             ValidationException => StatusCodes.Status400BadRequest,
@@ -77,7 +78,15 @@ public class ErrorHandlerMiddleware
             }
         }
 
-        await context.Response.WriteAsJsonAsync(problemDetails);
+        await context.Response.WriteAsJsonAsync
+        (
+            problemDetails,
+            options: new JsonSerializerOptions(JsonSerializerDefaults.Web)
+            {
+                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+            },
+            contentType: "application/problem+json"
+        );
     }
 }
 

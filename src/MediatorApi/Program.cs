@@ -18,7 +18,8 @@ builder.Services.AddProblemDetails(options =>
     {
         var problemDetails = context.ProblemDetails;
         context.HttpContext.Response.ContentType = "application/problem+json";
-        problemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext.TraceIdentifier;
+        problemDetails.Instance = $"{context.HttpContext?.Request.Method} {context.HttpContext?.Request.Path}";
+        problemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext?.TraceIdentifier;
 
     };
 });

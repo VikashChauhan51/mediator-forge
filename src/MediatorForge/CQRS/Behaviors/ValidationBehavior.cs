@@ -1,5 +1,4 @@
-﻿using MediatorForge.CQRS.Commands;
-using MediatorForge.CQRS.Exceptions;
+﻿using MediatorForge.CQRS.Exceptions;
 using MediatorForge.CQRS.Interfaces;
 using MediatorForge.Results;
 using MediatR;
@@ -11,7 +10,8 @@ public class ValidationBehavior<TRequest, TResponse>
     (IEnumerable<IValidator<TRequest>> validators,
     ILogger<ValidationBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>
-    where TRequest : ICommand<TResponse>
+   where TRequest : notnull, IRequest<TResponse>
+    where TResponse : notnull
 {
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
