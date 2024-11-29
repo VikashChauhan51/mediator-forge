@@ -25,7 +25,7 @@ public class AuthorizationBehaviorTests
     public async Task Handle_ShouldProceedToNextDelegate_WhenAuthorizationSucceeds()
     {
         // Arrange
-        var authorizationResult =  AuthorizationResult.Success;
+        var authorizationResult = AuthorizationResult.Success;
         _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
             .ReturnsAsync(authorizationResult);
 
@@ -33,8 +33,14 @@ public class AuthorizationBehaviorTests
         var response = await _behavior.Handle(_testRequest, _next, CancellationToken.None);
 
         // Assert
-        response.Should().BeSameAs(Mock.Get(_next).Object);
-        _loggerMock.Verify(log => log.LogInformation(It.IsAny<string>(), It.IsAny<object[]>()), Times.Once);
+
+        _loggerMock.Verify(
+            x => x.Log(LogLevel.Information,
+            It.IsAny<EventId>(),
+            It.Is<It.IsAnyType>((v, t) => v.ToString().Contains("Authorizing request")),
+            It.IsAny<Exception>(),
+            It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)),
+            Times.Once);
     }
 
     [Fact]
@@ -43,6 +49,14 @@ public class AuthorizationBehaviorTests
         // Arrange
         var authorizationErrors = new List<AuthorizationError> { new AuthorizationError("Code", "Message") };
         var authorizationResult = AuthorizationResult.Failure(authorizationErrors);
+        var _testRequest = new TestRequestResult
+        {
+            RequestData = "Result request"
+        };
+        var _authorizerMock = new Mock<IAuthorizer<TestRequestResult>>();
+        var _loggerMock = new Mock<ILogger<AuthorizationBehavior<TestRequestResult, Result<TestResponse>>>>();
+        var _next = Mock.Of<RequestHandlerDelegate<Result<TestResponse>>>();
+        var _behavior = new AuthorizationBehavior<TestRequestResult, Result<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
         _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
             .ReturnsAsync(authorizationResult);
 
