@@ -25,7 +25,7 @@ public class ValidationBehaviorTests
     }
 
     [Fact]
-    public async Task Handle_ShouldProceedToNextDelegate_WhenAuthorizationSucceeds()
+    public async Task Handle_ShouldProceedToNextDelegate_WhenValidationSucceeds()
     {
         // Arrange
         var validationResult = ValidationResult.Success;
@@ -42,28 +42,36 @@ public class ValidationBehaviorTests
         _loggerMock.Verify(
             x => x.Log(LogLevel.Information,
             It.IsAny<EventId>(),
-            It.Is<It.IsAnyType>((v, t) => v.ToString().Contains("Authorizing request")),
+            It.Is<It.IsAnyType>((v, t) => v.ToString().Contains("Validating request")),
             It.IsAny<Exception>(),
             It.Is<Func<It.IsAnyType, Exception, string>>((v, t) => true)),
             Times.Once);
     }
 
     [Fact]
-    public async Task Handle_ShouldReturnFailureResult_WhenAuthorizationFails_AndTResponseIsResult()
+    public async Task Handle_ShouldReturnFailureResult_WhenValidationFails_AndTResponseIsResult()
     {
         // Arrange
-        var ValidationResults = new List<ValidationResult> { new ValidationResult("Code", "Message") };
+        var ValidationResults = new List<ValidationError> { new ValidationError("prop1","Name is required") };
         var validationResult = ValidationResult.Failure(ValidationResults);
         var _testRequest = new TestRequestResult
         {
             RequestData = "Result request"
         };
-        var _authorizerMock = new Mock<IValidator<TestRequestResult>>();
+        var _validatorMock = new List<Mock<IValidator<TestRequestResult>>>()
+        {
+            new Mock<IValidator<TestRequestResult>>(),
+            new Mock<IValidator<TestRequestResult>>()
+        };
+
         var _loggerMock = new Mock<ILogger<ValidationBehavior<TestRequestResult, Result<TestResponse>>>>();
         var _next = Mock.Of<RequestHandlerDelegate<Result<TestResponse>>>();
-        var _behavior = new ValidationBehavior<TestRequestResult, Result<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
-        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(validationResult);
+        var _behavior = new ValidationBehavior<TestRequestResult, Result<TestResponse>>(_validatorMock.Select(x => x.Object), _loggerMock.Object);
+        foreach (var validator in _validatorMock)
+        {
+            validator.Setup(v => v.ValidateAsync(_testRequest, It.IsAny<CancellationToken>())).ReturnsAsync(validationResult);
+        }
+
 
         // Act
         var result = await _behavior.Handle(_testRequest, _next, CancellationToken.None);
@@ -71,22 +79,24 @@ public class ValidationBehaviorTests
         // Assert
         result.Should().BeOfType<Result<TestResponse>>();
         ((Result<TestResponse>)(object)result).IsSuccess.Should().BeFalse();
-        ((Result<TestResponse>)(object)result).Exception.Should().BeOfType<AuthorizationException>();
+        ((Result<TestResponse>)(object)result).Exception.Should().BeOfType<ValidationException>();
     }
 
     [Fact]
-    public async Task Handle_ShouldReturnOptionNone_WhenAuthorizationFails_AndTResponseIsOption()
+    public async Task Handle_ShouldReturnOptionNone_WhenValidationFails_AndTResponseIsOption()
     {
         // Arrange
-        var ValidationResults = new List<ValidationResult> { new ValidationResult("Code", "Message") };
-        var validationResult = validationResult.Failure(ValidationResults);
-        var _authorizerMock = new Mock<IValidator<TestRequestOption>>();
+        var ValidationResults = new List<ValidationError> { new ValidationError("prop1", "Name is required") };
+        var validationResult = ValidationResult.Failure(ValidationResults);
+        var _validatorMock = new List<Mock<IValidator<TestRequestOption>>>();
         var _testRequest = new TestRequestOption { RequestData = "Sample data" };
         var _loggerMock = new Mock<ILogger<ValidationBehavior<TestRequestOption, Option<TestResponse>>>>();
         var _next = Mock.Of<RequestHandlerDelegate<Option<TestResponse>>>();
-        var behavior = new ValidationBehavior<TestRequestOption, Option<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
-        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(validationResult);
+        var behavior = new ValidationBehavior<TestRequestOption, Option<TestResponse>>(_validatorMock.Select(x => x.Object), _loggerMock.Object);
+        foreach (var validator in _validatorMock)
+        {
+            validator.Setup(v => v.ValidateAsync(_testRequest, It.IsAny<CancellationToken>())).ReturnsAsync(validationResult);
+        }
 
         // Act
         var result = await behavior.Handle(_testRequest, _next, CancellationToken.None);
@@ -97,18 +107,24 @@ public class ValidationBehaviorTests
     }
 
     [Fact]
-    public async Task Handle_ShouldReturnResultError_WhenAuthorizationFails_AndTResponseIsResult()
+    public async Task Handle_ShouldReturnResultError_WhenValidationFails_AndTResponseIsResult()
     {
         // Arrange
-        var ValidationResults = new List<ValidationResult> { new ValidationResult("Code", "Message") };
-        var validationResult = validationResult.Failure(ValidationResults);
-        var _authorizerMock = new Mock<IValidator<TestRequestResult>>();
+        var ValidationResults = new List<ValidationError> { new ValidationError("prop1", "Name is required") };
+        var validationResult = ValidationResult.Failure(ValidationResults);
+        var _validatorMock = new List<Mock<IValidator<TestRequestResult>>>()
+        {
+            new Mock<IValidator<TestRequestResult>>(),
+            new Mock<IValidator<TestRequestResult>>()
+        };
         var _testRequest = new TestRequestResult { RequestData = "Sample data" };
         var _loggerMock = new Mock<ILogger<ValidationBehavior<TestRequestResult, Result<TestResponse>>>>();
         var _next = Mock.Of<RequestHandlerDelegate<Result<TestResponse>>>();
-        var behavior = new ValidationBehavior<TestRequestResult, Result<TestResponse>>(_authorizerMock.Object, _loggerMock.Object);
-        _authorizerMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(validationResult);
+        var behavior = new ValidationBehavior<TestRequestResult, Result<TestResponse>>(_validatorMock.Select(x => x.Object), _loggerMock.Object);
+        foreach (var validator in _validatorMock)
+        {
+            validator.Setup(v => v.ValidateAsync(_testRequest, It.IsAny<CancellationToken>())).ReturnsAsync(validationResult);
+        }
 
         // Act
         var result = await behavior.Handle(_testRequest, _next, CancellationToken.None);
@@ -119,16 +135,19 @@ public class ValidationBehaviorTests
     }
 
     [Fact]
-    public async Task Handle_ShouldThrowException_WhenAuthorizationFails_AndTResponseIsNotResultOrOption()
+    public async Task Handle_ShouldThrowException_WhenValidationFails_AndTResponseIsNotResultOrOption()
     {
         // Arrange
-        var ValidationResults = new List<ValidationResult> { new ValidationResult("Code", "Message") };
-        var validationResult = validationResult.Failure(ValidationResults);
-        var behavior = new ValidationBehavior<TestRequest, TestResponse>(_validatorMock.Object, _loggerMock.Object);
-        _validatorMock.Setup(a => a.AuthorizeAsync(_testRequest, It.IsAny<CancellationToken>()))
-            .ReturnsAsync(validationResult);
+        var ValidationResults = new List<ValidationError> { new ValidationError("prop1", "Name is required") };
+        var validationResult = ValidationResult.Failure(ValidationResults);
+        var behavior = new ValidationBehavior<TestRequest, TestResponse>(_validatorMock.Select(x => x.Object), _loggerMock.Object);
+        foreach (var validator in _validatorMock)
+        {
+            validator.Setup(v => v.ValidateAsync(_testRequest, It.IsAny<CancellationToken>())).ReturnsAsync(validationResult);
+        }
+
 
         // Act & Assert
-        await Assert.ThrowsAsync<AuthorizationException>(() => behavior.Handle(_testRequest, _next, CancellationToken.None));
+        await Assert.ThrowsAsync<ValidationException>(() => behavior.Handle(_testRequest, _next, CancellationToken.None));
     }
 }
