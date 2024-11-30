@@ -1,0 +1,59 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Adapters
+  commentId: N:MediatorForge.Adapters
+  id: MediatorForge.Adapters
+  children:
+  - MediatorForge.Adapters.DependencyInjection
+  - MediatorForge.Adapters.FluentValidatorAdapter`1
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.Adapters
+  nameWithType: MediatorForge.Adapters
+  fullName: MediatorForge.Adapters
+  type: Namespace
+  assemblies:
+  - MediatorForge.Adapters
+references:
+- uid: MediatorForge.Adapters.DependencyInjection
+  commentId: T:MediatorForge.Adapters.DependencyInjection
+  name: DependencyInjection
+  nameWithType: DependencyInjection
+  fullName: MediatorForge.Adapters.DependencyInjection
+- uid: MediatorForge.Adapters.FluentValidatorAdapter`1
+  commentId: T:MediatorForge.Adapters.FluentValidatorAdapter`1
+  name: FluentValidatorAdapter<TRequest>
+  nameWithType: FluentValidatorAdapter<TRequest>
+  fullName: MediatorForge.Adapters.FluentValidatorAdapter<TRequest>
+  nameWithType.vb: FluentValidatorAdapter(Of TRequest)
+  fullName.vb: MediatorForge.Adapters.FluentValidatorAdapter(Of TRequest)
+  name.vb: FluentValidatorAdapter(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.Adapters.FluentValidatorAdapter`1
+    name: FluentValidatorAdapter
+    nameWithType: FluentValidatorAdapter
+    fullName: MediatorForge.Adapters.FluentValidatorAdapter
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.Adapters.FluentValidatorAdapter`1
+    name: FluentValidatorAdapter
+    nameWithType: FluentValidatorAdapter
+    fullName: MediatorForge.Adapters.FluentValidatorAdapter
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )

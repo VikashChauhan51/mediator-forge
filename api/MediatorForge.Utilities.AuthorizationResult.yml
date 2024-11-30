@@ -1,0 +1,662 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Utilities.AuthorizationResult
+  commentId: T:MediatorForge.Utilities.AuthorizationResult
+  id: AuthorizationResult
+  parent: MediatorForge.Utilities
+  children:
+  - MediatorForge.Utilities.AuthorizationResult.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  - MediatorForge.Utilities.AuthorizationResult.Errors
+  - MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  - MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  - MediatorForge.Utilities.AuthorizationResult.Success
+  langs:
+  - csharp
+  - vb
+  name: AuthorizationResult
+  nameWithType: AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: AuthorizationResult
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 6
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nRepresents the result of an authorization operation.\n"
+  example: []
+  syntax:
+    content: public class AuthorizationResult
+    content.vb: Public Class AuthorizationResult
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  id: IsAuthorized
+  parent: MediatorForge.Utilities.AuthorizationResult
+  langs:
+  - csharp
+  - vb
+  name: IsAuthorized
+  nameWithType: AuthorizationResult.IsAuthorized
+  fullName: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IsAuthorized
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 11
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nGets a value indicating whether the authorization was successful.\n"
+  example: []
+  syntax:
+    content: public bool IsAuthorized { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsAuthorized As Boolean
+  overload: MediatorForge.Utilities.AuthorizationResult.IsAuthorized*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MediatorForge.Utilities.AuthorizationResult.Errors
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.Errors
+  id: Errors
+  parent: MediatorForge.Utilities.AuthorizationResult
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: AuthorizationResult.Errors
+  fullName: MediatorForge.Utilities.AuthorizationResult.Errors
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Errors
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 16
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nGets the collection of authorization errors.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<AuthorizationError> Errors { get; }
+    parameters: []
+    return:
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+    content.vb: Public ReadOnly Property Errors As IEnumerable(Of AuthorizationError)
+  overload: MediatorForge.Utilities.AuthorizationResult.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MediatorForge.Utilities.AuthorizationResult.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  commentId: M:MediatorForge.Utilities.AuthorizationResult.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  id: '#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})'
+  parent: MediatorForge.Utilities.AuthorizationResult
+  langs:
+  - csharp
+  - vb
+  name: AuthorizationResult(IEnumerable<AuthorizationError>)
+  nameWithType: AuthorizationResult.AuthorizationResult(IEnumerable<AuthorizationError>)
+  fullName: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 22
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nInitializes a new instance of the <xref href=\"MediatorForge.Utilities.AuthorizationResult\" data-throw-if-not-resolved=\"false\"></xref> class with a collection of authorization errors.\n"
+  example: []
+  syntax:
+    content: public AuthorizationResult(IEnumerable<AuthorizationError> errors)
+    parameters:
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+      description: The collection of authorization errors.
+    content.vb: Public Sub New(errors As IEnumerable(Of AuthorizationError))
+  overload: MediatorForge.Utilities.AuthorizationResult.#ctor*
+  nameWithType.vb: AuthorizationResult.AuthorizationResult(IEnumerable(Of AuthorizationError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  name.vb: AuthorizationResult(IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.Utilities.AuthorizationResult.Success
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.Success
+  id: Success
+  parent: MediatorForge.Utilities.AuthorizationResult
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: AuthorizationResult.Success
+  fullName: MediatorForge.Utilities.AuthorizationResult.Success
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Success
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 31
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nGets an <xref href=\"MediatorForge.Utilities.AuthorizationResult\" data-throw-if-not-resolved=\"false\"></xref> that represents a successful authorization.\n"
+  example: []
+  syntax:
+    content: public static AuthorizationResult Success { get; }
+    parameters: []
+    return:
+      type: MediatorForge.Utilities.AuthorizationResult
+    content.vb: Public Shared ReadOnly Property Success As AuthorizationResult
+  overload: MediatorForge.Utilities.AuthorizationResult.Success*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  commentId: M:MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  id: Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  parent: MediatorForge.Utilities.AuthorizationResult
+  langs:
+  - csharp
+  - vb
+  name: Failure(IEnumerable<AuthorizationError>)
+  nameWithType: AuthorizationResult.Failure(IEnumerable<AuthorizationError>)
+  fullName: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/AuthorizationResult.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Failure
+    path: src/MediatorForge/Utilities/AuthorizationResult.cs
+    startLine: 38
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nCreates an <xref href=\"MediatorForge.Utilities.AuthorizationResult\" data-throw-if-not-resolved=\"false\"></xref> that represents a failed authorization with the specified errors.\n"
+  example: []
+  syntax:
+    content: public static AuthorizationResult Failure(IEnumerable<AuthorizationError> errors)
+    parameters:
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+      description: The collection of authorization errors.
+    return:
+      type: MediatorForge.Utilities.AuthorizationResult
+      description: An <xref href="MediatorForge.Utilities.AuthorizationResult" data-throw-if-not-resolved="false"></xref> that represents a failed authorization.
+    content.vb: Public Shared Function Failure(errors As IEnumerable(Of AuthorizationError)) As AuthorizationResult
+  overload: MediatorForge.Utilities.AuthorizationResult.Failure*
+  nameWithType.vb: AuthorizationResult.Failure(IEnumerable(Of AuthorizationError))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  name.vb: Failure(IEnumerable(Of AuthorizationError))
+references:
+- uid: MediatorForge.Utilities
+  commentId: N:MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+  fullName: MediatorForge.Utilities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.Utilities.AuthorizationResult.IsAuthorized*
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  name: IsAuthorized
+  nameWithType: AuthorizationResult.IsAuthorized
+  fullName: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MediatorForge.Utilities.AuthorizationResult.Errors*
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Errors
+  name: Errors
+  nameWithType: AuthorizationResult.Errors
+  fullName: MediatorForge.Utilities.AuthorizationResult.Errors
+- uid: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+  commentId: '!:IEnumerable{MediatorForge.Utilities.AuthorizationError}'
+  definition: IEnumerable`1
+  name: IEnumerable<AuthorizationError>
+  nameWithType: IEnumerable<AuthorizationError>
+  fullName: IEnumerable<MediatorForge.Utilities.AuthorizationError>
+  nameWithType.vb: IEnumerable(Of AuthorizationError)
+  fullName.vb: IEnumerable(Of MediatorForge.Utilities.AuthorizationError)
+  name.vb: IEnumerable(Of AuthorizationError)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.AuthorizationError
+    name: AuthorizationError
+    nameWithType: AuthorizationError
+    fullName: MediatorForge.Utilities.AuthorizationError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.AuthorizationError
+    name: AuthorizationError
+    nameWithType: AuthorizationError
+    fullName: MediatorForge.Utilities.AuthorizationError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Utilities.AuthorizationResult
+  commentId: T:MediatorForge.Utilities.AuthorizationResult
+  parent: MediatorForge.Utilities
+  name: AuthorizationResult
+  nameWithType: AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult
+- uid: MediatorForge.Utilities.AuthorizationResult.#ctor*
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.#ctor
+  name: AuthorizationResult
+  nameWithType: AuthorizationResult.AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult
+- uid: MediatorForge.Utilities.AuthorizationResult.Success*
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Success
+  name: Success
+  nameWithType: AuthorizationResult.Success
+  fullName: MediatorForge.Utilities.AuthorizationResult.Success
+- uid: MediatorForge.Utilities.AuthorizationResult.Failure*
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Failure
+  name: Failure
+  nameWithType: AuthorizationResult.Failure
+  fullName: MediatorForge.Utilities.AuthorizationResult.Failure

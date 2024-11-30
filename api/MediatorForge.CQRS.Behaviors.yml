@@ -1,0 +1,163 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Behaviors
+  commentId: N:MediatorForge.CQRS.Behaviors
+  id: MediatorForge.CQRS.Behaviors
+  children:
+  - MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+  - MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+  - MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.CQRS.Behaviors
+  nameWithType: MediatorForge.CQRS.Behaviors
+  fullName: MediatorForge.CQRS.Behaviors
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+  commentId: T:MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+  name: AuthorizationBehavior<TRequest, TResponse>
+  nameWithType: AuthorizationBehavior<TRequest, TResponse>
+  fullName: MediatorForge.CQRS.Behaviors.AuthorizationBehavior<TRequest, TResponse>
+  nameWithType.vb: AuthorizationBehavior(Of TRequest, TResponse)
+  fullName.vb: MediatorForge.CQRS.Behaviors.AuthorizationBehavior(Of TRequest, TResponse)
+  name.vb: AuthorizationBehavior(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+    name: AuthorizationBehavior
+    nameWithType: AuthorizationBehavior
+    fullName: MediatorForge.CQRS.Behaviors.AuthorizationBehavior
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+    name: AuthorizationBehavior
+    nameWithType: AuthorizationBehavior
+    fullName: MediatorForge.CQRS.Behaviors.AuthorizationBehavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+  commentId: T:MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+  name: LoggingBehavior<TRequest, TResponse>
+  nameWithType: LoggingBehavior<TRequest, TResponse>
+  fullName: MediatorForge.CQRS.Behaviors.LoggingBehavior<TRequest, TResponse>
+  nameWithType.vb: LoggingBehavior(Of TRequest, TResponse)
+  fullName.vb: MediatorForge.CQRS.Behaviors.LoggingBehavior(Of TRequest, TResponse)
+  name.vb: LoggingBehavior(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+    name: LoggingBehavior
+    nameWithType: LoggingBehavior
+    fullName: MediatorForge.CQRS.Behaviors.LoggingBehavior
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+    name: LoggingBehavior
+    nameWithType: LoggingBehavior
+    fullName: MediatorForge.CQRS.Behaviors.LoggingBehavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+  commentId: T:MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+  name: ValidationBehavior<TRequest, TResponse>
+  nameWithType: ValidationBehavior<TRequest, TResponse>
+  fullName: MediatorForge.CQRS.Behaviors.ValidationBehavior<TRequest, TResponse>
+  nameWithType.vb: ValidationBehavior(Of TRequest, TResponse)
+  fullName.vb: MediatorForge.CQRS.Behaviors.ValidationBehavior(Of TRequest, TResponse)
+  name.vb: ValidationBehavior(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+    name: ValidationBehavior
+    nameWithType: ValidationBehavior
+    fullName: MediatorForge.CQRS.Behaviors.ValidationBehavior
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+    name: ValidationBehavior
+    nameWithType: ValidationBehavior
+    fullName: MediatorForge.CQRS.Behaviors.ValidationBehavior
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )

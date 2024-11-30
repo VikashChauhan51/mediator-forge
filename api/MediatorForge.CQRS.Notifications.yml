@@ -1,0 +1,53 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Notifications
+  commentId: N:MediatorForge.CQRS.Notifications
+  id: MediatorForge.CQRS.Notifications
+  children:
+  - MediatorForge.CQRS.Notifications.EventNotification`1
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.CQRS.Notifications
+  nameWithType: MediatorForge.CQRS.Notifications
+  fullName: MediatorForge.CQRS.Notifications
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1
+  commentId: T:MediatorForge.CQRS.Notifications.EventNotification`1
+  name: EventNotification<TEvent>
+  nameWithType: EventNotification<TEvent>
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>
+  nameWithType.vb: EventNotification(Of TEvent)
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent)
+  name.vb: EventNotification(Of TEvent)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Notifications.EventNotification`1
+    name: EventNotification
+    nameWithType: EventNotification
+    fullName: MediatorForge.CQRS.Notifications.EventNotification
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TEvent
+    nameWithType: TEvent
+    fullName: TEvent
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Notifications.EventNotification`1
+    name: EventNotification
+    nameWithType: EventNotification
+    fullName: MediatorForge.CQRS.Notifications.EventNotification
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TEvent
+    nameWithType: TEvent
+    fullName: TEvent
+  - name: )
+    nameWithType: )
+    fullName: )

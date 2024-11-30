@@ -1,3 +1,1513 @@
 ### YamlMime:XRefMap
 sorted: true
-references: []
+references:
+- uid: MediatorForge
+  name: MediatorForge
+  href: api/MediatorForge.html
+  commentId: N:MediatorForge
+  fullName: MediatorForge
+  nameWithType: MediatorForge
+- uid: MediatorForge.Adapters
+  name: MediatorForge.Adapters
+  href: api/MediatorForge.Adapters.html
+  commentId: N:MediatorForge.Adapters
+  fullName: MediatorForge.Adapters
+  nameWithType: MediatorForge.Adapters
+- uid: MediatorForge.Adapters.DependencyInjection
+  name: DependencyInjection
+  href: api/MediatorForge.Adapters.DependencyInjection.html
+  commentId: T:MediatorForge.Adapters.DependencyInjection
+  fullName: MediatorForge.Adapters.DependencyInjection
+  nameWithType: DependencyInjection
+- uid: MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  name: AddMediatorForgeFluentValidatorAdapter(IServiceCollection)
+  href: api/MediatorForge.Adapters.DependencyInjection.html#MediatorForge_Adapters_DependencyInjection_AddMediatorForgeFluentValidatorAdapter_Microsoft_Extensions_DependencyInjection_IServiceCollection_
+  commentId: M:MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  fullName: MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter(Microsoft.Extensions.DependencyInjection.IServiceCollection)
+  nameWithType: DependencyInjection.AddMediatorForgeFluentValidatorAdapter(IServiceCollection)
+- uid: MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter*
+  name: AddMediatorForgeFluentValidatorAdapter
+  href: api/MediatorForge.Adapters.DependencyInjection.html#MediatorForge_Adapters_DependencyInjection_AddMediatorForgeFluentValidatorAdapter_
+  commentId: Overload:MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter
+  isSpec: "True"
+  fullName: MediatorForge.Adapters.DependencyInjection.AddMediatorForgeFluentValidatorAdapter
+  nameWithType: DependencyInjection.AddMediatorForgeFluentValidatorAdapter
+- uid: MediatorForge.Adapters.FluentValidatorAdapter`1
+  name: FluentValidatorAdapter<TRequest>
+  href: api/MediatorForge.Adapters.FluentValidatorAdapter-1.html
+  commentId: T:MediatorForge.Adapters.FluentValidatorAdapter`1
+  name.vb: FluentValidatorAdapter(Of TRequest)
+  fullName: MediatorForge.Adapters.FluentValidatorAdapter<TRequest>
+  fullName.vb: MediatorForge.Adapters.FluentValidatorAdapter(Of TRequest)
+  nameWithType: FluentValidatorAdapter<TRequest>
+  nameWithType.vb: FluentValidatorAdapter(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers
+  name: MediatorForge.CQRS.Authorizers
+  href: api/MediatorForge.CQRS.Authorizers.html
+  commentId: N:MediatorForge.CQRS.Authorizers
+  fullName: MediatorForge.CQRS.Authorizers
+  nameWithType: MediatorForge.CQRS.Authorizers
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  name: DefaultAuthorizer<TRequest>
+  href: api/MediatorForge.CQRS.Authorizers.DefaultAuthorizer-1.html
+  commentId: T:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  name.vb: DefaultAuthorizer(Of TRequest)
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest)
+  nameWithType: DefaultAuthorizer<TRequest>
+  nameWithType.vb: DefaultAuthorizer(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  href: api/MediatorForge.CQRS.Authorizers.DefaultAuthorizer-1.html#MediatorForge_CQRS_Authorizers_DefaultAuthorizer_1_AuthorizeAsync__0_CancellationToken_
+  commentId: M:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: DefaultAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType.vb: DefaultAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync*
+  name: AuthorizeAsync
+  href: api/MediatorForge.CQRS.Authorizers.DefaultAuthorizer-1.html#MediatorForge_CQRS_Authorizers_DefaultAuthorizer_1_AuthorizeAsync_
+  commentId: Overload:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>.AuthorizeAsync
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest).AuthorizeAsync
+  nameWithType: DefaultAuthorizer<TRequest>.AuthorizeAsync
+  nameWithType.vb: DefaultAuthorizer(Of TRequest).AuthorizeAsync
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  name: IAuthorizer<TRequest>
+  href: api/MediatorForge.CQRS.Authorizers.IAuthorizer-1.html
+  commentId: T:MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  name.vb: IAuthorizer(Of TRequest)
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest)
+  nameWithType: IAuthorizer<TRequest>
+  nameWithType.vb: IAuthorizer(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  href: api/MediatorForge.CQRS.Authorizers.IAuthorizer-1.html#MediatorForge_CQRS_Authorizers_IAuthorizer_1_AuthorizeAsync__0_CancellationToken_
+  commentId: M:MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync*
+  name: AuthorizeAsync
+  href: api/MediatorForge.CQRS.Authorizers.IAuthorizer-1.html#MediatorForge_CQRS_Authorizers_IAuthorizer_1_AuthorizeAsync_
+  commentId: Overload:MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync
+- uid: MediatorForge.CQRS.Behaviors
+  name: MediatorForge.CQRS.Behaviors
+  href: api/MediatorForge.CQRS.Behaviors.html
+  commentId: N:MediatorForge.CQRS.Behaviors
+  fullName: MediatorForge.CQRS.Behaviors
+  nameWithType: MediatorForge.CQRS.Behaviors
+- uid: MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+  name: AuthorizationBehavior<TRequest, TResponse>
+  href: api/MediatorForge.CQRS.Behaviors.AuthorizationBehavior-2.html
+  commentId: T:MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+  name.vb: AuthorizationBehavior(Of TRequest, TResponse)
+  fullName: MediatorForge.CQRS.Behaviors.AuthorizationBehavior<TRequest, TResponse>
+  fullName.vb: MediatorForge.CQRS.Behaviors.AuthorizationBehavior(Of TRequest, TResponse)
+  nameWithType: AuthorizationBehavior<TRequest, TResponse>
+  nameWithType.vb: AuthorizationBehavior(Of TRequest, TResponse)
+- uid: MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+  name: LoggingBehavior<TRequest, TResponse>
+  href: api/MediatorForge.CQRS.Behaviors.LoggingBehavior-2.html
+  commentId: T:MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+  name.vb: LoggingBehavior(Of TRequest, TResponse)
+  fullName: MediatorForge.CQRS.Behaviors.LoggingBehavior<TRequest, TResponse>
+  fullName.vb: MediatorForge.CQRS.Behaviors.LoggingBehavior(Of TRequest, TResponse)
+  nameWithType: LoggingBehavior<TRequest, TResponse>
+  nameWithType.vb: LoggingBehavior(Of TRequest, TResponse)
+- uid: MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+  name: ValidationBehavior<TRequest, TResponse>
+  href: api/MediatorForge.CQRS.Behaviors.ValidationBehavior-2.html
+  commentId: T:MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+  name.vb: ValidationBehavior(Of TRequest, TResponse)
+  fullName: MediatorForge.CQRS.Behaviors.ValidationBehavior<TRequest, TResponse>
+  fullName.vb: MediatorForge.CQRS.Behaviors.ValidationBehavior(Of TRequest, TResponse)
+  nameWithType: ValidationBehavior<TRequest, TResponse>
+  nameWithType.vb: ValidationBehavior(Of TRequest, TResponse)
+- uid: MediatorForge.CQRS.Commands
+  name: MediatorForge.CQRS.Commands
+  href: api/MediatorForge.CQRS.Commands.html
+  commentId: N:MediatorForge.CQRS.Commands
+  fullName: MediatorForge.CQRS.Commands
+  nameWithType: MediatorForge.CQRS.Commands
+- uid: MediatorForge.CQRS.Commands.ICommand
+  name: ICommand
+  href: api/MediatorForge.CQRS.Commands.ICommand.html
+  commentId: T:MediatorForge.CQRS.Commands.ICommand
+  fullName: MediatorForge.CQRS.Commands.ICommand
+  nameWithType: ICommand
+- uid: MediatorForge.CQRS.Commands.ICommand`1
+  name: ICommand<TResponse>
+  href: api/MediatorForge.CQRS.Commands.ICommand-1.html
+  commentId: T:MediatorForge.CQRS.Commands.ICommand`1
+  name.vb: ICommand(Of TResponse)
+  fullName: MediatorForge.CQRS.Commands.ICommand<TResponse>
+  fullName.vb: MediatorForge.CQRS.Commands.ICommand(Of TResponse)
+  nameWithType: ICommand<TResponse>
+  nameWithType.vb: ICommand(Of TResponse)
+- uid: MediatorForge.CQRS.Commands.ICommandHandler`1
+  name: ICommandHandler<TCommand>
+  href: api/MediatorForge.CQRS.Commands.ICommandHandler-1.html
+  commentId: T:MediatorForge.CQRS.Commands.ICommandHandler`1
+  name.vb: ICommandHandler(Of TCommand)
+  fullName: MediatorForge.CQRS.Commands.ICommandHandler<TCommand>
+  fullName.vb: MediatorForge.CQRS.Commands.ICommandHandler(Of TCommand)
+  nameWithType: ICommandHandler<TCommand>
+  nameWithType.vb: ICommandHandler(Of TCommand)
+- uid: MediatorForge.CQRS.Commands.ICommandHandler`2
+  name: ICommandHandler<TCommand, TResponse>
+  href: api/MediatorForge.CQRS.Commands.ICommandHandler-2.html
+  commentId: T:MediatorForge.CQRS.Commands.ICommandHandler`2
+  name.vb: ICommandHandler(Of TCommand, TResponse)
+  fullName: MediatorForge.CQRS.Commands.ICommandHandler<TCommand, TResponse>
+  fullName.vb: MediatorForge.CQRS.Commands.ICommandHandler(Of TCommand, TResponse)
+  nameWithType: ICommandHandler<TCommand, TResponse>
+  nameWithType.vb: ICommandHandler(Of TCommand, TResponse)
+- uid: MediatorForge.CQRS.Exceptions
+  name: MediatorForge.CQRS.Exceptions
+  href: api/MediatorForge.CQRS.Exceptions.html
+  commentId: N:MediatorForge.CQRS.Exceptions
+  fullName: MediatorForge.CQRS.Exceptions
+  nameWithType: MediatorForge.CQRS.Exceptions
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException
+  name: AuthorizationException
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html
+  commentId: T:MediatorForge.CQRS.Exceptions.AuthorizationException
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException
+  nameWithType: AuthorizationException
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name: AuthorizationException(IEnumerable<AuthorizationError>)
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException__ctor_IEnumerable_MediatorForge_Utilities_AuthorizationError__
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name.vb: AuthorizationException(IEnumerable(Of AuthorizationError))
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  fullName.vb: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  nameWithType: AuthorizationException.AuthorizationException(IEnumerable<AuthorizationError>)
+  nameWithType.vb: AuthorizationException.AuthorizationException(IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name: AuthorizationException(String, IEnumerable<AuthorizationError>)
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException__ctor_System_String_IEnumerable_MediatorForge_Utilities_AuthorizationError__
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name.vb: AuthorizationException(String, IEnumerable(Of AuthorizationError))
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(System.String, IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  fullName.vb: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(System.String, IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  nameWithType: AuthorizationException.AuthorizationException(String, IEnumerable<AuthorizationError>)
+  nameWithType.vb: AuthorizationException.AuthorizationException(String, IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor*
+  name: AuthorizationException
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException__ctor_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException
+  nameWithType: AuthorizationException.AuthorizationException
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  name: Errors
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException_Errors
+  commentId: P:MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  nameWithType: AuthorizationException.Errors
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors*
+  name: Errors
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException_Errors_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  nameWithType: AuthorizationException.Errors
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  name: ToString()
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException_ToString
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString()
+  nameWithType: AuthorizationException.ToString()
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString*
+  name: ToString
+  href: api/MediatorForge.CQRS.Exceptions.AuthorizationException.html#MediatorForge_CQRS_Exceptions_AuthorizationException_ToString_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  nameWithType: AuthorizationException.ToString
+- uid: MediatorForge.CQRS.Exceptions.ValidationException
+  name: ValidationException
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html
+  commentId: T:MediatorForge.CQRS.Exceptions.ValidationException
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException
+  nameWithType: ValidationException
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name: ValidationException(IEnumerable<ValidationError>)
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException__ctor_IEnumerable_MediatorForge_Utilities_ValidationError__
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name.vb: ValidationException(IEnumerable(Of ValidationError))
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(IEnumerable<MediatorForge.Utilities.ValidationError>)
+  fullName.vb: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  nameWithType: ValidationException.ValidationException(IEnumerable<ValidationError>)
+  nameWithType.vb: ValidationException.ValidationException(IEnumerable(Of ValidationError))
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})
+  name: ValidationException(String, IEnumerable<ValidationError>)
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException__ctor_System_String_IEnumerable_MediatorForge_Utilities_ValidationError__
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})
+  name.vb: ValidationException(String, IEnumerable(Of ValidationError))
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(System.String, IEnumerable<MediatorForge.Utilities.ValidationError>)
+  fullName.vb: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(System.String, IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  nameWithType: ValidationException.ValidationException(String, IEnumerable<ValidationError>)
+  nameWithType.vb: ValidationException.ValidationException(String, IEnumerable(Of ValidationError))
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor*
+  name: ValidationException
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException__ctor_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException
+  nameWithType: ValidationException.ValidationException
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  name: Errors
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException_Errors
+  commentId: P:MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  nameWithType: ValidationException.Errors
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.Errors*
+  name: Errors
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException_Errors_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  nameWithType: ValidationException.Errors
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  name: ToString()
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException_ToString
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ToString()
+  nameWithType: ValidationException.ToString()
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.ToString*
+  name: ToString
+  href: api/MediatorForge.CQRS.Exceptions.ValidationException.html#MediatorForge_CQRS_Exceptions_ValidationException_ToString_
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  nameWithType: ValidationException.ToString
+- uid: MediatorForge.CQRS.Notifications
+  name: MediatorForge.CQRS.Notifications
+  href: api/MediatorForge.CQRS.Notifications.html
+  commentId: N:MediatorForge.CQRS.Notifications
+  fullName: MediatorForge.CQRS.Notifications
+  nameWithType: MediatorForge.CQRS.Notifications
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1
+  name: EventNotification<TEvent>
+  href: api/MediatorForge.CQRS.Notifications.EventNotification-1.html
+  commentId: T:MediatorForge.CQRS.Notifications.EventNotification`1
+  name.vb: EventNotification(Of TEvent)
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent)
+  nameWithType: EventNotification<TEvent>
+  nameWithType.vb: EventNotification(Of TEvent)
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1.#ctor(`0)
+  name: EventNotification(TEvent)
+  href: api/MediatorForge.CQRS.Notifications.EventNotification-1.html#MediatorForge_CQRS_Notifications_EventNotification_1__ctor__0_
+  commentId: M:MediatorForge.CQRS.Notifications.EventNotification`1.#ctor(`0)
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>.EventNotification(TEvent)
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent).EventNotification(TEvent)
+  nameWithType: EventNotification<TEvent>.EventNotification(TEvent)
+  nameWithType.vb: EventNotification(Of TEvent).EventNotification(TEvent)
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1.#ctor*
+  name: EventNotification
+  href: api/MediatorForge.CQRS.Notifications.EventNotification-1.html#MediatorForge_CQRS_Notifications_EventNotification_1__ctor_
+  commentId: Overload:MediatorForge.CQRS.Notifications.EventNotification`1.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>.EventNotification
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent).EventNotification
+  nameWithType: EventNotification<TEvent>.EventNotification
+  nameWithType.vb: EventNotification(Of TEvent).EventNotification
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1.Event
+  name: Event
+  href: api/MediatorForge.CQRS.Notifications.EventNotification-1.html#MediatorForge_CQRS_Notifications_EventNotification_1_Event
+  commentId: P:MediatorForge.CQRS.Notifications.EventNotification`1.Event
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>.Event
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent).Event
+  nameWithType: EventNotification<TEvent>.Event
+  nameWithType.vb: EventNotification(Of TEvent).Event
+- uid: MediatorForge.CQRS.Notifications.EventNotification`1.Event*
+  name: Event
+  href: api/MediatorForge.CQRS.Notifications.EventNotification-1.html#MediatorForge_CQRS_Notifications_EventNotification_1_Event_
+  commentId: Overload:MediatorForge.CQRS.Notifications.EventNotification`1.Event
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Notifications.EventNotification<TEvent>.Event
+  fullName.vb: MediatorForge.CQRS.Notifications.EventNotification(Of TEvent).Event
+  nameWithType: EventNotification<TEvent>.Event
+  nameWithType.vb: EventNotification(Of TEvent).Event
+- uid: MediatorForge.CQRS.Queries
+  name: MediatorForge.CQRS.Queries
+  href: api/MediatorForge.CQRS.Queries.html
+  commentId: N:MediatorForge.CQRS.Queries
+  fullName: MediatorForge.CQRS.Queries
+  nameWithType: MediatorForge.CQRS.Queries
+- uid: MediatorForge.CQRS.Queries.IQuery`1
+  name: IQuery<TResponse>
+  href: api/MediatorForge.CQRS.Queries.IQuery-1.html
+  commentId: T:MediatorForge.CQRS.Queries.IQuery`1
+  name.vb: IQuery(Of TResponse)
+  fullName: MediatorForge.CQRS.Queries.IQuery<TResponse>
+  fullName.vb: MediatorForge.CQRS.Queries.IQuery(Of TResponse)
+  nameWithType: IQuery<TResponse>
+  nameWithType.vb: IQuery(Of TResponse)
+- uid: MediatorForge.CQRS.Queries.IQueryHandler`2
+  name: IQueryHandler<TQuery, TResponse>
+  href: api/MediatorForge.CQRS.Queries.IQueryHandler-2.html
+  commentId: T:MediatorForge.CQRS.Queries.IQueryHandler`2
+  name.vb: IQueryHandler(Of TQuery, TResponse)
+  fullName: MediatorForge.CQRS.Queries.IQueryHandler<TQuery, TResponse>
+  fullName.vb: MediatorForge.CQRS.Queries.IQueryHandler(Of TQuery, TResponse)
+  nameWithType: IQueryHandler<TQuery, TResponse>
+  nameWithType.vb: IQueryHandler(Of TQuery, TResponse)
+- uid: MediatorForge.CQRS.Validators
+  name: MediatorForge.CQRS.Validators
+  href: api/MediatorForge.CQRS.Validators.html
+  commentId: N:MediatorForge.CQRS.Validators
+  fullName: MediatorForge.CQRS.Validators
+  nameWithType: MediatorForge.CQRS.Validators
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+  name: DefaultValidator<TRequest>
+  href: api/MediatorForge.CQRS.Validators.DefaultValidator-1.html
+  commentId: T:MediatorForge.CQRS.Validators.DefaultValidator`1
+  name.vb: DefaultValidator(Of TRequest)
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest)
+  nameWithType: DefaultValidator<TRequest>
+  nameWithType.vb: DefaultValidator(Of TRequest)
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync(`0,CancellationToken)
+  name: ValidateAsync(TRequest, CancellationToken)
+  href: api/MediatorForge.CQRS.Validators.DefaultValidator-1.html#MediatorForge_CQRS_Validators_DefaultValidator_1_ValidateAsync__0_CancellationToken_
+  commentId: M:MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync(`0,CancellationToken)
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  nameWithType: DefaultValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  nameWithType.vb: DefaultValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync*
+  name: ValidateAsync
+  href: api/MediatorForge.CQRS.Validators.DefaultValidator-1.html#MediatorForge_CQRS_Validators_DefaultValidator_1_ValidateAsync_
+  commentId: Overload:MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>.ValidateAsync
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest).ValidateAsync
+  nameWithType: DefaultValidator<TRequest>.ValidateAsync
+  nameWithType.vb: DefaultValidator(Of TRequest).ValidateAsync
+- uid: MediatorForge.CQRS.Validators.IValidator`1
+  name: IValidator<TRequest>
+  href: api/MediatorForge.CQRS.Validators.IValidator-1.html
+  commentId: T:MediatorForge.CQRS.Validators.IValidator`1
+  name.vb: IValidator(Of TRequest)
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest)
+  nameWithType: IValidator<TRequest>
+  nameWithType.vb: IValidator(Of TRequest)
+- uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+  name: ValidateAsync(TRequest, CancellationToken)
+  href: api/MediatorForge.CQRS.Validators.IValidator-1.html#MediatorForge_CQRS_Validators_IValidator_1_ValidateAsync__0_CancellationToken_
+  commentId: M:MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  nameWithType: IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  nameWithType.vb: IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+- uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync*
+  name: ValidateAsync
+  href: api/MediatorForge.CQRS.Validators.IValidator-1.html#MediatorForge_CQRS_Validators_IValidator_1_ValidateAsync_
+  commentId: Overload:MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync
+  isSpec: "True"
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync
+  nameWithType: IValidator<TRequest>.ValidateAsync
+  nameWithType.vb: IValidator(Of TRequest).ValidateAsync
+- uid: MediatorForge.DependencyInjection
+  name: DependencyInjection
+  href: api/MediatorForge.DependencyInjection.html
+  commentId: T:MediatorForge.DependencyInjection
+  fullName: MediatorForge.DependencyInjection
+  nameWithType: DependencyInjection
+- uid: MediatorForge.DependencyInjection.AddMediatorForge(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly)
+  name: AddMediatorForge(IServiceCollection, Assembly)
+  href: api/MediatorForge.DependencyInjection.html#MediatorForge_DependencyInjection_AddMediatorForge_Microsoft_Extensions_DependencyInjection_IServiceCollection_System_Reflection_Assembly_
+  commentId: M:MediatorForge.DependencyInjection.AddMediatorForge(Microsoft.Extensions.DependencyInjection.IServiceCollection,System.Reflection.Assembly)
+  fullName: MediatorForge.DependencyInjection.AddMediatorForge(Microsoft.Extensions.DependencyInjection.IServiceCollection, System.Reflection.Assembly)
+  nameWithType: DependencyInjection.AddMediatorForge(IServiceCollection, Assembly)
+- uid: MediatorForge.DependencyInjection.AddMediatorForge*
+  name: AddMediatorForge
+  href: api/MediatorForge.DependencyInjection.html#MediatorForge_DependencyInjection_AddMediatorForge_
+  commentId: Overload:MediatorForge.DependencyInjection.AddMediatorForge
+  isSpec: "True"
+  fullName: MediatorForge.DependencyInjection.AddMediatorForge
+  nameWithType: DependencyInjection.AddMediatorForge
+- uid: MediatorForge.Results
+  name: MediatorForge.Results
+  href: api/MediatorForge.Results.html
+  commentId: N:MediatorForge.Results
+  fullName: MediatorForge.Results
+  nameWithType: MediatorForge.Results
+- uid: MediatorForge.Results.Option
+  name: Option
+  href: api/MediatorForge.Results.Option.html
+  commentId: T:MediatorForge.Results.Option
+  fullName: MediatorForge.Results.Option
+  nameWithType: Option
+- uid: MediatorForge.Results.Option.None*
+  name: None
+  href: api/MediatorForge.Results.Option.html#MediatorForge_Results_Option_None_
+  commentId: Overload:MediatorForge.Results.Option.None
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option.None
+  nameWithType: Option.None
+- uid: MediatorForge.Results.Option.None``1
+  name: None<T>()
+  href: api/MediatorForge.Results.Option.html#MediatorForge_Results_Option_None__1
+  commentId: M:MediatorForge.Results.Option.None``1
+  name.vb: None(Of T)()
+  fullName: MediatorForge.Results.Option.None<T>()
+  fullName.vb: MediatorForge.Results.Option.None(Of T)()
+  nameWithType: Option.None<T>()
+  nameWithType.vb: Option.None(Of T)()
+- uid: MediatorForge.Results.Option.Some*
+  name: Some
+  href: api/MediatorForge.Results.Option.html#MediatorForge_Results_Option_Some_
+  commentId: Overload:MediatorForge.Results.Option.Some
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option.Some
+  nameWithType: Option.Some
+- uid: MediatorForge.Results.Option.Some``1(``0)
+  name: Some<T>(T)
+  href: api/MediatorForge.Results.Option.html#MediatorForge_Results_Option_Some__1___0_
+  commentId: M:MediatorForge.Results.Option.Some``1(``0)
+  name.vb: Some(Of T)(T)
+  fullName: MediatorForge.Results.Option.Some<T>(T)
+  fullName.vb: MediatorForge.Results.Option.Some(Of T)(T)
+  nameWithType: Option.Some<T>(T)
+  nameWithType.vb: Option.Some(Of T)(T)
+- uid: MediatorForge.Results.Option`1
+  name: Option<T>
+  href: api/MediatorForge.Results.Option-1.html
+  commentId: T:MediatorForge.Results.Option`1
+  name.vb: Option(Of T)
+  fullName: MediatorForge.Results.Option<T>
+  fullName.vb: MediatorForge.Results.Option(Of T)
+  nameWithType: Option<T>
+  nameWithType.vb: Option(Of T)
+- uid: MediatorForge.Results.Option`1.CompareTo(MediatorForge.Results.Option{`0})
+  name: CompareTo(Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_CompareTo_MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.CompareTo(MediatorForge.Results.Option{`0})
+  name.vb: CompareTo(Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.CompareTo(MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).CompareTo(MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.CompareTo(Option<T>)
+  nameWithType.vb: Option(Of T).CompareTo(Option(Of T))
+- uid: MediatorForge.Results.Option`1.CompareTo*
+  name: CompareTo
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_CompareTo_
+  commentId: Overload:MediatorForge.Results.Option`1.CompareTo
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.CompareTo
+  fullName.vb: MediatorForge.Results.Option(Of T).CompareTo
+  nameWithType: Option<T>.CompareTo
+  nameWithType.vb: Option(Of T).CompareTo
+- uid: MediatorForge.Results.Option`1.Equals(MediatorForge.Results.Option{`0})
+  name: Equals(Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Equals_MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.Equals(MediatorForge.Results.Option{`0})
+  name.vb: Equals(Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.Equals(MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals(MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.Equals(Option<T>)
+  nameWithType.vb: Option(Of T).Equals(Option(Of T))
+- uid: MediatorForge.Results.Option`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Equals_System_Object_
+  commentId: M:MediatorForge.Results.Option`1.Equals(System.Object)
+  fullName: MediatorForge.Results.Option<T>.Equals(System.Object)
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals(System.Object)
+  nameWithType: Option<T>.Equals(Object)
+  nameWithType.vb: Option(Of T).Equals(Object)
+- uid: MediatorForge.Results.Option`1.Equals*
+  name: Equals
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Equals_
+  commentId: Overload:MediatorForge.Results.Option`1.Equals
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.Equals
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals
+  nameWithType: Option<T>.Equals
+  nameWithType.vb: Option(Of T).Equals
+- uid: MediatorForge.Results.Option`1.GetHashCode
+  name: GetHashCode()
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_GetHashCode
+  commentId: M:MediatorForge.Results.Option`1.GetHashCode
+  fullName: MediatorForge.Results.Option<T>.GetHashCode()
+  fullName.vb: MediatorForge.Results.Option(Of T).GetHashCode()
+  nameWithType: Option<T>.GetHashCode()
+  nameWithType.vb: Option(Of T).GetHashCode()
+- uid: MediatorForge.Results.Option`1.GetHashCode*
+  name: GetHashCode
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_GetHashCode_
+  commentId: Overload:MediatorForge.Results.Option`1.GetHashCode
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.GetHashCode
+  fullName.vb: MediatorForge.Results.Option(Of T).GetHashCode
+  nameWithType: Option<T>.GetHashCode
+  nameWithType.vb: Option(Of T).GetHashCode
+- uid: MediatorForge.Results.Option`1.IsNone
+  name: IsNone
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_IsNone
+  commentId: P:MediatorForge.Results.Option`1.IsNone
+  fullName: MediatorForge.Results.Option<T>.IsNone
+  fullName.vb: MediatorForge.Results.Option(Of T).IsNone
+  nameWithType: Option<T>.IsNone
+  nameWithType.vb: Option(Of T).IsNone
+- uid: MediatorForge.Results.Option`1.IsNone*
+  name: IsNone
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_IsNone_
+  commentId: Overload:MediatorForge.Results.Option`1.IsNone
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.IsNone
+  fullName.vb: MediatorForge.Results.Option(Of T).IsNone
+  nameWithType: Option<T>.IsNone
+  nameWithType.vb: Option(Of T).IsNone
+- uid: MediatorForge.Results.Option`1.IsSome
+  name: IsSome
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_IsSome
+  commentId: P:MediatorForge.Results.Option`1.IsSome
+  fullName: MediatorForge.Results.Option<T>.IsSome
+  fullName.vb: MediatorForge.Results.Option(Of T).IsSome
+  nameWithType: Option<T>.IsSome
+  nameWithType.vb: Option(Of T).IsSome
+- uid: MediatorForge.Results.Option`1.IsSome*
+  name: IsSome
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_IsSome_
+  commentId: Overload:MediatorForge.Results.Option`1.IsSome
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.IsSome
+  fullName.vb: MediatorForge.Results.Option(Of T).IsSome
+  nameWithType: Option<T>.IsSome
+  nameWithType.vb: Option(Of T).IsSome
+- uid: MediatorForge.Results.Option`1.Match(Action{`0},Action)
+  name: Match(Action<T>, Action)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Match_Action__0__Action_
+  commentId: M:MediatorForge.Results.Option`1.Match(Action{`0},Action)
+  name.vb: Match(Action(Of T), Action)
+  fullName: MediatorForge.Results.Option<T>.Match(Action<T>, Action)
+  fullName.vb: MediatorForge.Results.Option(Of T).Match(Action(Of T), Action)
+  nameWithType: Option<T>.Match(Action<T>, Action)
+  nameWithType.vb: Option(Of T).Match(Action(Of T), Action)
+- uid: MediatorForge.Results.Option`1.Match*
+  name: Match
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Match_
+  commentId: Overload:MediatorForge.Results.Option`1.Match
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.Match
+  fullName.vb: MediatorForge.Results.Option(Of T).Match
+  nameWithType: Option<T>.Match
+  nameWithType.vb: Option(Of T).Match
+- uid: MediatorForge.Results.Option`1.Match``1(Func{`0,``0},Func{``0})
+  name: Match<TResult>(Func<T, TResult>, Func<TResult>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Match__1_Func__0___0__Func___0__
+  commentId: M:MediatorForge.Results.Option`1.Match``1(Func{`0,``0},Func{``0})
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+  fullName: MediatorForge.Results.Option<T>.Match<TResult>(Func<T, TResult>, Func<TResult>)
+  fullName.vb: MediatorForge.Results.Option(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+  nameWithType: Option<T>.Match<TResult>(Func<T, TResult>, Func<TResult>)
+  nameWithType.vb: Option(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+- uid: MediatorForge.Results.Option`1.None
+  name: None
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_None
+  commentId: P:MediatorForge.Results.Option`1.None
+  fullName: MediatorForge.Results.Option<T>.None
+  fullName.vb: MediatorForge.Results.Option(Of T).None
+  nameWithType: Option<T>.None
+  nameWithType.vb: Option(Of T).None
+- uid: MediatorForge.Results.Option`1.None*
+  name: None
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_None_
+  commentId: Overload:MediatorForge.Results.Option`1.None
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.None
+  fullName.vb: MediatorForge.Results.Option(Of T).None
+  nameWithType: Option<T>.None
+  nameWithType.vb: Option(Of T).None
+- uid: MediatorForge.Results.Option`1.OnNone(Action)
+  name: OnNone(Action)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_OnNone_Action_
+  commentId: M:MediatorForge.Results.Option`1.OnNone(Action)
+  fullName: MediatorForge.Results.Option<T>.OnNone(Action)
+  fullName.vb: MediatorForge.Results.Option(Of T).OnNone(Action)
+  nameWithType: Option<T>.OnNone(Action)
+  nameWithType.vb: Option(Of T).OnNone(Action)
+- uid: MediatorForge.Results.Option`1.OnNone*
+  name: OnNone
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_OnNone_
+  commentId: Overload:MediatorForge.Results.Option`1.OnNone
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.OnNone
+  fullName.vb: MediatorForge.Results.Option(Of T).OnNone
+  nameWithType: Option<T>.OnNone
+  nameWithType.vb: Option(Of T).OnNone
+- uid: MediatorForge.Results.Option`1.OnSome(Action{`0})
+  name: OnSome(Action<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_OnSome_Action__0__
+  commentId: M:MediatorForge.Results.Option`1.OnSome(Action{`0})
+  name.vb: OnSome(Action(Of T))
+  fullName: MediatorForge.Results.Option<T>.OnSome(Action<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).OnSome(Action(Of T))
+  nameWithType: Option<T>.OnSome(Action<T>)
+  nameWithType.vb: Option(Of T).OnSome(Action(Of T))
+- uid: MediatorForge.Results.Option`1.OnSome*
+  name: OnSome
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_OnSome_
+  commentId: Overload:MediatorForge.Results.Option`1.OnSome
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.OnSome
+  fullName.vb: MediatorForge.Results.Option(Of T).OnSome
+  nameWithType: Option<T>.OnSome
+  nameWithType.vb: Option(Of T).OnSome
+- uid: MediatorForge.Results.Option`1.op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: Equality(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Equality_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: Equality(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.Equality(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).Equality(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.Equality(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).Equality(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_Equality*
+  name: Equality
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Equality_
+  commentId: Overload:MediatorForge.Results.Option`1.op_Equality
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.Equality
+  fullName.vb: MediatorForge.Results.Option(Of T).Equality
+  nameWithType: Option<T>.Equality
+  nameWithType.vb: Option(Of T).Equality
+- uid: MediatorForge.Results.Option`1.op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: GreaterThan(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_GreaterThan_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: GreaterThan(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.GreaterThan(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThan(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.GreaterThan(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).GreaterThan(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_GreaterThan*
+  name: GreaterThan
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_GreaterThan_
+  commentId: Overload:MediatorForge.Results.Option`1.op_GreaterThan
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.GreaterThan
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThan
+  nameWithType: Option<T>.GreaterThan
+  nameWithType.vb: Option(Of T).GreaterThan
+- uid: MediatorForge.Results.Option`1.op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: GreaterThanOrEqual(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_GreaterThanOrEqual_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: GreaterThanOrEqual(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.GreaterThanOrEqual(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThanOrEqual(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.GreaterThanOrEqual(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).GreaterThanOrEqual(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_GreaterThanOrEqual_
+  commentId: Overload:MediatorForge.Results.Option`1.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.GreaterThanOrEqual
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThanOrEqual
+  nameWithType: Option<T>.GreaterThanOrEqual
+  nameWithType.vb: Option(Of T).GreaterThanOrEqual
+- uid: MediatorForge.Results.Option`1.op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  name: Implicit(T to Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Implicit__0__MediatorForge_Results_Option__0_
+  commentId: M:MediatorForge.Results.Option`1.op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  name.vb: Widening(T to Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.Implicit(T to MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).Widening(T to MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.Implicit(T to Option<T>)
+  nameWithType.vb: Option(Of T).Widening(T to Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_Implicit*
+  name: Implicit
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Implicit_
+  commentId: Overload:MediatorForge.Results.Option`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: MediatorForge.Results.Option<T>.Implicit
+  fullName.vb: MediatorForge.Results.Option(Of T).Widening
+  nameWithType: Option<T>.Implicit
+  nameWithType.vb: Option(Of T).Widening
+- uid: MediatorForge.Results.Option`1.op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: Inequality(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Inequality_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: Inequality(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.Inequality(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).Inequality(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.Inequality(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).Inequality(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_Inequality*
+  name: Inequality
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_Inequality_
+  commentId: Overload:MediatorForge.Results.Option`1.op_Inequality
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.Inequality
+  fullName.vb: MediatorForge.Results.Option(Of T).Inequality
+  nameWithType: Option<T>.Inequality
+  nameWithType.vb: Option(Of T).Inequality
+- uid: MediatorForge.Results.Option`1.op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: LessThan(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_LessThan_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: LessThan(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.LessThan(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThan(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.LessThan(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).LessThan(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_LessThan*
+  name: LessThan
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_LessThan_
+  commentId: Overload:MediatorForge.Results.Option`1.op_LessThan
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.LessThan
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThan
+  nameWithType: Option<T>.LessThan
+  nameWithType.vb: Option(Of T).LessThan
+- uid: MediatorForge.Results.Option`1.op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name: LessThanOrEqual(Option<T>, Option<T>)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_LessThanOrEqual_MediatorForge_Results_Option__0__MediatorForge_Results_Option__0__
+  commentId: M:MediatorForge.Results.Option`1.op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  name.vb: LessThanOrEqual(Option(Of T), Option(Of T))
+  fullName: MediatorForge.Results.Option<T>.LessThanOrEqual(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThanOrEqual(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  nameWithType: Option<T>.LessThanOrEqual(Option<T>, Option<T>)
+  nameWithType.vb: Option(Of T).LessThanOrEqual(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_op_LessThanOrEqual_
+  commentId: Overload:MediatorForge.Results.Option`1.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.LessThanOrEqual
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThanOrEqual
+  nameWithType: Option<T>.LessThanOrEqual
+  nameWithType.vb: Option(Of T).LessThanOrEqual
+- uid: MediatorForge.Results.Option`1.Some(`0)
+  name: Some(T)
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Some__0_
+  commentId: M:MediatorForge.Results.Option`1.Some(`0)
+  fullName: MediatorForge.Results.Option<T>.Some(T)
+  fullName.vb: MediatorForge.Results.Option(Of T).Some(T)
+  nameWithType: Option<T>.Some(T)
+  nameWithType.vb: Option(Of T).Some(T)
+- uid: MediatorForge.Results.Option`1.Some*
+  name: Some
+  href: api/MediatorForge.Results.Option-1.html#MediatorForge_Results_Option_1_Some_
+  commentId: Overload:MediatorForge.Results.Option`1.Some
+  isSpec: "True"
+  fullName: MediatorForge.Results.Option<T>.Some
+  fullName.vb: MediatorForge.Results.Option(Of T).Some
+  nameWithType: Option<T>.Some
+  nameWithType.vb: Option(Of T).Some
+- uid: MediatorForge.Results.Result`1
+  name: Result<T>
+  href: api/MediatorForge.Results.Result-1.html
+  commentId: T:MediatorForge.Results.Result`1
+  name.vb: Result(Of T)
+  fullName: MediatorForge.Results.Result<T>
+  fullName.vb: MediatorForge.Results.Result(Of T)
+  nameWithType: Result<T>
+  nameWithType.vb: Result(Of T)
+- uid: MediatorForge.Results.Result`1.#ctor(`0)
+  name: Result(T)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1__ctor__0_
+  commentId: M:MediatorForge.Results.Result`1.#ctor(`0)
+  fullName: MediatorForge.Results.Result<T>.Result(T)
+  fullName.vb: MediatorForge.Results.Result(Of T).Result(T)
+  nameWithType: Result<T>.Result(T)
+  nameWithType.vb: Result(Of T).Result(T)
+- uid: MediatorForge.Results.Result`1.#ctor(Exception)
+  name: Result(Exception)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1__ctor_Exception_
+  commentId: M:MediatorForge.Results.Result`1.#ctor(Exception)
+  fullName: MediatorForge.Results.Result<T>.Result(Exception)
+  fullName.vb: MediatorForge.Results.Result(Of T).Result(Exception)
+  nameWithType: Result<T>.Result(Exception)
+  nameWithType.vb: Result(Of T).Result(Exception)
+- uid: MediatorForge.Results.Result`1.#ctor*
+  name: Result
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1__ctor_
+  commentId: Overload:MediatorForge.Results.Result`1.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Result
+  fullName.vb: MediatorForge.Results.Result(Of T).Result
+  nameWithType: Result<T>.Result
+  nameWithType.vb: Result(Of T).Result
+- uid: MediatorForge.Results.Result`1.CompareTo(MediatorForge.Results.Result{`0})
+  name: CompareTo(Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_CompareTo_MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.CompareTo(MediatorForge.Results.Result{`0})
+  name.vb: CompareTo(Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.CompareTo(MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).CompareTo(MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.CompareTo(Result<T>)
+  nameWithType.vb: Result(Of T).CompareTo(Result(Of T))
+- uid: MediatorForge.Results.Result`1.CompareTo*
+  name: CompareTo
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_CompareTo_
+  commentId: Overload:MediatorForge.Results.Result`1.CompareTo
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.CompareTo
+  fullName.vb: MediatorForge.Results.Result(Of T).CompareTo
+  nameWithType: Result<T>.CompareTo
+  nameWithType.vb: Result(Of T).CompareTo
+- uid: MediatorForge.Results.Result`1.Equals(MediatorForge.Results.Result{`0})
+  name: Equals(Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Equals_MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.Equals(MediatorForge.Results.Result{`0})
+  name.vb: Equals(Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.Equals(MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Equals(MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.Equals(Result<T>)
+  nameWithType.vb: Result(Of T).Equals(Result(Of T))
+- uid: MediatorForge.Results.Result`1.Equals(System.Object)
+  name: Equals(Object)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Equals_System_Object_
+  commentId: M:MediatorForge.Results.Result`1.Equals(System.Object)
+  fullName: MediatorForge.Results.Result<T>.Equals(System.Object)
+  fullName.vb: MediatorForge.Results.Result(Of T).Equals(System.Object)
+  nameWithType: Result<T>.Equals(Object)
+  nameWithType.vb: Result(Of T).Equals(Object)
+- uid: MediatorForge.Results.Result`1.Equals*
+  name: Equals
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Equals_
+  commentId: Overload:MediatorForge.Results.Result`1.Equals
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Equals
+  fullName.vb: MediatorForge.Results.Result(Of T).Equals
+  nameWithType: Result<T>.Equals
+  nameWithType.vb: Result(Of T).Equals
+- uid: MediatorForge.Results.Result`1.Exception
+  name: Exception
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Exception
+  commentId: P:MediatorForge.Results.Result`1.Exception
+  fullName: MediatorForge.Results.Result<T>.Exception
+  fullName.vb: MediatorForge.Results.Result(Of T).Exception
+  nameWithType: Result<T>.Exception
+  nameWithType.vb: Result(Of T).Exception
+- uid: MediatorForge.Results.Result`1.Exception*
+  name: Exception
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Exception_
+  commentId: Overload:MediatorForge.Results.Result`1.Exception
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Exception
+  fullName.vb: MediatorForge.Results.Result(Of T).Exception
+  nameWithType: Result<T>.Exception
+  nameWithType.vb: Result(Of T).Exception
+- uid: MediatorForge.Results.Result`1.Fail(Exception)
+  name: Fail(Exception)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Fail_Exception_
+  commentId: M:MediatorForge.Results.Result`1.Fail(Exception)
+  fullName: MediatorForge.Results.Result<T>.Fail(Exception)
+  fullName.vb: MediatorForge.Results.Result(Of T).Fail(Exception)
+  nameWithType: Result<T>.Fail(Exception)
+  nameWithType.vb: Result(Of T).Fail(Exception)
+- uid: MediatorForge.Results.Result`1.Fail*
+  name: Fail
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Fail_
+  commentId: Overload:MediatorForge.Results.Result`1.Fail
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Fail
+  fullName.vb: MediatorForge.Results.Result(Of T).Fail
+  nameWithType: Result<T>.Fail
+  nameWithType.vb: Result(Of T).Fail
+- uid: MediatorForge.Results.Result`1.GetHashCode
+  name: GetHashCode()
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_GetHashCode
+  commentId: M:MediatorForge.Results.Result`1.GetHashCode
+  fullName: MediatorForge.Results.Result<T>.GetHashCode()
+  fullName.vb: MediatorForge.Results.Result(Of T).GetHashCode()
+  nameWithType: Result<T>.GetHashCode()
+  nameWithType.vb: Result(Of T).GetHashCode()
+- uid: MediatorForge.Results.Result`1.GetHashCode*
+  name: GetHashCode
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_GetHashCode_
+  commentId: Overload:MediatorForge.Results.Result`1.GetHashCode
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.GetHashCode
+  fullName.vb: MediatorForge.Results.Result(Of T).GetHashCode
+  nameWithType: Result<T>.GetHashCode
+  nameWithType.vb: Result(Of T).GetHashCode
+- uid: MediatorForge.Results.Result`1.IsSuccess
+  name: IsSuccess
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_IsSuccess
+  commentId: P:MediatorForge.Results.Result`1.IsSuccess
+  fullName: MediatorForge.Results.Result<T>.IsSuccess
+  fullName.vb: MediatorForge.Results.Result(Of T).IsSuccess
+  nameWithType: Result<T>.IsSuccess
+  nameWithType.vb: Result(Of T).IsSuccess
+- uid: MediatorForge.Results.Result`1.IsSuccess*
+  name: IsSuccess
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_IsSuccess_
+  commentId: Overload:MediatorForge.Results.Result`1.IsSuccess
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.IsSuccess
+  fullName.vb: MediatorForge.Results.Result(Of T).IsSuccess
+  nameWithType: Result<T>.IsSuccess
+  nameWithType.vb: Result(Of T).IsSuccess
+- uid: MediatorForge.Results.Result`1.Match(Action{`0},Action{Exception})
+  name: Match(Action<T>, Action<Exception>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Match_Action__0__Action_Exception__
+  commentId: M:MediatorForge.Results.Result`1.Match(Action{`0},Action{Exception})
+  name.vb: Match(Action(Of T), Action(Of Exception))
+  fullName: MediatorForge.Results.Result<T>.Match(Action<T>, Action<Exception>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Match(Action(Of T), Action(Of Exception))
+  nameWithType: Result<T>.Match(Action<T>, Action<Exception>)
+  nameWithType.vb: Result(Of T).Match(Action(Of T), Action(Of Exception))
+- uid: MediatorForge.Results.Result`1.Match*
+  name: Match
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Match_
+  commentId: Overload:MediatorForge.Results.Result`1.Match
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Match
+  fullName.vb: MediatorForge.Results.Result(Of T).Match
+  nameWithType: Result<T>.Match
+  nameWithType.vb: Result(Of T).Match
+- uid: MediatorForge.Results.Result`1.Match``1(Func{`0,``0},Func{Exception,``0})
+  name: Match<TResult>(Func<T, TResult>, Func<Exception, TResult>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Match__1_Func__0___0__Func_Exception___0__
+  commentId: M:MediatorForge.Results.Result`1.Match``1(Func{`0,``0},Func{Exception,``0})
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of Exception, TResult))
+  fullName: MediatorForge.Results.Result<T>.Match<TResult>(Func<T, TResult>, Func<Exception, TResult>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of Exception, TResult))
+  nameWithType: Result<T>.Match<TResult>(Func<T, TResult>, Func<Exception, TResult>)
+  nameWithType.vb: Result(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of Exception, TResult))
+- uid: MediatorForge.Results.Result`1.OnFailure(Action{Exception})
+  name: OnFailure(Action<Exception>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_OnFailure_Action_Exception__
+  commentId: M:MediatorForge.Results.Result`1.OnFailure(Action{Exception})
+  name.vb: OnFailure(Action(Of Exception))
+  fullName: MediatorForge.Results.Result<T>.OnFailure(Action<Exception>)
+  fullName.vb: MediatorForge.Results.Result(Of T).OnFailure(Action(Of Exception))
+  nameWithType: Result<T>.OnFailure(Action<Exception>)
+  nameWithType.vb: Result(Of T).OnFailure(Action(Of Exception))
+- uid: MediatorForge.Results.Result`1.OnFailure*
+  name: OnFailure
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_OnFailure_
+  commentId: Overload:MediatorForge.Results.Result`1.OnFailure
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.OnFailure
+  fullName.vb: MediatorForge.Results.Result(Of T).OnFailure
+  nameWithType: Result<T>.OnFailure
+  nameWithType.vb: Result(Of T).OnFailure
+- uid: MediatorForge.Results.Result`1.OnSuccess(Action{`0})
+  name: OnSuccess(Action<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_OnSuccess_Action__0__
+  commentId: M:MediatorForge.Results.Result`1.OnSuccess(Action{`0})
+  name.vb: OnSuccess(Action(Of T))
+  fullName: MediatorForge.Results.Result<T>.OnSuccess(Action<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).OnSuccess(Action(Of T))
+  nameWithType: Result<T>.OnSuccess(Action<T>)
+  nameWithType.vb: Result(Of T).OnSuccess(Action(Of T))
+- uid: MediatorForge.Results.Result`1.OnSuccess*
+  name: OnSuccess
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_OnSuccess_
+  commentId: Overload:MediatorForge.Results.Result`1.OnSuccess
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.OnSuccess
+  fullName.vb: MediatorForge.Results.Result(Of T).OnSuccess
+  nameWithType: Result<T>.OnSuccess
+  nameWithType.vb: Result(Of T).OnSuccess
+- uid: MediatorForge.Results.Result`1.op_Equality(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: Equality(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Equality_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_Equality(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: Equality(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.Equality(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Equality(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.Equality(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).Equality(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_Equality*
+  name: Equality
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Equality_
+  commentId: Overload:MediatorForge.Results.Result`1.op_Equality
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Equality
+  fullName.vb: MediatorForge.Results.Result(Of T).Equality
+  nameWithType: Result<T>.Equality
+  nameWithType.vb: Result(Of T).Equality
+- uid: MediatorForge.Results.Result`1.op_GreaterThan(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: GreaterThan(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_GreaterThan_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_GreaterThan(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: GreaterThan(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.GreaterThan(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).GreaterThan(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.GreaterThan(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).GreaterThan(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_GreaterThan*
+  name: GreaterThan
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_GreaterThan_
+  commentId: Overload:MediatorForge.Results.Result`1.op_GreaterThan
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.GreaterThan
+  fullName.vb: MediatorForge.Results.Result(Of T).GreaterThan
+  nameWithType: Result<T>.GreaterThan
+  nameWithType.vb: Result(Of T).GreaterThan
+- uid: MediatorForge.Results.Result`1.op_GreaterThanOrEqual(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: GreaterThanOrEqual(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_GreaterThanOrEqual_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_GreaterThanOrEqual(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: GreaterThanOrEqual(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.GreaterThanOrEqual(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).GreaterThanOrEqual(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.GreaterThanOrEqual(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).GreaterThanOrEqual(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_GreaterThanOrEqual*
+  name: GreaterThanOrEqual
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_GreaterThanOrEqual_
+  commentId: Overload:MediatorForge.Results.Result`1.op_GreaterThanOrEqual
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.GreaterThanOrEqual
+  fullName.vb: MediatorForge.Results.Result(Of T).GreaterThanOrEqual
+  nameWithType: Result<T>.GreaterThanOrEqual
+  nameWithType.vb: Result(Of T).GreaterThanOrEqual
+- uid: MediatorForge.Results.Result`1.op_Implicit(`0)~MediatorForge.Results.Result{`0}
+  name: Implicit(T to Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Implicit__0__MediatorForge_Results_Result__0_
+  commentId: M:MediatorForge.Results.Result`1.op_Implicit(`0)~MediatorForge.Results.Result{`0}
+  name.vb: Widening(T to Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.Implicit(T to MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Widening(T to MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.Implicit(T to Result<T>)
+  nameWithType.vb: Result(Of T).Widening(T to Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_Implicit(Exception)~MediatorForge.Results.Result{`0}
+  name: Implicit(Exception to Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Implicit_Exception__MediatorForge_Results_Result__0_
+  commentId: M:MediatorForge.Results.Result`1.op_Implicit(Exception)~MediatorForge.Results.Result{`0}
+  name.vb: Widening(Exception to Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.Implicit(Exception to MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Widening(Exception to MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.Implicit(Exception to Result<T>)
+  nameWithType.vb: Result(Of T).Widening(Exception to Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_Implicit*
+  name: Implicit
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Implicit_
+  commentId: Overload:MediatorForge.Results.Result`1.op_Implicit
+  isSpec: "True"
+  name.vb: Widening
+  fullName: MediatorForge.Results.Result<T>.Implicit
+  fullName.vb: MediatorForge.Results.Result(Of T).Widening
+  nameWithType: Result<T>.Implicit
+  nameWithType.vb: Result(Of T).Widening
+- uid: MediatorForge.Results.Result`1.op_Inequality(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: Inequality(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Inequality_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_Inequality(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: Inequality(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.Inequality(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).Inequality(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.Inequality(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).Inequality(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_Inequality*
+  name: Inequality
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_Inequality_
+  commentId: Overload:MediatorForge.Results.Result`1.op_Inequality
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Inequality
+  fullName.vb: MediatorForge.Results.Result(Of T).Inequality
+  nameWithType: Result<T>.Inequality
+  nameWithType.vb: Result(Of T).Inequality
+- uid: MediatorForge.Results.Result`1.op_LessThan(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: LessThan(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_LessThan_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_LessThan(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: LessThan(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.LessThan(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).LessThan(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.LessThan(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).LessThan(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_LessThan*
+  name: LessThan
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_LessThan_
+  commentId: Overload:MediatorForge.Results.Result`1.op_LessThan
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.LessThan
+  fullName.vb: MediatorForge.Results.Result(Of T).LessThan
+  nameWithType: Result<T>.LessThan
+  nameWithType.vb: Result(Of T).LessThan
+- uid: MediatorForge.Results.Result`1.op_LessThanOrEqual(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name: LessThanOrEqual(Result<T>, Result<T>)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_LessThanOrEqual_MediatorForge_Results_Result__0__MediatorForge_Results_Result__0__
+  commentId: M:MediatorForge.Results.Result`1.op_LessThanOrEqual(MediatorForge.Results.Result{`0},MediatorForge.Results.Result{`0})
+  name.vb: LessThanOrEqual(Result(Of T), Result(Of T))
+  fullName: MediatorForge.Results.Result<T>.LessThanOrEqual(MediatorForge.Results.Result<T>, MediatorForge.Results.Result<T>)
+  fullName.vb: MediatorForge.Results.Result(Of T).LessThanOrEqual(MediatorForge.Results.Result(Of T), MediatorForge.Results.Result(Of T))
+  nameWithType: Result<T>.LessThanOrEqual(Result<T>, Result<T>)
+  nameWithType.vb: Result(Of T).LessThanOrEqual(Result(Of T), Result(Of T))
+- uid: MediatorForge.Results.Result`1.op_LessThanOrEqual*
+  name: LessThanOrEqual
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_op_LessThanOrEqual_
+  commentId: Overload:MediatorForge.Results.Result`1.op_LessThanOrEqual
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.LessThanOrEqual
+  fullName.vb: MediatorForge.Results.Result(Of T).LessThanOrEqual
+  nameWithType: Result<T>.LessThanOrEqual
+  nameWithType.vb: Result(Of T).LessThanOrEqual
+- uid: MediatorForge.Results.Result`1.Succ(`0)
+  name: Succ(T)
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Succ__0_
+  commentId: M:MediatorForge.Results.Result`1.Succ(`0)
+  fullName: MediatorForge.Results.Result<T>.Succ(T)
+  fullName.vb: MediatorForge.Results.Result(Of T).Succ(T)
+  nameWithType: Result<T>.Succ(T)
+  nameWithType.vb: Result(Of T).Succ(T)
+- uid: MediatorForge.Results.Result`1.Succ*
+  name: Succ
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Succ_
+  commentId: Overload:MediatorForge.Results.Result`1.Succ
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Succ
+  fullName.vb: MediatorForge.Results.Result(Of T).Succ
+  nameWithType: Result<T>.Succ
+  nameWithType.vb: Result(Of T).Succ
+- uid: MediatorForge.Results.Result`1.Value
+  name: Value
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Value
+  commentId: P:MediatorForge.Results.Result`1.Value
+  fullName: MediatorForge.Results.Result<T>.Value
+  fullName.vb: MediatorForge.Results.Result(Of T).Value
+  nameWithType: Result<T>.Value
+  nameWithType.vb: Result(Of T).Value
+- uid: MediatorForge.Results.Result`1.Value*
+  name: Value
+  href: api/MediatorForge.Results.Result-1.html#MediatorForge_Results_Result_1_Value_
+  commentId: Overload:MediatorForge.Results.Result`1.Value
+  isSpec: "True"
+  fullName: MediatorForge.Results.Result<T>.Value
+  fullName.vb: MediatorForge.Results.Result(Of T).Value
+  nameWithType: Result<T>.Value
+  nameWithType.vb: Result(Of T).Value
+- uid: MediatorForge.Results.ResultState
+  name: ResultState
+  href: api/MediatorForge.Results.ResultState.html
+  commentId: T:MediatorForge.Results.ResultState
+  fullName: MediatorForge.Results.ResultState
+  nameWithType: ResultState
+- uid: MediatorForge.Results.ResultState.Failed
+  name: Failed
+  href: api/MediatorForge.Results.ResultState.html#MediatorForge_Results_ResultState_Failed
+  commentId: F:MediatorForge.Results.ResultState.Failed
+  fullName: MediatorForge.Results.ResultState.Failed
+  nameWithType: ResultState.Failed
+- uid: MediatorForge.Results.ResultState.Success
+  name: Success
+  href: api/MediatorForge.Results.ResultState.html#MediatorForge_Results_ResultState_Success
+  commentId: F:MediatorForge.Results.ResultState.Success
+  fullName: MediatorForge.Results.ResultState.Success
+  nameWithType: ResultState.Success
+- uid: MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  href: api/MediatorForge.Utilities.html
+  commentId: N:MediatorForge.Utilities
+  fullName: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+- uid: MediatorForge.Utilities.AuthorizationError
+  name: AuthorizationError
+  href: api/MediatorForge.Utilities.AuthorizationError.html
+  commentId: T:MediatorForge.Utilities.AuthorizationError
+  fullName: MediatorForge.Utilities.AuthorizationError
+  nameWithType: AuthorizationError
+- uid: MediatorForge.Utilities.AuthorizationError.#ctor(System.String,System.String,System.Object)
+  name: AuthorizationError(String, String, Object)
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError__ctor_System_String_System_String_System_Object_
+  commentId: M:MediatorForge.Utilities.AuthorizationError.#ctor(System.String,System.String,System.Object)
+  fullName: MediatorForge.Utilities.AuthorizationError.AuthorizationError(System.String, System.String, System.Object)
+  nameWithType: AuthorizationError.AuthorizationError(String, String, Object)
+- uid: MediatorForge.Utilities.AuthorizationError.#ctor*
+  name: AuthorizationError
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError__ctor_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationError.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationError.AuthorizationError
+  nameWithType: AuthorizationError.AuthorizationError
+- uid: MediatorForge.Utilities.AuthorizationError.AdditionalData
+  name: AdditionalData
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_AdditionalData
+  commentId: P:MediatorForge.Utilities.AuthorizationError.AdditionalData
+  fullName: MediatorForge.Utilities.AuthorizationError.AdditionalData
+  nameWithType: AuthorizationError.AdditionalData
+- uid: MediatorForge.Utilities.AuthorizationError.AdditionalData*
+  name: AdditionalData
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_AdditionalData_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationError.AdditionalData
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationError.AdditionalData
+  nameWithType: AuthorizationError.AdditionalData
+- uid: MediatorForge.Utilities.AuthorizationError.Code
+  name: Code
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_Code
+  commentId: P:MediatorForge.Utilities.AuthorizationError.Code
+  fullName: MediatorForge.Utilities.AuthorizationError.Code
+  nameWithType: AuthorizationError.Code
+- uid: MediatorForge.Utilities.AuthorizationError.Code*
+  name: Code
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_Code_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationError.Code
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationError.Code
+  nameWithType: AuthorizationError.Code
+- uid: MediatorForge.Utilities.AuthorizationError.Message
+  name: Message
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_Message
+  commentId: P:MediatorForge.Utilities.AuthorizationError.Message
+  fullName: MediatorForge.Utilities.AuthorizationError.Message
+  nameWithType: AuthorizationError.Message
+- uid: MediatorForge.Utilities.AuthorizationError.Message*
+  name: Message
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_Message_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationError.Message
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationError.Message
+  nameWithType: AuthorizationError.Message
+- uid: MediatorForge.Utilities.AuthorizationError.ToString
+  name: ToString()
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_ToString
+  commentId: M:MediatorForge.Utilities.AuthorizationError.ToString
+  fullName: MediatorForge.Utilities.AuthorizationError.ToString()
+  nameWithType: AuthorizationError.ToString()
+- uid: MediatorForge.Utilities.AuthorizationError.ToString*
+  name: ToString
+  href: api/MediatorForge.Utilities.AuthorizationError.html#MediatorForge_Utilities_AuthorizationError_ToString_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationError.ToString
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationError.ToString
+  nameWithType: AuthorizationError.ToString
+- uid: MediatorForge.Utilities.AuthorizationResult
+  name: AuthorizationResult
+  href: api/MediatorForge.Utilities.AuthorizationResult.html
+  commentId: T:MediatorForge.Utilities.AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult
+  nameWithType: AuthorizationResult
+- uid: MediatorForge.Utilities.AuthorizationResult.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name: AuthorizationResult(IEnumerable<AuthorizationError>)
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult__ctor_IEnumerable_MediatorForge_Utilities_AuthorizationError__
+  commentId: M:MediatorForge.Utilities.AuthorizationResult.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name.vb: AuthorizationResult(IEnumerable(Of AuthorizationError))
+  fullName: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  fullName.vb: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  nameWithType: AuthorizationResult.AuthorizationResult(IEnumerable<AuthorizationError>)
+  nameWithType.vb: AuthorizationResult.AuthorizationResult(IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.Utilities.AuthorizationResult.#ctor*
+  name: AuthorizationResult
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult__ctor_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationResult.AuthorizationResult
+  nameWithType: AuthorizationResult.AuthorizationResult
+- uid: MediatorForge.Utilities.AuthorizationResult.Errors
+  name: Errors
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Errors
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.Errors
+  fullName: MediatorForge.Utilities.AuthorizationResult.Errors
+  nameWithType: AuthorizationResult.Errors
+- uid: MediatorForge.Utilities.AuthorizationResult.Errors*
+  name: Errors
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Errors_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Errors
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationResult.Errors
+  nameWithType: AuthorizationResult.Errors
+- uid: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name: Failure(IEnumerable<AuthorizationError>)
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Failure_IEnumerable_MediatorForge_Utilities_AuthorizationError__
+  commentId: M:MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  name.vb: Failure(IEnumerable(Of AuthorizationError))
+  fullName: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  fullName.vb: MediatorForge.Utilities.AuthorizationResult.Failure(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  nameWithType: AuthorizationResult.Failure(IEnumerable<AuthorizationError>)
+  nameWithType.vb: AuthorizationResult.Failure(IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.Utilities.AuthorizationResult.Failure*
+  name: Failure
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Failure_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Failure
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationResult.Failure
+  nameWithType: AuthorizationResult.Failure
+- uid: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  name: IsAuthorized
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_IsAuthorized
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  fullName: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  nameWithType: AuthorizationResult.IsAuthorized
+- uid: MediatorForge.Utilities.AuthorizationResult.IsAuthorized*
+  name: IsAuthorized
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_IsAuthorized_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationResult.IsAuthorized
+  nameWithType: AuthorizationResult.IsAuthorized
+- uid: MediatorForge.Utilities.AuthorizationResult.Success
+  name: Success
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Success
+  commentId: P:MediatorForge.Utilities.AuthorizationResult.Success
+  fullName: MediatorForge.Utilities.AuthorizationResult.Success
+  nameWithType: AuthorizationResult.Success
+- uid: MediatorForge.Utilities.AuthorizationResult.Success*
+  name: Success
+  href: api/MediatorForge.Utilities.AuthorizationResult.html#MediatorForge_Utilities_AuthorizationResult_Success_
+  commentId: Overload:MediatorForge.Utilities.AuthorizationResult.Success
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.AuthorizationResult.Success
+  nameWithType: AuthorizationResult.Success
+- uid: MediatorForge.Utilities.ValidationError
+  name: ValidationError
+  href: api/MediatorForge.Utilities.ValidationError.html
+  commentId: T:MediatorForge.Utilities.ValidationError
+  fullName: MediatorForge.Utilities.ValidationError
+  nameWithType: ValidationError
+- uid: MediatorForge.Utilities.ValidationError.#ctor(System.String,System.String,System.Object)
+  name: ValidationError(String, String, Object)
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError__ctor_System_String_System_String_System_Object_
+  commentId: M:MediatorForge.Utilities.ValidationError.#ctor(System.String,System.String,System.Object)
+  fullName: MediatorForge.Utilities.ValidationError.ValidationError(System.String, System.String, System.Object)
+  nameWithType: ValidationError.ValidationError(String, String, Object)
+- uid: MediatorForge.Utilities.ValidationError.#ctor*
+  name: ValidationError
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError__ctor_
+  commentId: Overload:MediatorForge.Utilities.ValidationError.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationError.ValidationError
+  nameWithType: ValidationError.ValidationError
+- uid: MediatorForge.Utilities.ValidationError.AttemptedValue
+  name: AttemptedValue
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_AttemptedValue
+  commentId: P:MediatorForge.Utilities.ValidationError.AttemptedValue
+  fullName: MediatorForge.Utilities.ValidationError.AttemptedValue
+  nameWithType: ValidationError.AttemptedValue
+- uid: MediatorForge.Utilities.ValidationError.AttemptedValue*
+  name: AttemptedValue
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_AttemptedValue_
+  commentId: Overload:MediatorForge.Utilities.ValidationError.AttemptedValue
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationError.AttemptedValue
+  nameWithType: ValidationError.AttemptedValue
+- uid: MediatorForge.Utilities.ValidationError.ErrorMessage
+  name: ErrorMessage
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_ErrorMessage
+  commentId: P:MediatorForge.Utilities.ValidationError.ErrorMessage
+  fullName: MediatorForge.Utilities.ValidationError.ErrorMessage
+  nameWithType: ValidationError.ErrorMessage
+- uid: MediatorForge.Utilities.ValidationError.ErrorMessage*
+  name: ErrorMessage
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_ErrorMessage_
+  commentId: Overload:MediatorForge.Utilities.ValidationError.ErrorMessage
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationError.ErrorMessage
+  nameWithType: ValidationError.ErrorMessage
+- uid: MediatorForge.Utilities.ValidationError.PropertyName
+  name: PropertyName
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_PropertyName
+  commentId: P:MediatorForge.Utilities.ValidationError.PropertyName
+  fullName: MediatorForge.Utilities.ValidationError.PropertyName
+  nameWithType: ValidationError.PropertyName
+- uid: MediatorForge.Utilities.ValidationError.PropertyName*
+  name: PropertyName
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_PropertyName_
+  commentId: Overload:MediatorForge.Utilities.ValidationError.PropertyName
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationError.PropertyName
+  nameWithType: ValidationError.PropertyName
+- uid: MediatorForge.Utilities.ValidationError.ToString
+  name: ToString()
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_ToString
+  commentId: M:MediatorForge.Utilities.ValidationError.ToString
+  fullName: MediatorForge.Utilities.ValidationError.ToString()
+  nameWithType: ValidationError.ToString()
+- uid: MediatorForge.Utilities.ValidationError.ToString*
+  name: ToString
+  href: api/MediatorForge.Utilities.ValidationError.html#MediatorForge_Utilities_ValidationError_ToString_
+  commentId: Overload:MediatorForge.Utilities.ValidationError.ToString
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationError.ToString
+  nameWithType: ValidationError.ToString
+- uid: MediatorForge.Utilities.ValidationResult
+  name: ValidationResult
+  href: api/MediatorForge.Utilities.ValidationResult.html
+  commentId: T:MediatorForge.Utilities.ValidationResult
+  fullName: MediatorForge.Utilities.ValidationResult
+  nameWithType: ValidationResult
+- uid: MediatorForge.Utilities.ValidationResult.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name: ValidationResult(IEnumerable<ValidationError>)
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult__ctor_IEnumerable_MediatorForge_Utilities_ValidationError__
+  commentId: M:MediatorForge.Utilities.ValidationResult.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name.vb: ValidationResult(IEnumerable(Of ValidationError))
+  fullName: MediatorForge.Utilities.ValidationResult.ValidationResult(IEnumerable<MediatorForge.Utilities.ValidationError>)
+  fullName.vb: MediatorForge.Utilities.ValidationResult.ValidationResult(IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  nameWithType: ValidationResult.ValidationResult(IEnumerable<ValidationError>)
+  nameWithType.vb: ValidationResult.ValidationResult(IEnumerable(Of ValidationError))
+- uid: MediatorForge.Utilities.ValidationResult.#ctor*
+  name: ValidationResult
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult__ctor_
+  commentId: Overload:MediatorForge.Utilities.ValidationResult.#ctor
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationResult.ValidationResult
+  nameWithType: ValidationResult.ValidationResult
+- uid: MediatorForge.Utilities.ValidationResult.Errors
+  name: Errors
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Errors
+  commentId: P:MediatorForge.Utilities.ValidationResult.Errors
+  fullName: MediatorForge.Utilities.ValidationResult.Errors
+  nameWithType: ValidationResult.Errors
+- uid: MediatorForge.Utilities.ValidationResult.Errors*
+  name: Errors
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Errors_
+  commentId: Overload:MediatorForge.Utilities.ValidationResult.Errors
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationResult.Errors
+  nameWithType: ValidationResult.Errors
+- uid: MediatorForge.Utilities.ValidationResult.Failure(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name: Failure(IEnumerable<ValidationError>)
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Failure_IEnumerable_MediatorForge_Utilities_ValidationError__
+  commentId: M:MediatorForge.Utilities.ValidationResult.Failure(IEnumerable{MediatorForge.Utilities.ValidationError})
+  name.vb: Failure(IEnumerable(Of ValidationError))
+  fullName: MediatorForge.Utilities.ValidationResult.Failure(IEnumerable<MediatorForge.Utilities.ValidationError>)
+  fullName.vb: MediatorForge.Utilities.ValidationResult.Failure(IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  nameWithType: ValidationResult.Failure(IEnumerable<ValidationError>)
+  nameWithType.vb: ValidationResult.Failure(IEnumerable(Of ValidationError))
+- uid: MediatorForge.Utilities.ValidationResult.Failure*
+  name: Failure
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Failure_
+  commentId: Overload:MediatorForge.Utilities.ValidationResult.Failure
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationResult.Failure
+  nameWithType: ValidationResult.Failure
+- uid: MediatorForge.Utilities.ValidationResult.IsValid
+  name: IsValid
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_IsValid
+  commentId: P:MediatorForge.Utilities.ValidationResult.IsValid
+  fullName: MediatorForge.Utilities.ValidationResult.IsValid
+  nameWithType: ValidationResult.IsValid
+- uid: MediatorForge.Utilities.ValidationResult.IsValid*
+  name: IsValid
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_IsValid_
+  commentId: Overload:MediatorForge.Utilities.ValidationResult.IsValid
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationResult.IsValid
+  nameWithType: ValidationResult.IsValid
+- uid: MediatorForge.Utilities.ValidationResult.Success
+  name: Success
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Success
+  commentId: P:MediatorForge.Utilities.ValidationResult.Success
+  fullName: MediatorForge.Utilities.ValidationResult.Success
+  nameWithType: ValidationResult.Success
+- uid: MediatorForge.Utilities.ValidationResult.Success*
+  name: Success
+  href: api/MediatorForge.Utilities.ValidationResult.html#MediatorForge_Utilities_ValidationResult_Success_
+  commentId: Overload:MediatorForge.Utilities.ValidationResult.Success
+  isSpec: "True"
+  fullName: MediatorForge.Utilities.ValidationResult.Success
+  nameWithType: ValidationResult.Success

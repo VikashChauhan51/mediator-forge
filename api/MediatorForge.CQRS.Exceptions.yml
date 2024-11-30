@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Exceptions
+  commentId: N:MediatorForge.CQRS.Exceptions
+  id: MediatorForge.CQRS.Exceptions
+  children:
+  - MediatorForge.CQRS.Exceptions.AuthorizationException
+  - MediatorForge.CQRS.Exceptions.ValidationException
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.CQRS.Exceptions
+  nameWithType: MediatorForge.CQRS.Exceptions
+  fullName: MediatorForge.CQRS.Exceptions
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException
+  commentId: T:MediatorForge.CQRS.Exceptions.AuthorizationException
+  name: AuthorizationException
+  nameWithType: AuthorizationException
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException
+- uid: MediatorForge.CQRS.Exceptions.ValidationException
+  commentId: T:MediatorForge.CQRS.Exceptions.ValidationException
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException

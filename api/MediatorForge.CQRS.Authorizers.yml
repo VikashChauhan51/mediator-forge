@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Authorizers
+  commentId: N:MediatorForge.CQRS.Authorizers
+  id: MediatorForge.CQRS.Authorizers
+  children:
+  - MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  - MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.CQRS.Authorizers
+  nameWithType: MediatorForge.CQRS.Authorizers
+  fullName: MediatorForge.CQRS.Authorizers
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  commentId: T:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  name: DefaultAuthorizer<TRequest>
+  nameWithType: DefaultAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>
+  nameWithType.vb: DefaultAuthorizer(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest)
+  name.vb: DefaultAuthorizer(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+    name: DefaultAuthorizer
+    nameWithType: DefaultAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+    name: DefaultAuthorizer
+    nameWithType: DefaultAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  commentId: T:MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  name: IAuthorizer<TRequest>
+  nameWithType: IAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>
+  nameWithType.vb: IAuthorizer(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest)
+  name.vb: IAuthorizer(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )

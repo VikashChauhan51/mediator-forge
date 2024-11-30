@@ -1,0 +1,108 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Results
+  commentId: N:MediatorForge.Results
+  id: MediatorForge.Results
+  children:
+  - MediatorForge.Results.Option
+  - MediatorForge.Results.Option`1
+  - MediatorForge.Results.Result`1
+  - MediatorForge.Results.ResultState
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.Results
+  nameWithType: MediatorForge.Results
+  fullName: MediatorForge.Results
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.Results.Option`1
+  commentId: T:MediatorForge.Results.Option`1
+  name: Option<T>
+  nameWithType: Option<T>
+  fullName: MediatorForge.Results.Option<T>
+  nameWithType.vb: Option(Of T)
+  fullName.vb: MediatorForge.Results.Option(Of T)
+  name.vb: Option(Of T)
+  spec.csharp:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Results.Option
+  commentId: T:MediatorForge.Results.Option
+  name: Option
+  nameWithType: Option
+  fullName: MediatorForge.Results.Option
+- uid: MediatorForge.Results.Result`1
+  commentId: T:MediatorForge.Results.Result`1
+  name: Result<T>
+  nameWithType: Result<T>
+  fullName: MediatorForge.Results.Result<T>
+  nameWithType.vb: Result(Of T)
+  fullName.vb: MediatorForge.Results.Result(Of T)
+  name.vb: Result(Of T)
+  spec.csharp:
+  - uid: MediatorForge.Results.Result`1
+    name: Result
+    nameWithType: Result
+    fullName: MediatorForge.Results.Result
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.Results.Result`1
+    name: Result
+    nameWithType: Result
+    fullName: MediatorForge.Results.Result
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Results.ResultState
+  commentId: T:MediatorForge.Results.ResultState
+  parent: MediatorForge.Results
+  name: ResultState
+  nameWithType: ResultState
+  fullName: MediatorForge.Results.ResultState
+- uid: MediatorForge.Results
+  commentId: N:MediatorForge.Results
+  name: MediatorForge.Results
+  nameWithType: MediatorForge.Results
+  fullName: MediatorForge.Results

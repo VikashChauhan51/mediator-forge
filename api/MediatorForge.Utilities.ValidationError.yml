@@ -1,0 +1,648 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Utilities.ValidationError
+  commentId: T:MediatorForge.Utilities.ValidationError
+  id: ValidationError
+  parent: MediatorForge.Utilities
+  children:
+  - MediatorForge.Utilities.ValidationError.#ctor(System.String,System.String,System.Object)
+  - MediatorForge.Utilities.ValidationError.AttemptedValue
+  - MediatorForge.Utilities.ValidationError.ErrorMessage
+  - MediatorForge.Utilities.ValidationError.PropertyName
+  - MediatorForge.Utilities.ValidationError.ToString
+  langs:
+  - csharp
+  - vb
+  name: ValidationError
+  nameWithType: ValidationError
+  fullName: MediatorForge.Utilities.ValidationError
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ValidationError
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 5
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nRepresents a validation error with a property name, error message, and attempted value.\n"
+  example: []
+  syntax:
+    content: 'public class ValidationError : IEquatable<ValidationError>'
+    content.vb: >-
+      Public Class ValidationError
+
+          Implements IEquatable(Of ValidationError)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{MediatorForge.Utilities.ValidationError}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MediatorForge.Utilities.ValidationError.#ctor(System.String,System.String,System.Object)
+  commentId: M:MediatorForge.Utilities.ValidationError.#ctor(System.String,System.String,System.Object)
+  id: '#ctor(System.String,System.String,System.Object)'
+  parent: MediatorForge.Utilities.ValidationError
+  langs:
+  - csharp
+  - vb
+  name: ValidationError(String, String, Object)
+  nameWithType: ValidationError.ValidationError(String, String, Object)
+  fullName: MediatorForge.Utilities.ValidationError.ValidationError(System.String, System.String, System.Object)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 5
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nRepresents a validation error with a property name, error message, and attempted value.\n"
+  example: []
+  syntax:
+    content: public ValidationError(string PropertyName, string ErrorMessage, object AttemptedValue = null)
+    parameters:
+    - id: PropertyName
+      type: System.String
+    - id: ErrorMessage
+      type: System.String
+    - id: AttemptedValue
+      type: System.Object
+    content.vb: Public Sub New(PropertyName As String, ErrorMessage As String, AttemptedValue As Object = Nothing)
+  overload: MediatorForge.Utilities.ValidationError.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: MediatorForge.Utilities.ValidationError.PropertyName
+  commentId: P:MediatorForge.Utilities.ValidationError.PropertyName
+  id: PropertyName
+  parent: MediatorForge.Utilities.ValidationError
+  langs:
+  - csharp
+  - vb
+  name: PropertyName
+  nameWithType: ValidationError.PropertyName
+  fullName: MediatorForge.Utilities.ValidationError.PropertyName
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: PropertyName
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 5
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  syntax:
+    content: public string PropertyName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PropertyName As String
+  overload: MediatorForge.Utilities.ValidationError.PropertyName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MediatorForge.Utilities.ValidationError.ErrorMessage
+  commentId: P:MediatorForge.Utilities.ValidationError.ErrorMessage
+  id: ErrorMessage
+  parent: MediatorForge.Utilities.ValidationError
+  langs:
+  - csharp
+  - vb
+  name: ErrorMessage
+  nameWithType: ValidationError.ErrorMessage
+  fullName: MediatorForge.Utilities.ValidationError.ErrorMessage
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ErrorMessage
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 5
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  syntax:
+    content: public string ErrorMessage { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ErrorMessage As String
+  overload: MediatorForge.Utilities.ValidationError.ErrorMessage*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MediatorForge.Utilities.ValidationError.AttemptedValue
+  commentId: P:MediatorForge.Utilities.ValidationError.AttemptedValue
+  id: AttemptedValue
+  parent: MediatorForge.Utilities.ValidationError
+  langs:
+  - csharp
+  - vb
+  name: AttemptedValue
+  nameWithType: ValidationError.AttemptedValue
+  fullName: MediatorForge.Utilities.ValidationError.AttemptedValue
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: AttemptedValue
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 5
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  syntax:
+    content: public object AttemptedValue { get; set; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public Property AttemptedValue As Object
+  overload: MediatorForge.Utilities.ValidationError.AttemptedValue*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: MediatorForge.Utilities.ValidationError.ToString
+  commentId: M:MediatorForge.Utilities.ValidationError.ToString
+  id: ToString
+  parent: MediatorForge.Utilities.ValidationError
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ValidationError.ToString()
+  fullName: MediatorForge.Utilities.ValidationError.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Utilities/ValidationError.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ToString
+    path: src/MediatorForge/Utilities/ValidationError.cs
+    startLine: 11
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Utilities
+  summary: "\nReturns a string that represents the current object.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: MediatorForge.Utilities.ValidationError.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MediatorForge.Utilities
+  commentId: N:MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+  fullName: MediatorForge.Utilities
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IEquatable{MediatorForge.Utilities.ValidationError}
+  commentId: T:System.IEquatable{MediatorForge.Utilities.ValidationError}
+  parent: System
+  definition: System.IEquatable`1
+  name: IEquatable<ValidationError>
+  nameWithType: IEquatable<ValidationError>
+  fullName: System.IEquatable<MediatorForge.Utilities.ValidationError>
+  nameWithType.vb: IEquatable(Of ValidationError)
+  fullName.vb: System.IEquatable(Of MediatorForge.Utilities.ValidationError)
+  name.vb: IEquatable(Of ValidationError)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.ValidationError
+    name: ValidationError
+    nameWithType: ValidationError
+    fullName: MediatorForge.Utilities.ValidationError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.ValidationError
+    name: ValidationError
+    nameWithType: ValidationError
+    fullName: MediatorForge.Utilities.ValidationError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: System.IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Utilities.ValidationError.#ctor*
+  commentId: Overload:MediatorForge.Utilities.ValidationError.#ctor
+  name: ValidationError
+  nameWithType: ValidationError.ValidationError
+  fullName: MediatorForge.Utilities.ValidationError.ValidationError
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MediatorForge.Utilities.ValidationError.PropertyName*
+  commentId: Overload:MediatorForge.Utilities.ValidationError.PropertyName
+  name: PropertyName
+  nameWithType: ValidationError.PropertyName
+  fullName: MediatorForge.Utilities.ValidationError.PropertyName
+- uid: MediatorForge.Utilities.ValidationError.ErrorMessage*
+  commentId: Overload:MediatorForge.Utilities.ValidationError.ErrorMessage
+  name: ErrorMessage
+  nameWithType: ValidationError.ErrorMessage
+  fullName: MediatorForge.Utilities.ValidationError.ErrorMessage
+- uid: MediatorForge.Utilities.ValidationError.AttemptedValue*
+  commentId: Overload:MediatorForge.Utilities.ValidationError.AttemptedValue
+  name: AttemptedValue
+  nameWithType: ValidationError.AttemptedValue
+  fullName: MediatorForge.Utilities.ValidationError.AttemptedValue
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Utilities.ValidationError.ToString*
+  commentId: Overload:MediatorForge.Utilities.ValidationError.ToString
+  name: ToString
+  nameWithType: ValidationError.ToString
+  fullName: MediatorForge.Utilities.ValidationError.ToString

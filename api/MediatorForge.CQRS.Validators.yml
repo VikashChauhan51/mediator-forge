@@ -1,0 +1,90 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Validators
+  commentId: N:MediatorForge.CQRS.Validators
+  id: MediatorForge.CQRS.Validators
+  children:
+  - MediatorForge.CQRS.Validators.DefaultValidator`1
+  - MediatorForge.CQRS.Validators.IValidator`1
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.CQRS.Validators
+  nameWithType: MediatorForge.CQRS.Validators
+  fullName: MediatorForge.CQRS.Validators
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+  commentId: T:MediatorForge.CQRS.Validators.DefaultValidator`1
+  name: DefaultValidator<TRequest>
+  nameWithType: DefaultValidator<TRequest>
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>
+  nameWithType.vb: DefaultValidator(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest)
+  name.vb: DefaultValidator(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+    name: DefaultValidator
+    nameWithType: DefaultValidator
+    fullName: MediatorForge.CQRS.Validators.DefaultValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+    name: DefaultValidator
+    nameWithType: DefaultValidator
+    fullName: MediatorForge.CQRS.Validators.DefaultValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Validators.IValidator`1
+  commentId: T:MediatorForge.CQRS.Validators.IValidator`1
+  name: IValidator<TRequest>
+  nameWithType: IValidator<TRequest>
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>
+  nameWithType.vb: IValidator(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest)
+  name.vb: IValidator(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )

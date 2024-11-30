@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Exceptions.ValidationException
+  commentId: T:MediatorForge.CQRS.Exceptions.ValidationException
+  id: ValidationException
+  parent: MediatorForge.CQRS.Exceptions
+  children:
+  - MediatorForge.CQRS.Exceptions.ValidationException.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  - MediatorForge.CQRS.Exceptions.ValidationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})
+  - MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  - MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  langs:
+  - csharp
+  - vb
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ValidationException
+    path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+    startLine: 7
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nRepresents an exception that is thrown when a validation check fails.\n"
+  example: []
+  syntax:
+    content: 'public class ValidationException : Exception'
+    content.vb: >-
+      Public Class ValidationException
+
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  commentId: P:MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  id: Errors
+  parent: MediatorForge.CQRS.Exceptions.ValidationException
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: ValidationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Errors
+    path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+    startLine: 12
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nGets the collection of validation errors.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<ValidationError> Errors { get; }
+    parameters: []
+    return:
+      type: IEnumerable{MediatorForge.Utilities.ValidationError}
+    content.vb: Public ReadOnly Property Errors As IEnumerable(Of ValidationError)
+  overload: MediatorForge.CQRS.Exceptions.ValidationException.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})
+  id: '#ctor(IEnumerable{MediatorForge.Utilities.ValidationError})'
+  parent: MediatorForge.CQRS.Exceptions.ValidationException
+  langs:
+  - csharp
+  - vb
+  name: ValidationException(IEnumerable<ValidationError>)
+  nameWithType: ValidationException.ValidationException(IEnumerable<ValidationError>)
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(IEnumerable<MediatorForge.Utilities.ValidationError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+    startLine: 18
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"MediatorForge.CQRS.Exceptions.ValidationException\" data-throw-if-not-resolved=\"false\"></xref> class with a specified collection of validation errors.\n"
+  example: []
+  syntax:
+    content: public ValidationException(IEnumerable<ValidationError> errors)
+    parameters:
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.ValidationError}
+      description: The collection of validation errors.
+    content.vb: Public Sub New(errors As IEnumerable(Of ValidationError))
+  overload: MediatorForge.CQRS.Exceptions.ValidationException.#ctor*
+  nameWithType.vb: ValidationException.ValidationException(IEnumerable(Of ValidationError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  name.vb: ValidationException(IEnumerable(Of ValidationError))
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})
+  id: '#ctor(System.String,IEnumerable{MediatorForge.Utilities.ValidationError})'
+  parent: MediatorForge.CQRS.Exceptions.ValidationException
+  langs:
+  - csharp
+  - vb
+  name: ValidationException(String, IEnumerable<ValidationError>)
+  nameWithType: ValidationException.ValidationException(String, IEnumerable<ValidationError>)
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(System.String, IEnumerable<MediatorForge.Utilities.ValidationError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+    startLine: 30
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"MediatorForge.CQRS.Exceptions.ValidationException\" data-throw-if-not-resolved=\"false\"></xref> class with a specified error message\nand a collection of validation errors.\n"
+  example: []
+  syntax:
+    content: public ValidationException(string message, IEnumerable<ValidationError> errors)
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.ValidationError}
+      description: The collection of validation errors.
+    content.vb: Public Sub New(message As String, errors As IEnumerable(Of ValidationError))
+  overload: MediatorForge.CQRS.Exceptions.ValidationException.#ctor*
+  nameWithType.vb: ValidationException.ValidationException(String, IEnumerable(Of ValidationError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException(System.String, IEnumerable(Of MediatorForge.Utilities.ValidationError))
+  name.vb: ValidationException(String, IEnumerable(Of ValidationError))
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  commentId: M:MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  id: ToString
+  parent: MediatorForge.CQRS.Exceptions.ValidationException
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ValidationException.ToString()
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ToString
+    path: src/MediatorForge/CQRS/Exceptions/ValidationException.cs
+    startLine: 40
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nReturns a string that represents the current object.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString As String
+  overload: MediatorForge.CQRS.Exceptions.ValidationException.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MediatorForge.CQRS.Exceptions
+  commentId: N:MediatorForge.CQRS.Exceptions
+  name: MediatorForge.CQRS.Exceptions
+  nameWithType: MediatorForge.CQRS.Exceptions
+  fullName: MediatorForge.CQRS.Exceptions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.Errors*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.Errors
+  name: Errors
+  nameWithType: ValidationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.Errors
+- uid: IEnumerable{MediatorForge.Utilities.ValidationError}
+  commentId: '!:IEnumerable{MediatorForge.Utilities.ValidationError}'
+  definition: IEnumerable`1
+  name: IEnumerable<ValidationError>
+  nameWithType: IEnumerable<ValidationError>
+  fullName: IEnumerable<MediatorForge.Utilities.ValidationError>
+  nameWithType.vb: IEnumerable(Of ValidationError)
+  fullName.vb: IEnumerable(Of MediatorForge.Utilities.ValidationError)
+  name.vb: IEnumerable(Of ValidationError)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.ValidationError
+    name: ValidationError
+    nameWithType: ValidationError
+    fullName: MediatorForge.Utilities.ValidationError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.ValidationError
+    name: ValidationError
+    nameWithType: ValidationError
+    fullName: MediatorForge.Utilities.ValidationError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Exceptions.ValidationException
+  commentId: T:MediatorForge.CQRS.Exceptions.ValidationException
+  name: ValidationException
+  nameWithType: ValidationException
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.#ctor*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.#ctor
+  name: ValidationException
+  nameWithType: ValidationException.ValidationException
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ValidationException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MediatorForge.CQRS.Exceptions.ValidationException.ToString*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.ValidationException.ToString
+  name: ToString
+  nameWithType: ValidationException.ToString
+  fullName: MediatorForge.CQRS.Exceptions.ValidationException.ToString

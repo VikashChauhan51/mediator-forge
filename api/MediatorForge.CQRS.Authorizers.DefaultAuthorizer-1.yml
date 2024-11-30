@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  commentId: T:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  id: DefaultAuthorizer`1
+  parent: MediatorForge.CQRS.Authorizers
+  children:
+  - MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DefaultAuthorizer<TRequest>
+  nameWithType: DefaultAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Authorizers/DefaultAuthorizer.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: DefaultAuthorizer
+    path: src/MediatorForge/CQRS/Authorizers/DefaultAuthorizer.cs
+    startLine: 8
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Authorizers
+  summary: "\nThe default authorize implementation.\n"
+  example: []
+  syntax:
+    content: 'public class DefaultAuthorizer<TRequest> : IAuthorizer<TRequest>'
+    typeParameters:
+    - id: TRequest
+      description: ''
+    content.vb: >-
+      Public Class DefaultAuthorizer(Of TRequest)
+
+          Implements IAuthorizer(Of TRequest)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatorForge.CQRS.Authorizers.IAuthorizer{{TRequest}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: DefaultAuthorizer(Of TRequest)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest)
+  name.vb: DefaultAuthorizer(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  commentId: M:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  id: AuthorizeAsync(`0,CancellationToken)
+  parent: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+  langs:
+  - csharp
+  - vb
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: DefaultAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Authorizers/DefaultAuthorizer.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: AuthorizeAsync
+    path: src/MediatorForge/CQRS/Authorizers/DefaultAuthorizer.cs
+    startLine: 10
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Authorizers
+  syntax:
+    content: public Task<AuthorizationResult> AuthorizeAsync(TRequest request, CancellationToken cancellationToken = null)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: Task{MediatorForge.Utilities.AuthorizationResult}
+    content.vb: Public Function AuthorizeAsync(request As TRequest, cancellationToken As CancellationToken = Nothing) As Task(Of AuthorizationResult)
+  overload: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync*
+  implements:
+  - MediatorForge.CQRS.Authorizers.IAuthorizer{{TRequest}}.AuthorizeAsync({TRequest},CancellationToken)
+  nameWithType.vb: DefaultAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+references:
+- uid: MediatorForge.CQRS.Authorizers
+  commentId: N:MediatorForge.CQRS.Authorizers
+  name: MediatorForge.CQRS.Authorizers
+  nameWithType: MediatorForge.CQRS.Authorizers
+  fullName: MediatorForge.CQRS.Authorizers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer{{TRequest}}
+  commentId: T:MediatorForge.CQRS.Authorizers.IAuthorizer{`0}
+  parent: MediatorForge.CQRS.Authorizers
+  definition: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  name: IAuthorizer<TRequest>
+  nameWithType: IAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>
+  nameWithType.vb: IAuthorizer(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest)
+  name.vb: IAuthorizer(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  commentId: T:MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  name: IAuthorizer<TRequest>
+  nameWithType: IAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>
+  nameWithType.vb: IAuthorizer(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest)
+  name.vb: IAuthorizer(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer
+    nameWithType: IAuthorizer
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync*
+  commentId: Overload:MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1.AuthorizeAsync
+  name: AuthorizeAsync
+  nameWithType: DefaultAuthorizer<TRequest>.AuthorizeAsync
+  fullName: MediatorForge.CQRS.Authorizers.DefaultAuthorizer<TRequest>.AuthorizeAsync
+  nameWithType.vb: DefaultAuthorizer(Of TRequest).AuthorizeAsync
+  fullName.vb: MediatorForge.CQRS.Authorizers.DefaultAuthorizer(Of TRequest).AuthorizeAsync
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer{{TRequest}}.AuthorizeAsync({TRequest},CancellationToken)
+  commentId: M:MediatorForge.CQRS.Authorizers.IAuthorizer{`0}.AuthorizeAsync(`0,CancellationToken)
+  parent: MediatorForge.CQRS.Authorizers.IAuthorizer{{TRequest}}
+  definition: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+    name: AuthorizeAsync
+    nameWithType: IAuthorizer<TRequest>.AuthorizeAsync
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+    name: AuthorizeAsync
+    nameWithType: IAuthorizer(Of TRequest).AuthorizeAsync
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{MediatorForge.Utilities.AuthorizationResult}
+  commentId: '!:Task{MediatorForge.Utilities.AuthorizationResult}'
+  definition: Task`1
+  name: Task<AuthorizationResult>
+  nameWithType: Task<AuthorizationResult>
+  fullName: Task<MediatorForge.Utilities.AuthorizationResult>
+  nameWithType.vb: Task(Of AuthorizationResult)
+  fullName.vb: Task(Of MediatorForge.Utilities.AuthorizationResult)
+  name.vb: Task(Of AuthorizationResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.AuthorizationResult
+    name: AuthorizationResult
+    nameWithType: AuthorizationResult
+    fullName: MediatorForge.Utilities.AuthorizationResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.AuthorizationResult
+    name: AuthorizationResult
+    nameWithType: AuthorizationResult
+    fullName: MediatorForge.Utilities.AuthorizationResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  commentId: M:MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  isExternal: true
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+    name: AuthorizeAsync
+    nameWithType: IAuthorizer<TRequest>.AuthorizeAsync
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+    name: AuthorizeAsync
+    nameWithType: IAuthorizer(Of TRequest).AuthorizeAsync
+    fullName: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,46 +1,483 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/vik/Documents/GitHub/mediator-forge/docfx_project",
+  "source_base_path": "C:/Users/vik/Documents/GitHub/mediator-forge",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Toc",
-      "source_relative_path": "api/toc.yml",
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
       "output": {
         ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "/eRskZlMuET/Vr4U91gLH2365kE9jfmX7m3sT0vqlRo="
+          "relative_path": "README.html",
+          "hash": "agKQbsT17x/0jPNeyWe56HJ1JO71vy603hahNFkfWQ8="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Adapters.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Adapters.DependencyInjection.html",
+          "hash": "JfpozfkRWEBRnIdbDhcKwN8CvvFSoUMuQKCbGZTYxsg="
         }
       },
       "is_incremental": false,
       "version": ""
     },
     {
-      "type": "Conceptual",
-      "source_relative_path": "index.md",
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Adapters.FluentValidatorAdapter-1.yml",
       "output": {
         ".html": {
-          "relative_path": "index.html",
-          "hash": "UpgWgs6i1jxMjhcbWEFSW4YnwVB0WxKga9Bg84K9QTg="
+          "relative_path": "api/MediatorForge.Adapters.FluentValidatorAdapter-1.html",
+          "hash": "cDo+9CQMFDwC6x+uKHo3ROm3u3nae1LvGdfJGQcD24Y="
         }
       },
       "is_incremental": false,
-      "version": "",
-      "rawTitle": "<h1 id=\"this-is-the-homepage\" sourcefile=\"index.md\" sourcestartlinenumber=\"1\" sourceendlinenumber=\"1\">This is the <strong>HOMEPAGE</strong>.</h1>"
+      "version": ""
     },
     {
-      "log_codes": [
-        "InvalidFileLink"
-      ],
-      "type": "Toc",
-      "source_relative_path": "toc.yml",
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Adapters.yml",
       "output": {
         ".html": {
-          "relative_path": "toc.html",
-          "hash": "Z7E+A4C89NhrZSNZ3D1DEHX3ZrIOFpA1hFW2KO8UObc="
+          "relative_path": "api/MediatorForge.Adapters.html",
+          "hash": "vr64Aeg0p9IGJEusmJTMKDXWH4P/r94QSHE3SvRROa4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Authorizers.DefaultAuthorizer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Authorizers.DefaultAuthorizer-1.html",
+          "hash": "uKDFbEqlmsJjSRrjTxglkUdYuBKjxIh8Q+DcFLxZEMY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Authorizers.IAuthorizer-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Authorizers.IAuthorizer-1.html",
+          "hash": "iXK6EzLJzKlCuq2NlsZCvF//IM3UoZEfBmXS5a/eUIQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Authorizers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Authorizers.html",
+          "hash": "BhPB/P+4hNKo2q03KJiYrNMH58HElVKFKbRSldf7k2I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Behaviors.AuthorizationBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Behaviors.AuthorizationBehavior-2.html",
+          "hash": "Qp9dxBG/uQxJVn13qVD0/9LDj3BM+Jk2ehRe3xsxa14="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Behaviors.LoggingBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Behaviors.LoggingBehavior-2.html",
+          "hash": "icfTJ1u79djet2ZTKEsu/A5FgzRZ10t14iR3n1gtitk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Behaviors.ValidationBehavior-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Behaviors.ValidationBehavior-2.html",
+          "hash": "d1OGh/M26KqNxv+G+Fektrt/qeLYUSNH8pZzI+p58+8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Behaviors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Behaviors.html",
+          "hash": "Gcl2gxuATkqk3mh4eFXeGIZV6AvX1+zWe8TmK6cLWEo="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Commands.ICommand-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Commands.ICommand-1.html",
+          "hash": "FsXU1ZFgqFO5AMwulA49sDXlR8cgT8FZinDcYrupL+I="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Commands.ICommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Commands.ICommand.html",
+          "hash": "NYQCzRuzMjoMKfv3p2Ar2L9rgaIBUP4+V0tEh7Zm0VA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Commands.ICommandHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Commands.ICommandHandler-1.html",
+          "hash": "2nDGEYy6E16veK3hgvuUm9ZpJrCwxfW0Xgk+dnZr2eQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Commands.ICommandHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Commands.ICommandHandler-2.html",
+          "hash": "jnUrjbhmeiMi7ZzOrNIX6daPIyMn2rJCub8U1acqAFs="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Commands.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Commands.html",
+          "hash": "23RfsvaYNVkvjfCJG2FgmRPpc5pwO3pFHqbQeJq/7ko="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Exceptions.AuthorizationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Exceptions.AuthorizationException.html",
+          "hash": "4bvN4E16RcSxUBr4U/3F2UvHbMjA0075DTkpt7tbt8M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Exceptions.ValidationException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Exceptions.ValidationException.html",
+          "hash": "oT5PKkLwgZaK4kWACSAogF9DaohH9MUpgqvgIvvXgeg="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Exceptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Exceptions.html",
+          "hash": "IP3NlRjTPlpQoyO2fX5xtSpdtUx+x5rEurK4VzznbJc="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Notifications.EventNotification-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Notifications.EventNotification-1.html",
+          "hash": "p7QL4gAfkBjjcC1Ks8zEepGSf3Q7gOiK21xazcH6rRA="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Notifications.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Notifications.html",
+          "hash": "Get+L5SbRHjMT8pqI8BK7qGE/WsFKTx8a13KK9dRFY4="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Queries.IQuery-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Queries.IQuery-1.html",
+          "hash": "uunqonbEeJEj1QLqxKJSL/J2oEMn9tbmWWrPqiZFEO0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Queries.IQueryHandler-2.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Queries.IQueryHandler-2.html",
+          "hash": "3nbERghlQvpWBFoO24zpKjHVgO48H/mfVAXGDCYz/KQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Queries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Queries.html",
+          "hash": "0VeJ1Q3QbuYXdvxZXQbLBkh8Lb/r/9bXf0KU4UJ6dCI="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Validators.DefaultValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Validators.DefaultValidator-1.html",
+          "hash": "rWMNAplKpndYW+Rhtz5uj0kYcRt0AxJajt81SX3n55A="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Validators.IValidator-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Validators.IValidator-1.html",
+          "hash": "oTMrvBgU+9xa123hxdLVBcyWiIxEa1xRJTkrg6TZUtQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.CQRS.Validators.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.CQRS.Validators.html",
+          "hash": "+bTjcTrgAPLRhwSgWcD6Ru2tskEPkmM2xvX/iQt31JE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.DependencyInjection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.DependencyInjection.html",
+          "hash": "aqg5htsC9AsiF7bS24nKt/kBvLx1SVTI3iTNB/G7xUE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Results.Option-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Results.Option-1.html",
+          "hash": "dNVIOMj31D0U+4qFyqXazEw24ezdbtYJopiYX4zuDEQ="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Results.Option.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Results.Option.html",
+          "hash": "hKbODT1DOnc1Iq6lTuV8lDTQblR6OKTx76pcEFrCs/M="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Results.Result-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Results.Result-1.html",
+          "hash": "zdK10DTJPcC6qayqg5utc+NgzWP2lXKSX0P+GBwTEq0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Results.ResultState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Results.ResultState.html",
+          "hash": "7pyqwpsqJE6ML62VdW9dPRQM/qH3TKvzYr9TzaG0LxU="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Results.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Results.html",
+          "hash": "U1LvzfPnV8CKR4NukcMsDaS6ZRQWe7AeTWsRnBodSqE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Utilities.AuthorizationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Utilities.AuthorizationError.html",
+          "hash": "Ad4QEqpUYVefNTfNKsJTGASsXgRp77ff3CfcelFzjaY="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Utilities.AuthorizationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Utilities.AuthorizationResult.html",
+          "hash": "0FVQdBymxzqYhduWxhA6aU3JtRly7Wn90dEQDZ1phuk="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Utilities.ValidationError.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Utilities.ValidationError.html",
+          "hash": "brgSU4+jAIj/4Hj4ZNrO009iudu+3BDsfzanFPi2Drw="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Utilities.ValidationResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Utilities.ValidationResult.html",
+          "hash": "c6dse6hXlGoCIbams/B7y/zk4F11OgKrxjIbOI0Eu2s="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.Utilities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.Utilities.html",
+          "hash": "6E/JC8bdSvBXIgwBKY3xxLMLCLhRmt+5nCajkQLt3H0="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/MediatorForge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/MediatorForge.html",
+          "hash": "o8c6jVvgZBYeH/RtqVQwkohFvLtA0hFYPHjPwT28mZE="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "/iK6VjzXP4IcI/Ibpus5Hoe3E9aQhBW1CIzYo6xi9kw="
         }
       },
       "is_incremental": false,
@@ -50,18 +487,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 1,
+          "skipped_file_count": 1
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
+          "incrementalPhase": "build",
+          "total_file_count": 38,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
@@ -75,8 +517,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge
+  commentId: N:MediatorForge
+  id: MediatorForge
+  children:
+  - MediatorForge.DependencyInjection
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge
+  nameWithType: MediatorForge
+  fullName: MediatorForge
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.DependencyInjection
+  commentId: T:MediatorForge.DependencyInjection
+  name: DependencyInjection
+  nameWithType: DependencyInjection
+  fullName: MediatorForge.DependencyInjection

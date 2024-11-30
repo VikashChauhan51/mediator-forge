@@ -1,0 +1,275 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Commands.ICommandHandler`1
+  commentId: T:MediatorForge.CQRS.Commands.ICommandHandler`1
+  id: ICommandHandler`1
+  parent: MediatorForge.CQRS.Commands
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ICommandHandler<TCommand>
+  nameWithType: ICommandHandler<TCommand>
+  fullName: MediatorForge.CQRS.Commands.ICommandHandler<TCommand>
+  type: Interface
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Commands/ICommandHandler.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ICommandHandler
+    path: src/MediatorForge/CQRS/Commands/ICommandHandler.cs
+    startLine: 8
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Commands
+  summary: "\nHandle ICommand Request.\n"
+  example: []
+  syntax:
+    content: 'public interface ICommandHandler<in TCommand> : ICommandHandler<TCommand, Unit>, IRequestHandler<TCommand, Unit> where TCommand : ICommand<Unit>'
+    typeParameters:
+    - id: TCommand
+      description: ''
+    content.vb: >-
+      Public Interface ICommandHandler(Of In TCommand As ICommand(Of Unit))
+
+          Inherits ICommandHandler(Of TCommand, Unit)
+  inheritedMembers:
+  - MediatR.IRequestHandler{{TCommand},MediatR.Unit}.Handle({TCommand},System.Threading.CancellationToken)
+  nameWithType.vb: ICommandHandler(Of TCommand)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: MediatorForge.CQRS.Commands.ICommandHandler(Of TCommand)
+  name.vb: ICommandHandler(Of TCommand)
+references:
+- uid: MediatorForge.CQRS.Commands
+  commentId: N:MediatorForge.CQRS.Commands
+  name: MediatorForge.CQRS.Commands
+  nameWithType: MediatorForge.CQRS.Commands
+  fullName: MediatorForge.CQRS.Commands
+- uid: MediatR.IRequestHandler{{TCommand},MediatR.Unit}.Handle({TCommand},System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{`0,MediatR.Unit}.Handle(`0,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{{TCommand},MediatR.Unit}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  name: Handle(TCommand, CancellationToken)
+  nameWithType: IRequestHandler<TCommand, Unit>.Handle(TCommand, CancellationToken)
+  fullName: MediatR.IRequestHandler<TCommand, MediatR.Unit>.Handle(TCommand, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TCommand, Unit).Handle(TCommand, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TCommand, MediatR.Unit).Handle(TCommand, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler<TCommand, Unit>.Handle
+    fullName: MediatR.IRequestHandler<TCommand, MediatR.Unit>.Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TCommand
+    nameWithType: TCommand
+    fullName: TCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler(Of TCommand, Unit).Handle
+    fullName: MediatR.IRequestHandler(Of TCommand, MediatR.Unit).Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TCommand
+    nameWithType: TCommand
+    fullName: TCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler<TRequest, TResponse>.Handle
+    fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler(Of TRequest, TResponse).Handle
+    fullName: MediatR.IRequestHandler(Of TRequest, TResponse).Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler{{TCommand},MediatR.Unit}
+  commentId: T:MediatR.IRequestHandler{`0,MediatR.Unit}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  name: IRequestHandler<TCommand, Unit>
+  nameWithType: IRequestHandler<TCommand, Unit>
+  fullName: MediatR.IRequestHandler<TCommand, MediatR.Unit>
+  nameWithType.vb: IRequestHandler(Of TCommand, Unit)
+  fullName.vb: MediatR.IRequestHandler(Of TCommand, MediatR.Unit)
+  name.vb: IRequestHandler(Of TCommand, Unit)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TCommand
+    nameWithType: TCommand
+    fullName: TCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MediatR.Unit
+    name: Unit
+    nameWithType: Unit
+    fullName: MediatR.Unit
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TCommand
+    nameWithType: TCommand
+    fullName: TCommand
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: MediatR.Unit
+    name: Unit
+    nameWithType: Unit
+    fullName: MediatR.Unit
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR

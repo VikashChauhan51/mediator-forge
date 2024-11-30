@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Utilities
+  commentId: N:MediatorForge.Utilities
+  id: MediatorForge.Utilities
+  children:
+  - MediatorForge.Utilities.AuthorizationError
+  - MediatorForge.Utilities.AuthorizationResult
+  - MediatorForge.Utilities.ValidationError
+  - MediatorForge.Utilities.ValidationResult
+  langs:
+  - csharp
+  - vb
+  name: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+  fullName: MediatorForge.Utilities
+  type: Namespace
+  assemblies:
+  - MediatorForge
+references:
+- uid: MediatorForge.Utilities.AuthorizationError
+  commentId: T:MediatorForge.Utilities.AuthorizationError
+  name: AuthorizationError
+  nameWithType: AuthorizationError
+  fullName: MediatorForge.Utilities.AuthorizationError
+- uid: MediatorForge.Utilities.AuthorizationResult
+  commentId: T:MediatorForge.Utilities.AuthorizationResult
+  parent: MediatorForge.Utilities
+  name: AuthorizationResult
+  nameWithType: AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult
+- uid: MediatorForge.Utilities.ValidationError
+  commentId: T:MediatorForge.Utilities.ValidationError
+  name: ValidationError
+  nameWithType: ValidationError
+  fullName: MediatorForge.Utilities.ValidationError
+- uid: MediatorForge.Utilities.ValidationResult
+  commentId: T:MediatorForge.Utilities.ValidationResult
+  parent: MediatorForge.Utilities
+  name: ValidationResult
+  nameWithType: ValidationResult
+  fullName: MediatorForge.Utilities.ValidationResult
+- uid: MediatorForge.Utilities
+  commentId: N:MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+  fullName: MediatorForge.Utilities

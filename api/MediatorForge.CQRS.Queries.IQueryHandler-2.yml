@@ -1,0 +1,273 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Queries.IQueryHandler`2
+  commentId: T:MediatorForge.CQRS.Queries.IQueryHandler`2
+  id: IQueryHandler`2
+  parent: MediatorForge.CQRS.Queries
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IQueryHandler<TQuery, TResponse>
+  nameWithType: IQueryHandler<TQuery, TResponse>
+  fullName: MediatorForge.CQRS.Queries.IQueryHandler<TQuery, TResponse>
+  type: Interface
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Queries/IQueryHandler.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IQueryHandler
+    path: src/MediatorForge/CQRS/Queries/IQueryHandler.cs
+    startLine: 9
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Queries
+  summary: "\nHandle IQuery.\n"
+  example: []
+  syntax:
+    content: 'public interface IQueryHandler<in TQuery, TResponse> : IRequestHandler<TQuery, TResponse> where TQuery : IQuery<TResponse>'
+    typeParameters:
+    - id: TQuery
+      description: ''
+    - id: TResponse
+      description: ''
+    content.vb: >-
+      Public Interface IQueryHandler(Of In TQuery As IQuery(Of TResponse), TResponse)
+
+          Inherits IRequestHandler(Of TQuery, TResponse)
+  inheritedMembers:
+  - MediatR.IRequestHandler{{TQuery},{TResponse}}.Handle({TQuery},System.Threading.CancellationToken)
+  nameWithType.vb: IQueryHandler(Of TQuery, TResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: MediatorForge.CQRS.Queries.IQueryHandler(Of TQuery, TResponse)
+  name.vb: IQueryHandler(Of TQuery, TResponse)
+references:
+- uid: MediatorForge.CQRS.Queries
+  commentId: N:MediatorForge.CQRS.Queries
+  name: MediatorForge.CQRS.Queries
+  nameWithType: MediatorForge.CQRS.Queries
+  fullName: MediatorForge.CQRS.Queries
+- uid: MediatR.IRequestHandler{{TQuery},{TResponse}}.Handle({TQuery},System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler{`0,`1}.Handle(`0,System.Threading.CancellationToken)
+  parent: MediatR.IRequestHandler{{TQuery},{TResponse}}
+  definition: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  name: Handle(TQuery, CancellationToken)
+  nameWithType: IRequestHandler<TQuery, TResponse>.Handle(TQuery, CancellationToken)
+  fullName: MediatR.IRequestHandler<TQuery, TResponse>.Handle(TQuery, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TQuery, TResponse).Handle(TQuery, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TQuery, TResponse).Handle(TQuery, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler<TQuery, TResponse>.Handle
+    fullName: MediatR.IRequestHandler<TQuery, TResponse>.Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TQuery
+    nameWithType: TQuery
+    fullName: TQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler(Of TQuery, TResponse).Handle
+    fullName: MediatR.IRequestHandler(Of TQuery, TResponse).Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TQuery
+    nameWithType: TQuery
+    fullName: TQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  commentId: M:MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+  isExternal: true
+  name: Handle(TRequest, CancellationToken)
+  nameWithType: IRequestHandler<TRequest, TResponse>.Handle(TRequest, CancellationToken)
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle(TRequest, System.Threading.CancellationToken)
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse).Handle(TRequest, CancellationToken)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse).Handle(TRequest, System.Threading.CancellationToken)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler<TRequest, TResponse>.Handle
+    fullName: MediatR.IRequestHandler<TRequest, TResponse>.Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2.Handle(`0,System.Threading.CancellationToken)
+    name: Handle
+    nameWithType: IRequestHandler(Of TRequest, TResponse).Handle
+    fullName: MediatR.IRequestHandler(Of TRequest, TResponse).Handle
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Threading.CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: System.Threading.CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler{{TQuery},{TResponse}}
+  commentId: T:MediatR.IRequestHandler{`0,`1}
+  parent: MediatR
+  definition: MediatR.IRequestHandler`2
+  name: IRequestHandler<TQuery, TResponse>
+  nameWithType: IRequestHandler<TQuery, TResponse>
+  fullName: MediatR.IRequestHandler<TQuery, TResponse>
+  nameWithType.vb: IRequestHandler(Of TQuery, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TQuery, TResponse)
+  name.vb: IRequestHandler(Of TQuery, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TQuery
+    nameWithType: TQuery
+    fullName: TQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TQuery
+    nameWithType: TQuery
+    fullName: TQuery
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR.IRequestHandler`2
+  commentId: T:MediatR.IRequestHandler`2
+  isExternal: true
+  name: IRequestHandler<TRequest, TResponse>
+  nameWithType: IRequestHandler<TRequest, TResponse>
+  fullName: MediatR.IRequestHandler<TRequest, TResponse>
+  nameWithType.vb: IRequestHandler(Of TRequest, TResponse)
+  fullName.vb: MediatR.IRequestHandler(Of TRequest, TResponse)
+  name.vb: IRequestHandler(Of TRequest, TResponse)
+  spec.csharp:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatR.IRequestHandler`2
+    name: IRequestHandler
+    nameWithType: IRequestHandler
+    fullName: MediatR.IRequestHandler
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResponse
+    nameWithType: TResponse
+    fullName: TResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatR
+  commentId: N:MediatR
+  isExternal: true
+  name: MediatR
+  nameWithType: MediatR
+  fullName: MediatR

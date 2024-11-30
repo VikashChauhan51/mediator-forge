@@ -1,0 +1,51 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Queries.IQuery`1
+  commentId: T:MediatorForge.CQRS.Queries.IQuery`1
+  id: IQuery`1
+  parent: MediatorForge.CQRS.Queries
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IQuery<TResponse>
+  nameWithType: IQuery<TResponse>
+  fullName: MediatorForge.CQRS.Queries.IQuery<TResponse>
+  type: Interface
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Queries/IQuery.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IQuery
+    path: src/MediatorForge/CQRS/Queries/IQuery.cs
+    startLine: 8
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Queries
+  summary: "\nExecute Query.\n"
+  example: []
+  syntax:
+    content: 'public interface IQuery<out TResponse> : IRequest<TResponse>, IBaseRequest'
+    typeParameters:
+    - id: TResponse
+      description: ''
+    content.vb: >-
+      Public Interface IQuery(Of Out TResponse)
+
+          Inherits IRequest(Of TResponse)
+  nameWithType.vb: IQuery(Of TResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: MediatorForge.CQRS.Queries.IQuery(Of TResponse)
+  name.vb: IQuery(Of TResponse)
+references:
+- uid: MediatorForge.CQRS.Queries
+  commentId: N:MediatorForge.CQRS.Queries
+  name: MediatorForge.CQRS.Queries
+  nameWithType: MediatorForge.CQRS.Queries
+  fullName: MediatorForge.CQRS.Queries

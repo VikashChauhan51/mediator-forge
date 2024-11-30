@@ -1,0 +1,201 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  commentId: T:MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  id: IAuthorizer`1
+  parent: MediatorForge.CQRS.Authorizers
+  children:
+  - MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: IAuthorizer<TRequest>
+  nameWithType: IAuthorizer<TRequest>
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>
+  type: Interface
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Authorizers/IAuthorizer.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IAuthorizer
+    path: src/MediatorForge/CQRS/Authorizers/IAuthorizer.cs
+    startLine: 9
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Authorizers
+  summary: "\nDefines a contract for authorizing a specific request.\n"
+  example: []
+  syntax:
+    content: public interface IAuthorizer<in TRequest>
+    typeParameters:
+    - id: TRequest
+      description: The type of the request to authorize.
+    content.vb: Public Interface IAuthorizer(Of In TRequest)
+  nameWithType.vb: IAuthorizer(Of TRequest)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest)
+  name.vb: IAuthorizer(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  commentId: M:MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync(`0,CancellationToken)
+  id: AuthorizeAsync(`0,CancellationToken)
+  parent: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+  langs:
+  - csharp
+  - vb
+  name: AuthorizeAsync(TRequest, CancellationToken)
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync(TRequest, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Authorizers/IAuthorizer.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: AuthorizeAsync
+    path: src/MediatorForge/CQRS/Authorizers/IAuthorizer.cs
+    startLine: 17
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Authorizers
+  summary: "\nAsynchronously authorizes the specified request.\n"
+  example: []
+  syntax:
+    content: Task<AuthorizationResult> AuthorizeAsync(TRequest request, CancellationToken cancellationToken = null)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+      description: The request to authorize.
+    - id: cancellationToken
+      type: CancellationToken
+      description: The request cancellation token.
+    return:
+      type: Task{MediatorForge.Utilities.AuthorizationResult}
+      description: A task that represents the asynchronous authorization operation. The task result contains the <xref href="MediatorForge.Utilities.AuthorizationResult" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Function AuthorizeAsync(request As TRequest, cancellationToken As CancellationToken = Nothing) As Task(Of AuthorizationResult)
+  overload: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync*
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync(TRequest, CancellationToken)
+references:
+- uid: MediatorForge.CQRS.Authorizers
+  commentId: N:MediatorForge.CQRS.Authorizers
+  name: MediatorForge.CQRS.Authorizers
+  nameWithType: MediatorForge.CQRS.Authorizers
+  fullName: MediatorForge.CQRS.Authorizers
+- uid: MediatorForge.Utilities.AuthorizationResult
+  commentId: T:MediatorForge.Utilities.AuthorizationResult
+  parent: MediatorForge.Utilities
+  name: AuthorizationResult
+  nameWithType: AuthorizationResult
+  fullName: MediatorForge.Utilities.AuthorizationResult
+- uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync*
+  commentId: Overload:MediatorForge.CQRS.Authorizers.IAuthorizer`1.AuthorizeAsync
+  name: AuthorizeAsync
+  nameWithType: IAuthorizer<TRequest>.AuthorizeAsync
+  fullName: MediatorForge.CQRS.Authorizers.IAuthorizer<TRequest>.AuthorizeAsync
+  nameWithType.vb: IAuthorizer(Of TRequest).AuthorizeAsync
+  fullName.vb: MediatorForge.CQRS.Authorizers.IAuthorizer(Of TRequest).AuthorizeAsync
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{MediatorForge.Utilities.AuthorizationResult}
+  commentId: '!:Task{MediatorForge.Utilities.AuthorizationResult}'
+  definition: Task`1
+  name: Task<AuthorizationResult>
+  nameWithType: Task<AuthorizationResult>
+  fullName: Task<MediatorForge.Utilities.AuthorizationResult>
+  nameWithType.vb: Task(Of AuthorizationResult)
+  fullName.vb: Task(Of MediatorForge.Utilities.AuthorizationResult)
+  name.vb: Task(Of AuthorizationResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.AuthorizationResult
+    name: AuthorizationResult
+    nameWithType: AuthorizationResult
+    fullName: MediatorForge.Utilities.AuthorizationResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.AuthorizationResult
+    name: AuthorizationResult
+    nameWithType: AuthorizationResult
+    fullName: MediatorForge.Utilities.AuthorizationResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Utilities
+  commentId: N:MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  nameWithType: MediatorForge.Utilities
+  fullName: MediatorForge.Utilities
+- uid: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

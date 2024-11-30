@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException
+  commentId: T:MediatorForge.CQRS.Exceptions.AuthorizationException
+  id: AuthorizationException
+  parent: MediatorForge.CQRS.Exceptions
+  children:
+  - MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  - MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  - MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  - MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  langs:
+  - csharp
+  - vb
+  name: AuthorizationException
+  nameWithType: AuthorizationException
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: AuthorizationException
+    path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+    startLine: 7
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nRepresents an exception that is thrown when an authorization check fails.\n"
+  example: []
+  syntax:
+    content: 'public class AuthorizationException : Exception'
+    content.vb: >-
+      Public Class AuthorizationException
+
+          Inherits Exception
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  commentId: P:MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  id: Errors
+  parent: MediatorForge.CQRS.Exceptions.AuthorizationException
+  langs:
+  - csharp
+  - vb
+  name: Errors
+  nameWithType: AuthorizationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Errors
+    path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+    startLine: 12
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nGets the collection of authorization errors.\n"
+  example: []
+  syntax:
+    content: public IEnumerable<AuthorizationError> Errors { get; }
+    parameters: []
+    return:
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+    content.vb: Public ReadOnly Property Errors As IEnumerable(Of AuthorizationError)
+  overload: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  id: '#ctor(IEnumerable{MediatorForge.Utilities.AuthorizationError})'
+  parent: MediatorForge.CQRS.Exceptions.AuthorizationException
+  langs:
+  - csharp
+  - vb
+  name: AuthorizationException(IEnumerable<AuthorizationError>)
+  nameWithType: AuthorizationException.AuthorizationException(IEnumerable<AuthorizationError>)
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+    startLine: 19
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"MediatorForge.CQRS.Exceptions.AuthorizationException\" data-throw-if-not-resolved=\"false\"></xref> class with a specified error message\nand a collection of authorization errors.\n"
+  example: []
+  syntax:
+    content: public AuthorizationException(IEnumerable<AuthorizationError> errors)
+    parameters:
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+      description: The collection of authorization errors.
+    content.vb: Public Sub New(errors As IEnumerable(Of AuthorizationError))
+  overload: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor*
+  nameWithType.vb: AuthorizationException.AuthorizationException(IEnumerable(Of AuthorizationError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  name.vb: AuthorizationException(IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})
+  id: '#ctor(System.String,IEnumerable{MediatorForge.Utilities.AuthorizationError})'
+  parent: MediatorForge.CQRS.Exceptions.AuthorizationException
+  langs:
+  - csharp
+  - vb
+  name: AuthorizationException(String, IEnumerable<AuthorizationError>)
+  nameWithType: AuthorizationException.AuthorizationException(String, IEnumerable<AuthorizationError>)
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(System.String, IEnumerable<MediatorForge.Utilities.AuthorizationError>)
+  type: Constructor
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: .ctor
+    path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+    startLine: 31
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nInitializes a new instance of the <xref href=\"MediatorForge.CQRS.Exceptions.AuthorizationException\" data-throw-if-not-resolved=\"false\"></xref> class with a specified error message\nand a collection of authorization errors.\n"
+  example: []
+  syntax:
+    content: public AuthorizationException(string message, IEnumerable<AuthorizationError> errors)
+    parameters:
+    - id: message
+      type: System.String
+      description: The error message that explains the reason for the exception.
+    - id: errors
+      type: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+      description: The collection of authorization errors.
+    content.vb: Public Sub New(message As String, errors As IEnumerable(Of AuthorizationError))
+  overload: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor*
+  nameWithType.vb: AuthorizationException.AuthorizationException(String, IEnumerable(Of AuthorizationError))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException(System.String, IEnumerable(Of MediatorForge.Utilities.AuthorizationError))
+  name.vb: AuthorizationException(String, IEnumerable(Of AuthorizationError))
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  commentId: M:MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  id: ToString
+  parent: MediatorForge.CQRS.Exceptions.AuthorizationException
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: AuthorizationException.ToString()
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString()
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ToString
+    path: src/MediatorForge/CQRS/Exceptions/AuthorizationException.cs
+    startLine: 41
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Exceptions
+  summary: "\nReturns a string that represents the current object.\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: A string that represents the current object.
+    content.vb: Public Overrides Function ToString As String
+  overload: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: MediatorForge.CQRS.Exceptions
+  commentId: N:MediatorForge.CQRS.Exceptions
+  name: MediatorForge.CQRS.Exceptions
+  nameWithType: MediatorForge.CQRS.Exceptions
+  fullName: MediatorForge.CQRS.Exceptions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+  name: Errors
+  nameWithType: AuthorizationException.Errors
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.Errors
+- uid: IEnumerable{MediatorForge.Utilities.AuthorizationError}
+  commentId: '!:IEnumerable{MediatorForge.Utilities.AuthorizationError}'
+  definition: IEnumerable`1
+  name: IEnumerable<AuthorizationError>
+  nameWithType: IEnumerable<AuthorizationError>
+  fullName: IEnumerable<MediatorForge.Utilities.AuthorizationError>
+  nameWithType.vb: IEnumerable(Of AuthorizationError)
+  fullName.vb: IEnumerable(Of MediatorForge.Utilities.AuthorizationError)
+  name.vb: IEnumerable(Of AuthorizationError)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.AuthorizationError
+    name: AuthorizationError
+    nameWithType: AuthorizationError
+    fullName: MediatorForge.Utilities.AuthorizationError
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.AuthorizationError
+    name: AuthorizationError
+    nameWithType: AuthorizationError
+    fullName: MediatorForge.Utilities.AuthorizationError
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException
+  commentId: T:MediatorForge.CQRS.Exceptions.AuthorizationException
+  name: AuthorizationException
+  nameWithType: AuthorizationException
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.#ctor
+  name: AuthorizationException
+  nameWithType: AuthorizationException.AuthorizationException
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.AuthorizationException
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString*
+  commentId: Overload:MediatorForge.CQRS.Exceptions.AuthorizationException.ToString
+  name: ToString
+  nameWithType: AuthorizationException.ToString
+  fullName: MediatorForge.CQRS.Exceptions.AuthorizationException.ToString

@@ -1,0 +1,118 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Results.ResultState
+  commentId: T:MediatorForge.Results.ResultState
+  id: ResultState
+  parent: MediatorForge.Results
+  children:
+  - MediatorForge.Results.ResultState.Failed
+  - MediatorForge.Results.ResultState.Success
+  langs:
+  - csharp
+  - vb
+  name: ResultState
+  nameWithType: ResultState
+  fullName: MediatorForge.Results.ResultState
+  type: Enum
+  source:
+    remote:
+      path: src/MediatorForge/Results/ResultState.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ResultState
+    path: src/MediatorForge/Results/ResultState.cs
+    startLine: 6
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nRepresents the state of a result.\n"
+  example: []
+  syntax:
+    content: 'public enum ResultState : byte'
+    content.vb: Public Enum ResultState As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: MediatorForge.Results.ResultState.Success
+  commentId: F:MediatorForge.Results.ResultState.Success
+  id: Success
+  parent: MediatorForge.Results.ResultState
+  langs:
+  - csharp
+  - vb
+  name: Success
+  nameWithType: ResultState.Success
+  fullName: MediatorForge.Results.ResultState.Success
+  type: Field
+  source:
+    remote:
+      path: src/MediatorForge/Results/ResultState.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Success
+    path: src/MediatorForge/Results/ResultState.cs
+    startLine: 11
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nIndicates that the result is successful.\n"
+  example: []
+  syntax:
+    content: Success = 0
+    return:
+      type: MediatorForge.Results.ResultState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: MediatorForge.Results.ResultState.Failed
+  commentId: F:MediatorForge.Results.ResultState.Failed
+  id: Failed
+  parent: MediatorForge.Results.ResultState
+  langs:
+  - csharp
+  - vb
+  name: Failed
+  nameWithType: ResultState.Failed
+  fullName: MediatorForge.Results.ResultState.Failed
+  type: Field
+  source:
+    remote:
+      path: src/MediatorForge/Results/ResultState.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Failed
+    path: src/MediatorForge/Results/ResultState.cs
+    startLine: 16
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nIndicates that the result has failed.\n"
+  example: []
+  syntax:
+    content: Failed = 1
+    return:
+      type: MediatorForge.Results.ResultState
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: MediatorForge.Results
+  commentId: N:MediatorForge.Results
+  name: MediatorForge.Results
+  nameWithType: MediatorForge.Results
+  fullName: MediatorForge.Results
+- uid: MediatorForge.Results.ResultState
+  commentId: T:MediatorForge.Results.ResultState
+  parent: MediatorForge.Results
+  name: ResultState
+  nameWithType: ResultState
+  fullName: MediatorForge.Results.ResultState

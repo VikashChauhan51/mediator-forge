@@ -1,0 +1,104 @@
+### YamlMime:TableOfContent
+- uid: MediatorForge
+  name: MediatorForge
+  items:
+  - uid: MediatorForge.DependencyInjection
+    name: DependencyInjection
+- uid: MediatorForge.Adapters
+  name: MediatorForge.Adapters
+  items:
+  - uid: MediatorForge.Adapters.DependencyInjection
+    name: DependencyInjection
+  - uid: MediatorForge.Adapters.FluentValidatorAdapter`1
+    name: FluentValidatorAdapter<TRequest>
+    name.vb: FluentValidatorAdapter(Of TRequest)
+- uid: MediatorForge.CQRS.Authorizers
+  name: MediatorForge.CQRS.Authorizers
+  items:
+  - uid: MediatorForge.CQRS.Authorizers.DefaultAuthorizer`1
+    name: DefaultAuthorizer<TRequest>
+    name.vb: DefaultAuthorizer(Of TRequest)
+  - uid: MediatorForge.CQRS.Authorizers.IAuthorizer`1
+    name: IAuthorizer<TRequest>
+    name.vb: IAuthorizer(Of TRequest)
+- uid: MediatorForge.CQRS.Behaviors
+  name: MediatorForge.CQRS.Behaviors
+  items:
+  - uid: MediatorForge.CQRS.Behaviors.AuthorizationBehavior`2
+    name: AuthorizationBehavior<TRequest, TResponse>
+    name.vb: AuthorizationBehavior(Of TRequest, TResponse)
+  - uid: MediatorForge.CQRS.Behaviors.LoggingBehavior`2
+    name: LoggingBehavior<TRequest, TResponse>
+    name.vb: LoggingBehavior(Of TRequest, TResponse)
+  - uid: MediatorForge.CQRS.Behaviors.ValidationBehavior`2
+    name: ValidationBehavior<TRequest, TResponse>
+    name.vb: ValidationBehavior(Of TRequest, TResponse)
+- uid: MediatorForge.CQRS.Commands
+  name: MediatorForge.CQRS.Commands
+  items:
+  - uid: MediatorForge.CQRS.Commands.ICommand
+    name: ICommand
+  - uid: MediatorForge.CQRS.Commands.ICommand`1
+    name: ICommand<TResponse>
+    name.vb: ICommand(Of TResponse)
+  - uid: MediatorForge.CQRS.Commands.ICommandHandler`2
+    name: ICommandHandler<TCommand, TResponse>
+    name.vb: ICommandHandler(Of TCommand, TResponse)
+  - uid: MediatorForge.CQRS.Commands.ICommandHandler`1
+    name: ICommandHandler<TCommand>
+    name.vb: ICommandHandler(Of TCommand)
+- uid: MediatorForge.CQRS.Exceptions
+  name: MediatorForge.CQRS.Exceptions
+  items:
+  - uid: MediatorForge.CQRS.Exceptions.AuthorizationException
+    name: AuthorizationException
+  - uid: MediatorForge.CQRS.Exceptions.ValidationException
+    name: ValidationException
+- uid: MediatorForge.CQRS.Notifications
+  name: MediatorForge.CQRS.Notifications
+  items:
+  - uid: MediatorForge.CQRS.Notifications.EventNotification`1
+    name: EventNotification<TEvent>
+    name.vb: EventNotification(Of TEvent)
+- uid: MediatorForge.CQRS.Queries
+  name: MediatorForge.CQRS.Queries
+  items:
+  - uid: MediatorForge.CQRS.Queries.IQuery`1
+    name: IQuery<TResponse>
+    name.vb: IQuery(Of TResponse)
+  - uid: MediatorForge.CQRS.Queries.IQueryHandler`2
+    name: IQueryHandler<TQuery, TResponse>
+    name.vb: IQueryHandler(Of TQuery, TResponse)
+- uid: MediatorForge.CQRS.Validators
+  name: MediatorForge.CQRS.Validators
+  items:
+  - uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+    name: DefaultValidator<TRequest>
+    name.vb: DefaultValidator(Of TRequest)
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator<TRequest>
+    name.vb: IValidator(Of TRequest)
+- uid: MediatorForge.Results
+  name: MediatorForge.Results
+  items:
+  - uid: MediatorForge.Results.Option
+    name: Option
+  - uid: MediatorForge.Results.Option`1
+    name: Option<T>
+    name.vb: Option(Of T)
+  - uid: MediatorForge.Results.Result`1
+    name: Result<T>
+    name.vb: Result(Of T)
+  - uid: MediatorForge.Results.ResultState
+    name: ResultState
+- uid: MediatorForge.Utilities
+  name: MediatorForge.Utilities
+  items:
+  - uid: MediatorForge.Utilities.AuthorizationError
+    name: AuthorizationError
+  - uid: MediatorForge.Utilities.AuthorizationResult
+    name: AuthorizationResult
+  - uid: MediatorForge.Utilities.ValidationError
+    name: ValidationError
+  - uid: MediatorForge.Utilities.ValidationResult
+    name: ValidationResult

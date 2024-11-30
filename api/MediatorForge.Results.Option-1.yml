@@ -1,0 +1,1860 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.Results.Option`1
+  commentId: T:MediatorForge.Results.Option`1
+  id: Option`1
+  parent: MediatorForge.Results
+  children:
+  - MediatorForge.Results.Option`1.CompareTo(MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.Equals(MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.Equals(System.Object)
+  - MediatorForge.Results.Option`1.GetHashCode
+  - MediatorForge.Results.Option`1.IsNone
+  - MediatorForge.Results.Option`1.IsSome
+  - MediatorForge.Results.Option`1.Match(Action{`0},Action)
+  - MediatorForge.Results.Option`1.Match``1(Func{`0,``0},Func{``0})
+  - MediatorForge.Results.Option`1.None
+  - MediatorForge.Results.Option`1.OnNone(Action)
+  - MediatorForge.Results.Option`1.OnSome(Action{`0})
+  - MediatorForge.Results.Option`1.op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  - MediatorForge.Results.Option`1.op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  - MediatorForge.Results.Option`1.Some(`0)
+  langs:
+  - csharp
+  - vb
+  name: Option<T>
+  nameWithType: Option<T>
+  fullName: MediatorForge.Results.Option<T>
+  type: Struct
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Option
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 6
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nRepresents an option type that can contain a value or be empty (None).\n"
+  example: []
+  syntax:
+    content: public readonly struct Option<T>
+    typeParameters:
+    - id: T
+      description: The type of the value.
+    content.vb: Public Structure Option(Of T)
+  implements:
+  - IEquatable{MediatorForge.Results.Option{{T}}}
+  - IComparable{MediatorForge.Results.Option{{T}}}
+  inheritedMembers:
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  nameWithType.vb: Option(Of T)
+  modifiers.csharp:
+  - public
+  - readonly
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+  fullName.vb: MediatorForge.Results.Option(Of T)
+  name.vb: Option(Of T)
+- uid: MediatorForge.Results.Option`1.Some(`0)
+  commentId: M:MediatorForge.Results.Option`1.Some(`0)
+  id: Some(`0)
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Some(T)
+  nameWithType: Option<T>.Some(T)
+  fullName: MediatorForge.Results.Option<T>.Some(T)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Some
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 22
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nCreates an instance of <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> that contains a value.\n"
+  example: []
+  syntax:
+    content: public static Option<T> Some(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to be contained.
+    return:
+      type: MediatorForge.Results.Option{{T}}
+      description: An <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> containing the specified value.
+    content.vb: 'Public Shared Function Some(value As T) As '
+  overload: MediatorForge.Results.Option`1.Some*
+  nameWithType.vb: Option(Of T).Some(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).Some(T)
+- uid: MediatorForge.Results.Option`1.None
+  commentId: P:MediatorForge.Results.Option`1.None
+  id: None
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: None
+  nameWithType: Option<T>.None
+  fullName: MediatorForge.Results.Option<T>.None
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: None
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 27
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nGets an instance of <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> that represents no value.\n"
+  example: []
+  syntax:
+    content: public static readonly Option<T> None { get; }
+    parameters: []
+    return:
+      type: MediatorForge.Results.Option{{T}}
+    content.vb: 'Public Shared ReadOnly Property None As '
+  overload: MediatorForge.Results.Option`1.None*
+  nameWithType.vb: Option(Of T).None
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+  fullName.vb: MediatorForge.Results.Option(Of T).None
+- uid: MediatorForge.Results.Option`1.IsSome
+  commentId: P:MediatorForge.Results.Option`1.IsSome
+  id: IsSome
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: IsSome
+  nameWithType: Option<T>.IsSome
+  fullName: MediatorForge.Results.Option<T>.IsSome
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IsSome
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 32
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nGets a value indicating whether this instance contains a value.\n"
+  example: []
+  syntax:
+    content: public readonly bool IsSome { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsSome As Boolean
+  overload: MediatorForge.Results.Option`1.IsSome*
+  nameWithType.vb: Option(Of T).IsSome
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: MediatorForge.Results.Option(Of T).IsSome
+- uid: MediatorForge.Results.Option`1.IsNone
+  commentId: P:MediatorForge.Results.Option`1.IsNone
+  id: IsNone
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: IsNone
+  nameWithType: Option<T>.IsNone
+  fullName: MediatorForge.Results.Option<T>.IsNone
+  type: Property
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: IsNone
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 37
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nGets a value indicating whether this instance does not contain a value.\n"
+  example: []
+  syntax:
+    content: public readonly bool IsNone { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsNone As Boolean
+  overload: MediatorForge.Results.Option`1.IsNone*
+  nameWithType.vb: Option(Of T).IsNone
+  modifiers.csharp:
+  - public
+  - readonly
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: MediatorForge.Results.Option(Of T).IsNone
+- uid: MediatorForge.Results.Option`1.Match``1(Func{`0,``0},Func{``0})
+  commentId: M:MediatorForge.Results.Option`1.Match``1(Func{`0,``0},Func{``0})
+  id: Match``1(Func{`0,``0},Func{``0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Match<TResult>(Func<T, TResult>, Func<TResult>)
+  nameWithType: Option<T>.Match<TResult>(Func<T, TResult>, Func<TResult>)
+  fullName: MediatorForge.Results.Option<T>.Match<TResult>(Func<T, TResult>, Func<TResult>)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Match
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 46
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nExecutes one of the specified functions based on whether this instance contains a value.\n"
+  example: []
+  syntax:
+    content: public readonly TResult Match<TResult>(Func<T, TResult> onSome, Func<TResult> onNone)
+    parameters:
+    - id: onSome
+      type: Func{{T},{TResult}}
+      description: The function to execute if this instance contains a value.
+    - id: onNone
+      type: Func{{TResult}}
+      description: The function to execute if this instance does not contain a value.
+    typeParameters:
+    - id: TResult
+      description: The type of the result produced by the functions.
+    return:
+      type: '{TResult}'
+      description: The result of the executed function.
+    content.vb: Public Function Match(Of TResult)(onSome As Func(Of T, TResult), onNone As Func(Of TResult)) As TResult
+  overload: MediatorForge.Results.Option`1.Match*
+  nameWithType.vb: Option(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+  name.vb: Match(Of TResult)(Func(Of T, TResult), Func(Of TResult))
+- uid: MediatorForge.Results.Option`1.Match(Action{`0},Action)
+  commentId: M:MediatorForge.Results.Option`1.Match(Action{`0},Action)
+  id: Match(Action{`0},Action)
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Match(Action<T>, Action)
+  nameWithType: Option<T>.Match(Action<T>, Action)
+  fullName: MediatorForge.Results.Option<T>.Match(Action<T>, Action)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Match
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 57
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nExecutes one of the specified functions based on whether this instance contains a value.\n"
+  example: []
+  syntax:
+    content: public readonly void Match(Action<T> onSome, Action onNone)
+    parameters:
+    - id: onSome
+      type: Action{{T}}
+      description: The function to execute if this instance contains a value.
+    - id: onNone
+      type: Action
+      description: The function to execute if this instance does not contain a value.
+    content.vb: Public Sub Match(onSome As Action(Of T), onNone As Action)
+  overload: MediatorForge.Results.Option`1.Match*
+  nameWithType.vb: Option(Of T).Match(Action(Of T), Action)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).Match(Action(Of T), Action)
+  name.vb: Match(Action(Of T), Action)
+- uid: MediatorForge.Results.Option`1.OnSome(Action{`0})
+  commentId: M:MediatorForge.Results.Option`1.OnSome(Action{`0})
+  id: OnSome(Action{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: OnSome(Action<T>)
+  nameWithType: Option<T>.OnSome(Action<T>)
+  fullName: MediatorForge.Results.Option<T>.OnSome(Action<T>)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: OnSome
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 73
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nExecutes the specified action if this instance contains a value.\n"
+  example: []
+  syntax:
+    content: public readonly void OnSome(Action<T> onSome)
+    parameters:
+    - id: onSome
+      type: Action{{T}}
+      description: The action to execute if this instance contains a value.
+    content.vb: Public Sub OnSome(onSome As Action(Of T))
+  overload: MediatorForge.Results.Option`1.OnSome*
+  nameWithType.vb: Option(Of T).OnSome(Action(Of T))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).OnSome(Action(Of T))
+  name.vb: OnSome(Action(Of T))
+- uid: MediatorForge.Results.Option`1.OnNone(Action)
+  commentId: M:MediatorForge.Results.Option`1.OnNone(Action)
+  id: OnNone(Action)
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: OnNone(Action)
+  nameWithType: Option<T>.OnNone(Action)
+  fullName: MediatorForge.Results.Option<T>.OnNone(Action)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: OnNone
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 85
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nExecutes the specified action if this instance does not contain a value.\n"
+  example: []
+  syntax:
+    content: public readonly void OnNone(Action onNone)
+    parameters:
+    - id: onNone
+      type: Action
+      description: The action to execute if this instance does not contain a value.
+    content.vb: Public Sub OnNone(onNone As Action)
+  overload: MediatorForge.Results.Option`1.OnNone*
+  nameWithType.vb: Option(Of T).OnNone(Action)
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).OnNone(Action)
+- uid: MediatorForge.Results.Option`1.CompareTo(MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.CompareTo(MediatorForge.Results.Option{`0})
+  id: CompareTo(MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: CompareTo(Option<T>)
+  nameWithType: Option<T>.CompareTo(Option<T>)
+  fullName: MediatorForge.Results.Option<T>.CompareTo(MediatorForge.Results.Option<T>)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: CompareTo
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 98
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nCompares this instance with another <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> and returns an integer that indicates whether this instance precedes, follows, or occurs in the same position in the sort order as the other <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public readonly int CompareTo(Option<T> other)
+    parameters:
+    - id: other
+      type: MediatorForge.Results.Option{{T}}
+      description: An <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare with this instance.
+    return:
+      type: System.Int32
+      description: A value that indicates the relative order of the objects being compared.
+    content.vb: Public Function CompareTo(other As  Option (Of T)) As Integer
+  overload: MediatorForge.Results.Option`1.CompareTo*
+  nameWithType.vb: Option(Of T).CompareTo(Option(Of T))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).CompareTo(MediatorForge.Results.Option(Of T))
+  name.vb: CompareTo(Option(Of T))
+- uid: MediatorForge.Results.Option`1.Equals(MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.Equals(MediatorForge.Results.Option{`0})
+  id: Equals(MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Option<T>)
+  nameWithType: Option<T>.Equals(Option<T>)
+  fullName: MediatorForge.Results.Option<T>.Equals(MediatorForge.Results.Option<T>)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Equals
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 120
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether this instance and another specified <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> have the same value.\n"
+  example: []
+  syntax:
+    content: public readonly bool Equals(Option<T> other)
+    parameters:
+    - id: other
+      type: MediatorForge.Results.Option{{T}}
+      description: The <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare to this instance.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the value of the specified <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> is equal to the value of this instance; otherwise, <code>false</code>.
+    content.vb: Public Function Equals(other As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.Equals*
+  nameWithType.vb: Option(Of T).Equals(Option(Of T))
+  modifiers.csharp:
+  - public
+  - readonly
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals(MediatorForge.Results.Option(Of T))
+  name.vb: Equals(Option(Of T))
+- uid: MediatorForge.Results.Option`1.Equals(System.Object)
+  commentId: M:MediatorForge.Results.Option`1.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Option<T>.Equals(Object)
+  fullName: MediatorForge.Results.Option<T>.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: Equals
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 134
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether the specified object is equal to this instance.\n"
+  example: []
+  syntax:
+    content: public override readonly bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+      description: The object to compare with this instance.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the specified object is equal to this instance; otherwise, <code>false</code>.
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overridden: System.ValueType.Equals(System.Object)
+  overload: MediatorForge.Results.Option`1.Equals*
+  nameWithType.vb: Option(Of T).Equals(Object)
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals(System.Object)
+- uid: MediatorForge.Results.Option`1.GetHashCode
+  commentId: M:MediatorForge.Results.Option`1.GetHashCode
+  id: GetHashCode
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Option<T>.GetHashCode()
+  fullName: MediatorForge.Results.Option<T>.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: GetHashCode
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 148
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nReturns the hash code for this instance.\n"
+  example: []
+  syntax:
+    content: public override readonly int GetHashCode()
+    return:
+      type: System.Int32
+      description: A hash code for the current object.
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overridden: System.ValueType.GetHashCode
+  overload: MediatorForge.Results.Option`1.GetHashCode*
+  nameWithType.vb: Option(Of T).GetHashCode()
+  modifiers.csharp:
+  - public
+  - override
+  - readonly
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: MediatorForge.Results.Option(Of T).GetHashCode()
+- uid: MediatorForge.Results.Option`1.op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  commentId: M:MediatorForge.Results.Option`1.op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  id: op_Implicit(`0)~MediatorForge.Results.Option{`0}
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Implicit(T to Option<T>)
+  nameWithType: Option<T>.Implicit(T to Option<T>)
+  fullName: MediatorForge.Results.Option<T>.Implicit(T to MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_Implicit
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 157
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nImplicitly converts a value to an <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> containing that value.\n"
+  example: []
+  syntax:
+    content: public static implicit operator Option<T>(T value)
+    parameters:
+    - id: value
+      type: '{T}'
+      description: The value to convert.
+    return:
+      type: MediatorForge.Results.Option{{T}}
+    content.vb: 'Public Shared Widening Operator CType(value As T) As '
+  overload: MediatorForge.Results.Option`1.op_Implicit*
+  nameWithType.vb: Option(Of T).Widening(T to Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).Widening(T to MediatorForge.Results.Option(Of T))
+  name.vb: Widening(T to Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_Equality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Equality(Option<T>, Option<T>)
+  nameWithType: Option<T>.Equality(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.Equality(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_Equality
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 165
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether two <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instances are equal.\n"
+  example: []
+  syntax:
+    content: public static bool operator ==(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the two <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> instances are equal; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator =(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_Equality*
+  nameWithType.vb: Option(Of T).Equality(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).Equality(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: Equality(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_Inequality(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Option<T>, Option<T>)
+  nameWithType: Option<T>.Inequality(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.Inequality(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_Inequality
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 176
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether two <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instances are not equal.\n"
+  example: []
+  syntax:
+    content: public static bool operator !=(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the two <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> instances are not equal; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator <>(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_Inequality*
+  nameWithType.vb: Option(Of T).Inequality(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).Inequality(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: Inequality(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_LessThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: LessThan(Option<T>, Option<T>)
+  nameWithType: Option<T>.LessThan(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.LessThan(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_LessThan
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 187
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether one <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instance precedes another in the sort order.\n"
+  example: []
+  syntax:
+    content: public static bool operator <(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> precedes the second in the sort order; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator <(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_LessThan*
+  nameWithType.vb: Option(Of T).LessThan(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThan(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: LessThan(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_LessThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: LessThanOrEqual(Option<T>, Option<T>)
+  nameWithType: Option<T>.LessThanOrEqual(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.LessThanOrEqual(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_LessThanOrEqual
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 198
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether one <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instance precedes or is equal to another in the sort order.\n"
+  example: []
+  syntax:
+    content: public static bool operator <=(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> precedes or is equal to the second in the sort order; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator <=(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_LessThanOrEqual*
+  nameWithType.vb: Option(Of T).LessThanOrEqual(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThanOrEqual(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: LessThanOrEqual(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_GreaterThan(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: GreaterThan(Option<T>, Option<T>)
+  nameWithType: Option<T>.GreaterThan(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.GreaterThan(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_GreaterThan
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 209
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether one <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instance follows another in the sort order.\n"
+  example: []
+  syntax:
+    content: public static bool operator>(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> follows the second in the sort order; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator>(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_GreaterThan*
+  nameWithType.vb: Option(Of T).GreaterThan(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThan(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: GreaterThan(Option(Of T), Option(Of T))
+- uid: MediatorForge.Results.Option`1.op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  commentId: M:MediatorForge.Results.Option`1.op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  id: op_GreaterThanOrEqual(MediatorForge.Results.Option{`0},MediatorForge.Results.Option{`0})
+  parent: MediatorForge.Results.Option`1
+  langs:
+  - csharp
+  - vb
+  name: GreaterThanOrEqual(Option<T>, Option<T>)
+  nameWithType: Option<T>.GreaterThanOrEqual(Option<T>, Option<T>)
+  fullName: MediatorForge.Results.Option<T>.GreaterThanOrEqual(MediatorForge.Results.Option<T>, MediatorForge.Results.Option<T>)
+  type: Operator
+  source:
+    remote:
+      path: src/MediatorForge/Results/Option.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: op_GreaterThanOrEqual
+    path: src/MediatorForge/Results/Option.cs
+    startLine: 220
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.Results
+  summary: "\nDetermines whether one <xref href=\"MediatorForge.Results.Option%601\" data-throw-if-not-resolved=\"false\"></xref> instance follows or is equal to another in the sort order.\n"
+  example: []
+  syntax:
+    content: public static bool operator >=(Option<T> left, Option<T> right)
+    parameters:
+    - id: left
+      type: MediatorForge.Results.Option{{T}}
+      description: The first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    - id: right
+      type: MediatorForge.Results.Option{{T}}
+      description: The second <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> to compare.
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the first <xref href="MediatorForge.Results.Option%601" data-throw-if-not-resolved="false"></xref> follows or is equal to the second in the sort order; otherwise, <code>false</code>.
+    content.vb: Public Shared Operator >=(left As  Option (Of T), right As  Option (Of T)) As Boolean
+  overload: MediatorForge.Results.Option`1.op_GreaterThanOrEqual*
+  nameWithType.vb: Option(Of T).GreaterThanOrEqual(Option(Of T), Option(Of T))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThanOrEqual(MediatorForge.Results.Option(Of T), MediatorForge.Results.Option(Of T))
+  name.vb: GreaterThanOrEqual(Option(Of T), Option(Of T))
+references:
+- uid: MediatorForge.Results
+  commentId: N:MediatorForge.Results
+  name: MediatorForge.Results
+  nameWithType: MediatorForge.Results
+  fullName: MediatorForge.Results
+- uid: IEquatable{MediatorForge.Results.Option{{T}}}
+  commentId: '!:IEquatable{MediatorForge.Results.Option{`0}}'
+  definition: IEquatable`1
+  name: IEquatable<Option<T>>
+  nameWithType: IEquatable<Option<T>>
+  fullName: IEquatable<MediatorForge.Results.Option<T>>
+  nameWithType.vb: IEquatable(Of Option(Of T))
+  fullName.vb: IEquatable(Of MediatorForge.Results.Option(Of T))
+  name.vb: IEquatable(Of Option(Of T))
+  spec.csharp:
+  - uid: IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IComparable{MediatorForge.Results.Option{{T}}}
+  commentId: '!:IComparable{MediatorForge.Results.Option{`0}}'
+  definition: IComparable`1
+  name: IComparable<Option<T>>
+  nameWithType: IComparable<Option<T>>
+  fullName: IComparable<MediatorForge.Results.Option<T>>
+  nameWithType.vb: IComparable(Of Option(Of T))
+  fullName.vb: IComparable(Of MediatorForge.Results.Option(Of T))
+  name.vb: IComparable(Of Option(Of T))
+  spec.csharp:
+  - uid: IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IEquatable`1
+  isExternal: true
+  name: IEquatable<>
+  nameWithType: IEquatable<>
+  fullName: IEquatable<>
+  nameWithType.vb: IEquatable(Of )
+  fullName.vb: IEquatable(Of )
+  name.vb: IEquatable(Of )
+  spec.csharp:
+  - uid: IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: IEquatable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEquatable`1
+    name: IEquatable
+    nameWithType: IEquatable
+    fullName: IEquatable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: IComparable`1
+  isExternal: true
+  name: IComparable<>
+  nameWithType: IComparable<>
+  fullName: IComparable<>
+  nameWithType.vb: IComparable(Of )
+  fullName.vb: IComparable(Of )
+  name.vb: IComparable(Of )
+  spec.csharp:
+  - uid: IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: IComparable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IComparable`1
+    name: IComparable
+    nameWithType: IComparable
+    fullName: IComparable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.Results.Option`1
+  commentId: T:MediatorForge.Results.Option`1
+  name: Option<T>
+  nameWithType: Option<T>
+  fullName: MediatorForge.Results.Option<T>
+  nameWithType.vb: Option(Of T)
+  fullName.vb: MediatorForge.Results.Option(Of T)
+  name.vb: Option(Of T)
+  spec.csharp:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Results.Option`1.Some*
+  commentId: Overload:MediatorForge.Results.Option`1.Some
+  name: Some
+  nameWithType: Option<T>.Some
+  fullName: MediatorForge.Results.Option<T>.Some
+  nameWithType.vb: Option(Of T).Some
+  fullName.vb: MediatorForge.Results.Option(Of T).Some
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: MediatorForge.Results.Option{{T}}
+  commentId: T:MediatorForge.Results.Option{`0}
+  parent: MediatorForge.Results
+  definition: MediatorForge.Results.Option`1
+  name: Option<T>
+  nameWithType: Option<T>
+  fullName: MediatorForge.Results.Option<T>
+  nameWithType.vb: Option(Of T)
+  fullName.vb: MediatorForge.Results.Option(Of T)
+  name.vb: Option(Of T)
+  spec.csharp:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.Results.Option`1
+    name: Option
+    nameWithType: Option
+    fullName: MediatorForge.Results.Option
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: MediatorForge.Results.Option`1.None*
+  commentId: Overload:MediatorForge.Results.Option`1.None
+  name: None
+  nameWithType: Option<T>.None
+  fullName: MediatorForge.Results.Option<T>.None
+  nameWithType.vb: Option(Of T).None
+  fullName.vb: MediatorForge.Results.Option(Of T).None
+- uid: MediatorForge.Results.Option`1.IsSome*
+  commentId: Overload:MediatorForge.Results.Option`1.IsSome
+  name: IsSome
+  nameWithType: Option<T>.IsSome
+  fullName: MediatorForge.Results.Option<T>.IsSome
+  nameWithType.vb: Option(Of T).IsSome
+  fullName.vb: MediatorForge.Results.Option(Of T).IsSome
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: MediatorForge.Results.Option`1.IsNone*
+  commentId: Overload:MediatorForge.Results.Option`1.IsNone
+  name: IsNone
+  nameWithType: Option<T>.IsNone
+  fullName: MediatorForge.Results.Option<T>.IsNone
+  nameWithType.vb: Option(Of T).IsNone
+  fullName.vb: MediatorForge.Results.Option(Of T).IsNone
+- uid: MediatorForge.Results.Option`1.Match*
+  commentId: Overload:MediatorForge.Results.Option`1.Match
+  name: Match
+  nameWithType: Option<T>.Match
+  fullName: MediatorForge.Results.Option<T>.Match
+  nameWithType.vb: Option(Of T).Match
+  fullName.vb: MediatorForge.Results.Option(Of T).Match
+- uid: Func{{T},{TResult}}
+  commentId: '!:Func{`0,``0}'
+  definition: Func`2
+  name: Func<T, TResult>
+  nameWithType: Func<T, TResult>
+  fullName: Func<T, TResult>
+  nameWithType.vb: Func(Of T, TResult)
+  fullName.vb: Func(Of T, TResult)
+  name.vb: Func(Of T, TResult)
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{{TResult}}
+  commentId: '!:Func{``0}'
+  definition: Func`1
+  name: Func<TResult>
+  nameWithType: Func<TResult>
+  fullName: Func<TResult>
+  nameWithType.vb: Func(Of TResult)
+  fullName.vb: Func(Of TResult)
+  name.vb: Func(Of TResult)
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TResult}'
+  commentId: '!:TResult'
+  definition: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`1
+  commentId: '!:Func`1'
+  isExternal: true
+  name: Func<>
+  nameWithType: Func<>
+  fullName: Func<>
+  nameWithType.vb: Func(Of )
+  fullName.vb: Func(Of )
+  name.vb: Func(Of )
+  spec.csharp:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`1
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TResult
+  name: TResult
+  nameWithType: TResult
+  fullName: TResult
+- uid: Action{{T}}
+  commentId: '!:Action{`0}'
+  definition: Action`1
+  name: Action<T>
+  nameWithType: Action<T>
+  fullName: Action<T>
+  nameWithType.vb: Action(Of T)
+  fullName.vb: Action(Of T)
+  name.vb: Action(Of T)
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Action
+  isExternal: true
+  name: Action
+  nameWithType: Action
+  fullName: Action
+- uid: Action`1
+  isExternal: true
+  name: Action<>
+  nameWithType: Action<>
+  fullName: Action<>
+  nameWithType.vb: Action(Of )
+  fullName.vb: Action(Of )
+  name.vb: Action(Of )
+  spec.csharp:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`1
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Results.Option`1.OnSome*
+  commentId: Overload:MediatorForge.Results.Option`1.OnSome
+  name: OnSome
+  nameWithType: Option<T>.OnSome
+  fullName: MediatorForge.Results.Option<T>.OnSome
+  nameWithType.vb: Option(Of T).OnSome
+  fullName.vb: MediatorForge.Results.Option(Of T).OnSome
+- uid: MediatorForge.Results.Option`1.OnNone*
+  commentId: Overload:MediatorForge.Results.Option`1.OnNone
+  name: OnNone
+  nameWithType: Option<T>.OnNone
+  fullName: MediatorForge.Results.Option<T>.OnNone
+  nameWithType.vb: Option(Of T).OnNone
+  fullName.vb: MediatorForge.Results.Option(Of T).OnNone
+- uid: MediatorForge.Results.Option`1.CompareTo*
+  commentId: Overload:MediatorForge.Results.Option`1.CompareTo
+  name: CompareTo
+  nameWithType: Option<T>.CompareTo
+  fullName: MediatorForge.Results.Option<T>.CompareTo
+  nameWithType.vb: Option(Of T).CompareTo
+  fullName.vb: MediatorForge.Results.Option(Of T).CompareTo
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: MediatorForge.Results.Option`1.Equals*
+  commentId: Overload:MediatorForge.Results.Option`1.Equals
+  name: Equals
+  nameWithType: Option<T>.Equals
+  fullName: MediatorForge.Results.Option<T>.Equals
+  nameWithType.vb: Option(Of T).Equals
+  fullName.vb: MediatorForge.Results.Option(Of T).Equals
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.Results.Option`1.GetHashCode*
+  commentId: Overload:MediatorForge.Results.Option`1.GetHashCode
+  name: GetHashCode
+  nameWithType: Option<T>.GetHashCode
+  fullName: MediatorForge.Results.Option<T>.GetHashCode
+  nameWithType.vb: Option(Of T).GetHashCode
+  fullName.vb: MediatorForge.Results.Option(Of T).GetHashCode
+- uid: MediatorForge.Results.Option`1.op_Implicit*
+  commentId: Overload:MediatorForge.Results.Option`1.op_Implicit
+  name: Implicit
+  nameWithType: Option<T>.Implicit
+  fullName: MediatorForge.Results.Option<T>.Implicit
+  nameWithType.vb: Option(Of T).Widening
+  fullName.vb: MediatorForge.Results.Option(Of T).Widening
+  name.vb: Widening
+- uid: MediatorForge.Results.Option`1.op_Equality*
+  commentId: Overload:MediatorForge.Results.Option`1.op_Equality
+  name: Equality
+  nameWithType: Option<T>.Equality
+  fullName: MediatorForge.Results.Option<T>.Equality
+  nameWithType.vb: Option(Of T).Equality
+  fullName.vb: MediatorForge.Results.Option(Of T).Equality
+- uid: MediatorForge.Results.Option`1.op_Inequality*
+  commentId: Overload:MediatorForge.Results.Option`1.op_Inequality
+  name: Inequality
+  nameWithType: Option<T>.Inequality
+  fullName: MediatorForge.Results.Option<T>.Inequality
+  nameWithType.vb: Option(Of T).Inequality
+  fullName.vb: MediatorForge.Results.Option(Of T).Inequality
+- uid: MediatorForge.Results.Option`1.op_LessThan*
+  commentId: Overload:MediatorForge.Results.Option`1.op_LessThan
+  name: LessThan
+  nameWithType: Option<T>.LessThan
+  fullName: MediatorForge.Results.Option<T>.LessThan
+  nameWithType.vb: Option(Of T).LessThan
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThan
+- uid: MediatorForge.Results.Option`1.op_LessThanOrEqual*
+  commentId: Overload:MediatorForge.Results.Option`1.op_LessThanOrEqual
+  name: LessThanOrEqual
+  nameWithType: Option<T>.LessThanOrEqual
+  fullName: MediatorForge.Results.Option<T>.LessThanOrEqual
+  nameWithType.vb: Option(Of T).LessThanOrEqual
+  fullName.vb: MediatorForge.Results.Option(Of T).LessThanOrEqual
+- uid: MediatorForge.Results.Option`1.op_GreaterThan*
+  commentId: Overload:MediatorForge.Results.Option`1.op_GreaterThan
+  name: GreaterThan
+  nameWithType: Option<T>.GreaterThan
+  fullName: MediatorForge.Results.Option<T>.GreaterThan
+  nameWithType.vb: Option(Of T).GreaterThan
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThan
+- uid: MediatorForge.Results.Option`1.op_GreaterThanOrEqual*
+  commentId: Overload:MediatorForge.Results.Option`1.op_GreaterThanOrEqual
+  name: GreaterThanOrEqual
+  nameWithType: Option<T>.GreaterThanOrEqual
+  fullName: MediatorForge.Results.Option<T>.GreaterThanOrEqual
+  nameWithType.vb: Option(Of T).GreaterThanOrEqual
+  fullName.vb: MediatorForge.Results.Option(Of T).GreaterThanOrEqual

@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1
+  commentId: T:MediatorForge.CQRS.Validators.DefaultValidator`1
+  id: DefaultValidator`1
+  parent: MediatorForge.CQRS.Validators
+  children:
+  - MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync(`0,CancellationToken)
+  langs:
+  - csharp
+  - vb
+  name: DefaultValidator<TRequest>
+  nameWithType: DefaultValidator<TRequest>
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>
+  type: Class
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Validators/DefaultValidator.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: DefaultValidator
+    path: src/MediatorForge/CQRS/Validators/DefaultValidator.cs
+    startLine: 8
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Validators
+  summary: "\nThe default validation implementation.\n"
+  example: []
+  syntax:
+    content: 'public class DefaultValidator<TRequest> : IValidator<TRequest>'
+    typeParameters:
+    - id: TRequest
+      description: ''
+    content.vb: >-
+      Public Class DefaultValidator(Of TRequest)
+
+          Implements IValidator(Of TRequest)
+  inheritance:
+  - System.Object
+  implements:
+  - MediatorForge.CQRS.Validators.IValidator{{TRequest}}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: DefaultValidator(Of TRequest)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest)
+  name.vb: DefaultValidator(Of TRequest)
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync(`0,CancellationToken)
+  commentId: M:MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync(`0,CancellationToken)
+  id: ValidateAsync(`0,CancellationToken)
+  parent: MediatorForge.CQRS.Validators.DefaultValidator`1
+  langs:
+  - csharp
+  - vb
+  name: ValidateAsync(TRequest, CancellationToken)
+  nameWithType: DefaultValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  type: Method
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Validators/DefaultValidator.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ValidateAsync
+    path: src/MediatorForge/CQRS/Validators/DefaultValidator.cs
+    startLine: 10
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Validators
+  syntax:
+    content: public Task<ValidationResult> ValidateAsync(TRequest request, CancellationToken cancellationToken = null)
+    parameters:
+    - id: request
+      type: '{TRequest}'
+    - id: cancellationToken
+      type: CancellationToken
+    return:
+      type: Task{MediatorForge.Utilities.ValidationResult}
+    content.vb: Public Function ValidateAsync(request As TRequest, cancellationToken As CancellationToken = Nothing) As Task(Of ValidationResult)
+  overload: MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync*
+  implements:
+  - MediatorForge.CQRS.Validators.IValidator{{TRequest}}.ValidateAsync({TRequest},CancellationToken)
+  nameWithType.vb: DefaultValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+references:
+- uid: MediatorForge.CQRS.Validators
+  commentId: N:MediatorForge.CQRS.Validators
+  name: MediatorForge.CQRS.Validators
+  nameWithType: MediatorForge.CQRS.Validators
+  fullName: MediatorForge.CQRS.Validators
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: MediatorForge.CQRS.Validators.IValidator{{TRequest}}
+  commentId: T:MediatorForge.CQRS.Validators.IValidator{`0}
+  parent: MediatorForge.CQRS.Validators
+  definition: MediatorForge.CQRS.Validators.IValidator`1
+  name: IValidator<TRequest>
+  nameWithType: IValidator<TRequest>
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>
+  nameWithType.vb: IValidator(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest)
+  name.vb: IValidator(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: MediatorForge.CQRS.Validators.IValidator`1
+  commentId: T:MediatorForge.CQRS.Validators.IValidator`1
+  name: IValidator<TRequest>
+  nameWithType: IValidator<TRequest>
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>
+  nameWithType.vb: IValidator(Of TRequest)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest)
+  name.vb: IValidator(Of TRequest)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1
+    name: IValidator
+    nameWithType: IValidator
+    fullName: MediatorForge.CQRS.Validators.IValidator
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync*
+  commentId: Overload:MediatorForge.CQRS.Validators.DefaultValidator`1.ValidateAsync
+  name: ValidateAsync
+  nameWithType: DefaultValidator<TRequest>.ValidateAsync
+  fullName: MediatorForge.CQRS.Validators.DefaultValidator<TRequest>.ValidateAsync
+  nameWithType.vb: DefaultValidator(Of TRequest).ValidateAsync
+  fullName.vb: MediatorForge.CQRS.Validators.DefaultValidator(Of TRequest).ValidateAsync
+- uid: MediatorForge.CQRS.Validators.IValidator{{TRequest}}.ValidateAsync({TRequest},CancellationToken)
+  commentId: M:MediatorForge.CQRS.Validators.IValidator{`0}.ValidateAsync(`0,CancellationToken)
+  parent: MediatorForge.CQRS.Validators.IValidator{{TRequest}}
+  definition: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+  name: ValidateAsync(TRequest, CancellationToken)
+  nameWithType: IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  nameWithType.vb: IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+    name: ValidateAsync
+    nameWithType: IValidator<TRequest>.ValidateAsync
+    fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+    name: ValidateAsync
+    nameWithType: IValidator(Of TRequest).ValidateAsync
+    fullName: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: '{TRequest}'
+  commentId: '!:TRequest'
+  definition: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: CancellationToken
+  isExternal: true
+  name: CancellationToken
+  nameWithType: CancellationToken
+  fullName: CancellationToken
+- uid: Task{MediatorForge.Utilities.ValidationResult}
+  commentId: '!:Task{MediatorForge.Utilities.ValidationResult}'
+  definition: Task`1
+  name: Task<ValidationResult>
+  nameWithType: Task<ValidationResult>
+  fullName: Task<MediatorForge.Utilities.ValidationResult>
+  nameWithType.vb: Task(Of ValidationResult)
+  fullName.vb: Task(Of MediatorForge.Utilities.ValidationResult)
+  name.vb: Task(Of ValidationResult)
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: MediatorForge.Utilities.ValidationResult
+    name: ValidationResult
+    nameWithType: ValidationResult
+    fullName: MediatorForge.Utilities.ValidationResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: MediatorForge.Utilities.ValidationResult
+    name: ValidationResult
+    nameWithType: ValidationResult
+    fullName: MediatorForge.Utilities.ValidationResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+  commentId: M:MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+  isExternal: true
+  name: ValidateAsync(TRequest, CancellationToken)
+  nameWithType: IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync(TRequest, CancellationToken)
+  nameWithType.vb: IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  fullName.vb: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync(TRequest, CancellationToken)
+  spec.csharp:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+    name: ValidateAsync
+    nameWithType: IValidator<TRequest>.ValidateAsync
+    fullName: MediatorForge.CQRS.Validators.IValidator<TRequest>.ValidateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: MediatorForge.CQRS.Validators.IValidator`1.ValidateAsync(`0,CancellationToken)
+    name: ValidateAsync
+    nameWithType: IValidator(Of TRequest).ValidateAsync
+    fullName: MediatorForge.CQRS.Validators.IValidator(Of TRequest).ValidateAsync
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: TRequest
+    nameWithType: TRequest
+    fullName: TRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: CancellationToken
+    name: CancellationToken
+    nameWithType: CancellationToken
+    fullName: CancellationToken
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: TRequest
+  name: TRequest
+  nameWithType: TRequest
+  fullName: TRequest
+- uid: Task`1
+  isExternal: true
+  name: Task<>
+  nameWithType: Task<>
+  fullName: Task<>
+  nameWithType.vb: Task(Of )
+  fullName.vb: Task(Of )
+  name.vb: Task(Of )
+  spec.csharp:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Task`1
+    name: Task
+    nameWithType: Task
+    fullName: Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

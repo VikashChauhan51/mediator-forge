@@ -1,0 +1,50 @@
+### YamlMime:ManagedReference
+items:
+- uid: MediatorForge.CQRS.Commands.ICommand`1
+  commentId: T:MediatorForge.CQRS.Commands.ICommand`1
+  id: ICommand`1
+  parent: MediatorForge.CQRS.Commands
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: ICommand<TResponse>
+  nameWithType: ICommand<TResponse>
+  fullName: MediatorForge.CQRS.Commands.ICommand<TResponse>
+  type: Interface
+  source:
+    remote:
+      path: src/MediatorForge/CQRS/Commands/ICommand.cs
+      branch: main
+      repo: https://github.com/VikashChauhan51/mediator-forge.git
+    id: ICommand
+    path: src/MediatorForge/CQRS/Commands/ICommand.cs
+    startLine: 14
+  assemblies:
+  - MediatorForge
+  namespace: MediatorForge.CQRS.Commands
+  summary: "\nExecute ICommand.\n"
+  example: []
+  syntax:
+    content: 'public interface ICommand<out TResponse> : IRequest<TResponse>, IBaseRequest'
+    typeParameters:
+    - id: TResponse
+    content.vb: >-
+      Public Interface ICommand(Of Out TResponse)
+
+          Inherits IRequest(Of TResponse)
+  nameWithType.vb: ICommand(Of TResponse)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: MediatorForge.CQRS.Commands.ICommand(Of TResponse)
+  name.vb: ICommand(Of TResponse)
+references:
+- uid: MediatorForge.CQRS.Commands
+  commentId: N:MediatorForge.CQRS.Commands
+  name: MediatorForge.CQRS.Commands
+  nameWithType: MediatorForge.CQRS.Commands
+  fullName: MediatorForge.CQRS.Commands
