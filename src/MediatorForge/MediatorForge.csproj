@@ -23,11 +23,17 @@
 		</Description>
 		<PackageTags>C#, Result, Option, MediatorR, Result Pattern, FluentValidator, Authorization, Logging</PackageTags>
 		<PackageProjectUrl>https://github.com/VikashChauhan51/mediator-forge</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/VikashChauhan51/mediator-forge</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<OutputType>library</OutputType>
 		<AssemblyVersion>1.0.0.0</AssemblyVersion>
 		<FileVersion>1.0.0.0</FileVersion>
 		<PackageReadmeFile>README.nuget.md</PackageReadmeFile>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<AssemblyOriginatorKeyFile>..\MediatorForge.snk</AssemblyOriginatorKeyFile>
+		<SignAssembly>true</SignAssembly>
 	</PropertyGroup>
 
 
@@ -35,5 +41,18 @@
     <PackageReference Include="MediatR" Version="12.4.1" />
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
   </ItemGroup>
+
+
+	<ItemGroup>
+	  <None Update="README.nuget.md">
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		  <Pack>True</Pack>
+	  </None>
+		<None Update="..\MediatorForge.snk">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>
