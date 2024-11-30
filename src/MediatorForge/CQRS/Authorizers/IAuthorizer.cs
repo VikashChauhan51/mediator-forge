@@ -1,7 +1,7 @@
 ﻿using MediatorForge.Utilities;
 using MediatR;
 
-namespace MediatorForge.CQRS.Interfaces;
+namespace MediatorForge.CQRS.Authorizers;
 
 /// <summary>
 /// Defines a contract for authorizing a specific request.

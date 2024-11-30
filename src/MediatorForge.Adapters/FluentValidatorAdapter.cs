@@ -1,4 +1,4 @@
-﻿using MediatorForge.CQRS.Interfaces;
+﻿using MediatorForge.CQRS.Validators;
 using MediatorForge.Utilities;
 using MediatR;
 

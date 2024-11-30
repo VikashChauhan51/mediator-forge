@@ -1,4 +1,5 @@
-﻿using MediatorForge.Results;
+﻿using MediatorForge.CQRS.Validators;
+using MediatorForge.Results;
 
 namespace MediatorForge.Tests.Tests;
 

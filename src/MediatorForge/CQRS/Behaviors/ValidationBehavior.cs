@@ -1,5 +1,5 @@
 ﻿using MediatorForge.CQRS.Exceptions;
-using MediatorForge.CQRS.Interfaces;
+using MediatorForge.CQRS.Validators;
 using MediatorForge.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;

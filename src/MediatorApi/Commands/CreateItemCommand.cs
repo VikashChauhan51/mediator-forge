@@ -1,5 +1,5 @@
 ﻿using MediatorForge.CQRS.Commands;
-using MediatorForge.CQRS.Interfaces;
+using MediatorForge.CQRS.Validators;
 using MediatorForge.Results;
 using MediatorForge.Utilities;
 

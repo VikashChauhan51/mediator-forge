@@ -1,4 +1,4 @@
-﻿using MediatorForge.CQRS.Interfaces;
+﻿using MediatorForge.CQRS.Validators;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace MediatorForge.Adapters;

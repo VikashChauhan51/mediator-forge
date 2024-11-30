@@ -1,4 +1,4 @@
-﻿using MediatorForge.CQRS.Commands;
+﻿using MediatorForge.CQRS.Authorizers;
 using MediatorForge.Results;
 
 namespace MediatorForge.Tests;
@@ -128,24 +128,3 @@ public class AuthorizationBehaviorTests
     }
 
 }
-
-public class TestRequest : ICommand<TestResponse>
-{
-    public string RequestData { get; set; }
-}
-
-public class TestRequestOption : ICommand<Option<TestResponse>>
-{
-    public string RequestData { get; set; }
-}
-
-public class TestRequestResult : ICommand<Result<TestResponse>>
-{
-    public string RequestData { get; set; }
-}
-
-public class TestResponse
-{
-    public string ResponseData { get; set; }
-}
-

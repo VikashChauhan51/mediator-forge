@@ -1,7 +1,7 @@
 ﻿using MediatorForge.Utilities;
 using MediatR;
 
-namespace MediatorForge.CQRS.Interfaces;
+namespace MediatorForge.CQRS.Validators;
 
 /// <summary>
 /// Defines a contract for validating a specific request.

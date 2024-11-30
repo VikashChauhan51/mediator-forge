@@ -10,8 +10,16 @@
 		<Authors>Vikash Chauhan</Authors>
 		<Summary>Adapter class to integrate MediatorForge validators with the custom validation system in C#</Summary>
 		<Copyright>Copyright (c) Vikash Chauhan. All rights reserved.</Copyright>
-		<Description>Extensions to language-ext framework effects system that wraps the IO behaviours from the .NET BCL</Description>
-		<PackageTags>C#, Result, Option, MediatorR, Result Pattern,FluentValidator</PackageTags>
+		<Description>
+			MediatorForge.Adapters provides a seamless integration of MediatorForge validators with custom validation systems in C# applications.
+			Key Features:
+			- Provides adapters to connect MediatorForge validation with custom systems.
+			- Ensures consistent validation logic across different layers.
+			- Simplifies integration and enhances code maintainability.
+
+			This library is designed to work with MediatorForge, ensuring smooth and efficient validation processes in your applications.
+		</Description>
+		<PackageTags>C#, Result, Option, MediatorR, Result Pattern, FluentValidator</PackageTags>
 		<PackageProjectUrl>https://github.com/VikashChauhan51/mediator-forge</PackageProjectUrl>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<OutputType>library</OutputType>
@@ -19,6 +27,7 @@
 		<FileVersion>1.0.0.0</FileVersion>
 		<PackageReadmeFile>README.nuget.md</PackageReadmeFile>
 	</PropertyGroup>
+
 
 	<ItemGroup>
 		<PackageReference Include="FluentValidation" Version="11.11.0" />

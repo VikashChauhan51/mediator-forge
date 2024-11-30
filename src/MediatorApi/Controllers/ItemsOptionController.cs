@@ -4,6 +4,7 @@ using MediatorApi.Commands;
 using MediatorApi.Notifications;
 using MediatorApi.Queries;
 using MediatorForge.CQRS.Exceptions;
+using MediatorForge.CQRS.Notifications;
 
 namespace MediatorApi.Controllers;
 
@@ -27,7 +28,7 @@ public class ItemsOptionController : ControllerBase
          (
                 async id =>
              {
-                 await _mediator.Publish(new ItemCreatedNotification { ItemId = id });
+                 await _mediator.Publish(new EventNotification<ItemCreatedNotification>(new ItemCreatedNotification { ItemId = id }));
                  return Ok(id);
              },
              () =>

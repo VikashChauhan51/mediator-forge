@@ -1,5 +1,5 @@
-﻿using MediatorForge.CQRS.Exceptions;
-using MediatorForge.CQRS.Interfaces;
+﻿using MediatorForge.CQRS.Authorizers;
+using MediatorForge.CQRS.Exceptions;
 using MediatorForge.Results;
 using MediatR;
 using Microsoft.Extensions.Logging;
@@ -30,7 +30,7 @@ public class AuthorizationBehavior<TRequest, TResponse>
 
         // Log the start of authorization
         logger.LogInformation("Authorizing request={Request}", typeof(TRequest).Name);
-        var authorizationResult = await authorizer?.AuthorizeAsync(request, cancellationToken);
+        var authorizationResult = await authorizer.AuthorizeAsync(request, cancellationToken);
         if (authorizationResult != null &&
             !authorizationResult.IsAuthorized)
         {

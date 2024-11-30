@@ -1,7 +1,7 @@
 using MediatorApi;
 using MediatorApi.Commands;
 using MediatorForge;
-using MediatorForge.CQRS.Interfaces;
+using MediatorForge.CQRS.Validators;
 using System.Diagnostics;
 using System.Reflection;
 

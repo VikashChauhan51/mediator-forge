@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿using MediatorForge.CQRS.Validators;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace MediatorForge.Adapters.Tests.Tests;
 

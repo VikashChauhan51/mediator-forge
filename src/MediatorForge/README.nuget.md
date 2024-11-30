@@ -10,6 +10,7 @@
 - **Authorization**: Handle authorization logic elegantly with custom exception handling.
 - **Logging**: Log requests, responses, and performance metrics effectively.
 - **Pipeline Behaviors**: Implement pipeline behaviors for handling cross-cutting concerns in a clean and maintainable way.
+- **Command and Query Handling**: Simplify the handling of commands and queries using custom interfaces.
 
 ## Installation
 
@@ -20,6 +21,77 @@ dotnet add package MediatorForge
 ```
 
 ## Usage
+
+### Command Interfaces
+
+Define and handle commands using custom command interfaces.
+
+#### Example:
+
+```csharp
+/// <summary>
+/// Execute ICommand.
+/// </summary>
+public interface ICommand : ICommand<Unit>
+{
+}
+
+/// <summary>
+/// Execute ICommand.
+/// </summary>
+public interface ICommand<out TResponse> : IRequest<TResponse>
+{
+}
+
+/// <summary>
+/// Handle ICommand Request.
+/// </summary>
+/// <typeparam name="TCommand"></typeparam>
+public interface ICommandHandler<in TCommand>
+    : ICommandHandler<TCommand, Unit>
+    where TCommand : ICommand<Unit>
+{
+}
+
+/// <summary>
+/// Handle ICommand Request.
+/// </summary>
+/// <typeparam name="TCommand"></typeparam>
+/// <typeparam name="TResponse"></typeparam>
+public interface ICommandHandler<in TCommand, TResponse>
+    : IRequestHandler<TCommand, TResponse>
+    where TCommand : ICommand<TResponse>
+    where TResponse : notnull
+{
+}
+```
+
+### Query Interfaces
+
+Define and handle queries similarly to commands.
+
+#### Example:
+
+```csharp
+/// <summary>
+/// Execute IQuery.
+/// </summary>
+public interface IQuery<out TResponse> : IRequest<TResponse>
+{
+}
+
+/// <summary>
+/// Handle IQuery Request.
+/// </summary>
+/// <typeparam name="TQuery"></typeparam>
+/// <typeparam name="TResponse"></typeparam>
+public interface IQueryHandler<in TQuery, TResponse>
+    : IRequestHandler<TQuery, TResponse>
+    where TQuery : IQuery<TResponse>
+    where TResponse : notnull
+{
+}
+```
 
 ### ValidationBehavior
 
@@ -152,6 +224,7 @@ public class ErrorHandlerMiddleware
     }
 }
 ```
+
 
 ### License
 

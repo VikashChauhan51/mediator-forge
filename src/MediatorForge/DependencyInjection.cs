@@ -1,7 +1,8 @@
-﻿using MediatorForge.CQRS.Behaviors;
-using MediatorForge.CQRS.Commands;
-using MediatR;
+﻿using MediatorForge.CQRS.Authorizers;
+using MediatorForge.CQRS.Behaviors;
+using MediatorForge.CQRS.Validators;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using System.Reflection;
 
 namespace MediatorForge;
@@ -28,6 +29,9 @@ public static class DependencyInjection
             configuration.AddOpenBehavior(typeof(ValidationBehavior<,>));
         });
 
+        // Register default authorizer and validator
+        services.AddTransient(typeof(IAuthorizer<>), typeof(DefaultAuthorizer<>));
+        services.AddTransient(typeof(IValidator<>), typeof(DefaultValidator<>));
         return services;
     }
 }
