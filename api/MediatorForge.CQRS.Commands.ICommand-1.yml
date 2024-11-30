@@ -31,7 +31,6 @@ items:
     - id: TResponse
     content.vb: >-
       Public Interface ICommand(Of Out TResponse)
-
           Inherits IRequest(Of TResponse)
   nameWithType.vb: ICommand(Of TResponse)
   modifiers.csharp:

@@ -33,7 +33,6 @@ items:
     content: 'public class ValidationException : Exception'
     content.vb: >-
       Public Class ValidationException
-
           Inherits Exception
   inheritance:
   - System.Object

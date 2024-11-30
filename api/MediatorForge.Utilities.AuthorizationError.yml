@@ -34,7 +34,6 @@ items:
     content: 'public class AuthorizationError : IEquatable<AuthorizationError>'
     content.vb: >-
       Public Class AuthorizationError
-
           Implements IEquatable(Of AuthorizationError)
   inheritance:
   - System.Object

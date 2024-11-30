@@ -33,7 +33,6 @@ items:
     content: 'public class AuthorizationException : Exception'
     content.vb: >-
       Public Class AuthorizationException
-
           Inherits Exception
   inheritance:
   - System.Object

@@ -34,7 +34,6 @@ items:
     content: 'public class ValidationError : IEquatable<ValidationError>'
     content.vb: >-
       Public Class ValidationError
-
           Implements IEquatable(Of ValidationError)
   inheritance:
   - System.Object

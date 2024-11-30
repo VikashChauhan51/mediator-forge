@@ -29,7 +29,6 @@ items:
     content: 'public interface ICommand : ICommand<Unit>, IRequest<Unit>, IBaseRequest'
     content.vb: >-
       Public Interface ICommand
-
           Inherits ICommand(Of Unit)
   modifiers.csharp:
   - public

@@ -33,7 +33,6 @@ items:
       description: ''
     content.vb: >-
       Public Class DefaultAuthorizer(Of TRequest)
-
           Implements IAuthorizer(Of TRequest)
   inheritance:
   - System.Object

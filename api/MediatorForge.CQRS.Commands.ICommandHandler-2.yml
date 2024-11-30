@@ -34,7 +34,6 @@ items:
       description: ''
     content.vb: >-
       Public Interface ICommandHandler(Of In TCommand As ICommand(Of TResponse), TResponse)
-
           Inherits IRequestHandler(Of TCommand, TResponse)
   inheritedMembers:
   - MediatR.IRequestHandler{{TCommand},{TResponse}}.Handle({TCommand},System.Threading.CancellationToken)

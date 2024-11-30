@@ -12,7 +12,7 @@
           "hash": "agKQbsT17x/0jPNeyWe56HJ1JO71vy603hahNFkfWQ8="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -482,26 +482,39 @@
       },
       "is_incremental": false,
       "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "FRKktqs9zuHtiRjaD/U8slBFp20iN3Br4GwsJ+cxOj8="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
     }
   ],
   "incremental_info": [
     {
       "status": {
-        "can_incremental": true,
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": true,
+          "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 1
+          "total_file_count": 2,
+          "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor ManagedReferenceDocumentProcessor disable incremental build because last build doesn't contain version .",
           "incrementalPhase": "build",
           "total_file_count": 38,
           "skipped_file_count": 0
@@ -517,8 +530,8 @@
     },
     {
       "status": {
-        "can_incremental": true,
-        "details": "Can support incremental post processing.",
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

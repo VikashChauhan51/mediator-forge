@@ -34,7 +34,6 @@ items:
       description: The event type of <see cref="!:TEvent"></see>.
     content.vb: >-
       Public Class EventNotification(Of TEvent)
-
           Implements INotification, IEquatable(Of EventNotification(Of TEvent))
   inheritance:
   - System.Object
