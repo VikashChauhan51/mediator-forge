@@ -1,0 +1,36 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": [
+            "../src/MediatorForge/*.csproj",
+            "../src/MediatorForge.Adapters/*.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "toc.yml",
+          "*.md",
+          "api/**.yml"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "favicon.ico"
+        ]
+      }
+    ],
+    "globalMetadata": {
+      "_appTitle": "MediatorForge Documentation"
+    }
+  }
+}
