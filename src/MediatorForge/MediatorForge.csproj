@@ -4,7 +4,7 @@
 		<TargetFramework>net8.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<PackageVersion>1.0.0-beta-1</PackageVersion>
+		<VersionPrefix>1.0.0</VersionPrefix>
 		<PackageId>MediatorForge</PackageId>
 		<Title>MediatorForge</Title>
 		<Authors>Vikash Chauhan</Authors>
@@ -27,12 +27,10 @@
 		<RepositoryType>git</RepositoryType>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
-		<OutputType>library</OutputType>
-		<AssemblyVersion>1.0.0.0</AssemblyVersion>
-		<FileVersion>1.0.0.0</FileVersion>
-		<PackageReadmeFile>README.nuget.md</PackageReadmeFile>
 		<AssemblyOriginatorKeyFile>..\MediatorForge.snk</AssemblyOriginatorKeyFile>
 		<SignAssembly>true</SignAssembly>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<PackageReadmeFile>README.nuget.md</PackageReadmeFile>
 	</PropertyGroup>
 
 
@@ -46,6 +44,7 @@
 	  <None Update="README.nuget.md">
 	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
 		  <Pack>True</Pack>
+		  <PackagePath>\</PackagePath>
 	  </None>
 		<None Update="..\MediatorForge.snk">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
