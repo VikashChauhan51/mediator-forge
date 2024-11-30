@@ -29,12 +29,6 @@ jobs:
       with:
         dotnet-version: 8.0.x
 
-    - name: Determine changes
-      id: determine_changes
-      run: |
-        CHANGED_FILES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }})
-        echo "CHANGED_FILES=$CHANGED_FILES" >> $GITHUB_ENV
-
     - name: Install dependencies
       if: contains(env.CHANGED_FILES, matrix.project.changes)
       run: dotnet restore ${{ matrix.project.path }}
