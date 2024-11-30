@@ -151,6 +151,9 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
+## Documentations
+- [Docs](https://vikashchauhan51.github.io/mediator-forge/index.html)
+- [API](https://vikashchauhan51.github.io/mediator-forge/api/toc.html)
 ## License
 
 This project is licensed under the MIT License.
