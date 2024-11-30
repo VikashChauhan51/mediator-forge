@@ -30,21 +30,17 @@ jobs:
         dotnet-version: 8.0.x
 
     - name: Install dependencies
-      if: contains(env.CHANGED_FILES, matrix.project.changes)
       run: dotnet restore ${{ matrix.project.path }}
       working-directory: src
 
     - name: Build
-      if: contains(env.CHANGED_FILES, matrix.project.changes)
       run: dotnet build ${{ matrix.project.path }} --configuration Release --no-restore
       working-directory: src
 
     - name: Pack
-      if: contains(env.CHANGED_FILES, matrix.project.changes)
       run: dotnet pack ${{ matrix.project.path }} --configuration Release --no-build --output $(dirname ${{ matrix.project.path }})/nupkgs
       working-directory: src
 
     - name: Publish
-      if: contains(env.CHANGED_FILES, matrix.project.changes)
       run: dotnet nuget push $(dirname ${{ matrix.project.path }})/nupkgs/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: src
