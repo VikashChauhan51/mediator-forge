@@ -7,40 +7,29 @@ on:
       - 'src/MediatorForge/**'
       - 'src/MediatorForge.Adapters/**'
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        project:
-          - name: MediatorForge
-            path: src/MediatorForge/MediatorForge.csproj
-            changes: 'src/MediatorForge/**'
-          - name: MediatorForge.Adapters
-            path: src/MediatorForge.Adapters/MediatorForge.Adapters.csproj
-            changes: 'src/MediatorForge.Adapters/**'
-
     steps:
     - name: Checkout
       uses: actions/checkout@v2
-
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 8.0.x
-
     - name: Install dependencies
-      run: dotnet restore ${{ matrix.project.path }}
+      run: dotnet restore
       working-directory: src
-
     - name: Build
-      run: dotnet build ${{ matrix.project.path }} --configuration Release --no-restore
+      run: dotnet build --configuration Release --no-restore
       working-directory: src
-
-    - name: Pack
-      run: dotnet pack ${{ matrix.project.path }} --configuration Release --no-build --output $(dirname ${{ matrix.project.path }})/nupkgs
+    - name: Pack MediatorForge
+      run: dotnet pack MediatorForge/MediatorForge.csproj --configuration Release --no-build --output nupkgs
       working-directory: src
-
+    - name: Pack MediatorForge Adapters
+      run: dotnet pack MediatorForge.Adapters/MediatorForge.Adapters.csproj --configuration Release --no-build --output nupkgs
+      working-directory: src
     - name: Publish
-      run: dotnet nuget push $(dirname ${{ matrix.project.path }})/nupkgs/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
+      run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
       working-directory: src
