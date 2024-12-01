@@ -1,3 +1,5 @@
+using Akka.Actor;
+using Akka.DependencyInjection;
 using MediatorApi;
 using MediatorApi.Commands;
 using MediatorForge;
@@ -22,6 +24,19 @@ builder.Services.AddProblemDetails(options =>
         problemDetails.Extensions["traceId"] = Activity.Current?.Id ?? context.HttpContext?.TraceIdentifier;
 
     };
+});
+
+
+// Register Akka.NET actor system
+builder.Services.AddSingleton(provider =>
+{
+    var bootstrap = BootstrapSetup.Create();
+    // enable DI support inside this ActorSystem, if needed
+    var diSetup = DependencyResolverSetup.Create(provider);
+    // merge this setup (and any others) together into ActorSystemSetup
+    var actorSystemSetup = bootstrap.And(diSetup);
+    var actorSystem = ActorSystem.Create("MediatorForge", actorSystemSetup);
+    return actorSystem;
 });
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

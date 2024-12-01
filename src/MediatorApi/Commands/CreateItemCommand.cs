@@ -1,7 +1,10 @@
-﻿using MediatorForge.CQRS.Commands;
+﻿using Akka.Actor;
+using Akka.DependencyInjection;
+using MediatorForge.CQRS.Commands;
 using MediatorForge.CQRS.Validators;
 using MediatorForge.Results;
 using MediatorForge.Utilities;
+using MediatR;
 
 namespace MediatorApi.Commands;
 
@@ -17,19 +20,39 @@ public class CreateItemCommandValidator : IValidator<CreateItemCommand>
     public Task<ValidationResult> ValidateAsync(CreateItemCommand request, CancellationToken cancellationToken = default)
     {
 
-        return Task.FromResult(ValidationResult.Failure(new List<ValidationError>()
-        {
-            new ValidationError("test","required","")
-        }));
+        return Task.FromResult(ValidationResult.Success);
     }
 }
-public class CreateItemCommandHandler : ICommandHandler<CreateItemCommand, Guid>
+
+
+public class CreateItemCommandHandler : IRequestHandler<CreateItemCommand, Guid>
 {
+    private readonly IActorRef _itemActor;
+
+    public CreateItemCommandHandler(ActorSystem actorSystem)
+    {
+        var props = DependencyResolver.For(actorSystem).Props<ItemActor>();
+        _itemActor = actorSystem.ActorOf(props, "itemActor");
+    }
+
     public async Task<Guid> Handle(CreateItemCommand request, CancellationToken cancellationToken)
     {
-        // Business logic to create an item and return its ID
-        var itemId = Guid.NewGuid();
+        var itemId = await _itemActor.Ask<Guid>(request, cancellationToken);
         return itemId;
+    }
+}
+
+
+
+public class ItemActor : ReceiveActor
+{
+    public ItemActor()
+    {
+        ReceiveAsync<CreateItemCommand>(async command =>
+        {
+            var itemId = Guid.NewGuid();
+            Sender.Tell(itemId);
+        });
     }
 }
 
