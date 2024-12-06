@@ -1,6 +1,6 @@
 ﻿using MediatorForge.CQRS.Authorizers;
 using MediatorForge.CQRS.Exceptions;
-using MediatorForge.Results;
+using ResultifyCore;
 using MediatR;
 using Microsoft.Extensions.Logging;
 

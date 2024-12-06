@@ -2,7 +2,7 @@
 using Akka.DependencyInjection;
 using MediatorForge.CQRS.Commands;
 using MediatorForge.CQRS.Validators;
-using MediatorForge.Results;
+using ResultifyCore;
 using MediatorForge.Utilities;
 using MediatR;
 

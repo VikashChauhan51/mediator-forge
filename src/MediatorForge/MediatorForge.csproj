@@ -35,17 +35,18 @@
 
 
 	<ItemGroup>
-    <PackageReference Include="MediatR" Version="12.4.1" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
-  </ItemGroup>
+		<PackageReference Include="MediatR" Version="12.4.1" />
+		<PackageReference Include="ResultifyCore" Version="1.0.0" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.0" />
+	</ItemGroup>
 
 
 	<ItemGroup>
-	  <None Update="README.nuget.md">
-	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-		  <Pack>True</Pack>
-		  <PackagePath>\</PackagePath>
-	  </None>
+		<None Update="README.nuget.md">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
 		<None Update="..\MediatorForge.snk">
 			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
 			<Pack>True</Pack>
