@@ -1,4 +1,4 @@
-﻿using MediatorForge.Results;
+﻿using ResultifyCore;
 
 namespace MediatorForge.Tests.Tests;
 

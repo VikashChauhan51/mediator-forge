@@ -1,5 +1,5 @@
 ﻿using MediatorForge.CQRS.Queries;
-using MediatorForge.Results;
+using ResultifyCore;
 
 namespace MediatorApi.Queries;
 

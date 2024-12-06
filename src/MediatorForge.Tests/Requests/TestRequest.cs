@@ -1,5 +1,5 @@
 ﻿using MediatorForge.CQRS.Commands;
-using MediatorForge.Results;
+using ResultifyCore;
 
 namespace MediatorForge.Adapters.Tests.Requests;
 public class TestRequest : ICommand<TestResponse>

@@ -1,5 +1,5 @@
 ﻿using MediatorForge.CQRS.Authorizers;
-using MediatorForge.Results;
+using ResultifyCore;
 
 namespace MediatorForge.Tests;
 
