@@ -5,6 +5,7 @@ using MediatorApi.Notifications;
 using MediatorApi.Queries;
 using MediatorForge.CQRS.Exceptions;
 using MediatorForge.CQRS.Notifications;
+using ResultifyCore;
 
 namespace MediatorApi.Controllers;
 
@@ -13,16 +14,27 @@ namespace MediatorApi.Controllers;
 public class ItemsResultController : ControllerBase
 {
     private readonly IMediator _mediator;
+    private readonly ILogger<ItemsResultController> logger;
 
-    public ItemsResultController(IMediator mediator)
+    public ItemsResultController(IMediator mediator, ILogger<ItemsResultController> logger)
     {
         _mediator = mediator;
+        this.logger = logger;
     }
 
     [HttpPost("create")]
     public async Task<IActionResult> CreateItem([FromBody] CreateItemResultCommand command)
     {
         var result = await _mediator.Send(command);
+
+        result
+        .Do(res => this.logger.LogInformation("Executing common action"))
+        .OnSuccess<Guid>(value => this.logger.LogInformation($"Success with value: {value}"))
+        .OnError(ex => this.logger.LogInformation($"Error: {ex.Message}"))
+        .Tap(value => this.logger.LogInformation($"Tap into value: {value}"))
+        .Map(value => value)
+        .OnSuccess(value => this.logger.LogInformation($"Transformed value: {value}"));
+
 
         return await result.Match<Task<IActionResult>>
          (
