@@ -1,25 +1,32 @@
-﻿using MediatorForge.CQRS.Exceptions;
-using MediatorForge.CQRS.Validators;
-using ResultifyCore;
+﻿using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.Logging;
+using ResultifyCore;
 
-namespace MediatorForge.CQRS.Behaviors;
-
-public class ValidationBehavior<TRequest, TResponse>
-    (IEnumerable<IValidator<TRequest>> validators,
-    ILogger<ValidationBehavior<TRequest, TResponse>> logger)
+namespace MediatorForge.Adapters;
+public class FluentValidationBehavior<TRequest, TResponse>
     : IPipelineBehavior<TRequest, TResponse>
-   where TRequest : notnull, IRequest<TResponse>
+    where TRequest : notnull, IRequest<TResponse>
     where TResponse : notnull
 {
+    private readonly IEnumerable<IValidator<TRequest>> _validators;
+    private readonly ILogger<FluentValidationBehavior<TRequest, TResponse>> _logger;
+
+    public FluentValidationBehavior(IEnumerable<IValidator<TRequest>> validators,
+        ILogger<FluentValidationBehavior<TRequest, TResponse>> logger)
+    {
+        _validators = validators;
+        _logger = logger;
+    }
+
     public async Task<TResponse> Handle(TRequest request, RequestHandlerDelegate<TResponse> next, CancellationToken cancellationToken)
     {
         // Log the start of validation
-        logger.LogInformation("Validating request={Request}", typeof(TRequest).Name);
-        var validationResults = validators?.Any() == true
+        _logger.LogInformation("Validating request={Request}", typeof(TRequest).Name);
+
+        var validationResults = _validators?.Any() == true
             ? await Task.WhenAll(
-                validators.Select(validator => validator.ValidateAsync(request))
+                _validators.Select(validator => validator.ValidateAsync(request, cancellationToken))
             )
             : null;
 
@@ -31,9 +38,11 @@ public class ValidationBehavior<TRequest, TResponse>
         if (failures?.Count > 0)
         {
             // Log the validation failure event
-            logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, failures);
+            _logger.LogWarning("Validation failed for request {Request}. Errors: {Errors}", typeof(TRequest).Name, failures);
+
             var validationException = new ValidationException(failures);
             var responseType = typeof(TResponse);
+
             if (responseType.IsGenericType)
             {
                 var genericTypeDefinition = responseType.GetGenericTypeDefinition();
@@ -56,11 +65,11 @@ public class ValidationBehavior<TRequest, TResponse>
                     return (TResponse)fromT2Method!.Invoke(null, new object[] { validationException })!;
                 }
             }
+
             throw validationException;
         }
 
-
         return await next();
     }
-
 }
+

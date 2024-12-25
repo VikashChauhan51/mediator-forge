@@ -4,7 +4,7 @@ using MediatorForge.Utilities;
 namespace MediatorForge.Adapters;
 public class FluentValidatorBase<TRequest> : FluentValidation.AbstractValidator<TRequest>, IValidator<TRequest>
 {
-    new public async Task<ValidationResult> ValidateAsync(TRequest request, CancellationToken cancellationToken = default)
+    async Task<ValidationResult> IValidator<TRequest>.ValidateAsync(TRequest request, CancellationToken cancellationToken)
     {
         var validationResult = await base.ValidateAsync(request, cancellationToken);
 

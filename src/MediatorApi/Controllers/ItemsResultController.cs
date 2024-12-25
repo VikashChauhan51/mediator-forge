@@ -29,8 +29,6 @@ public class ItemsResultController : ControllerBase
 
         result
         .Do(res => this.logger.LogInformation("Executing common action"))
-        .OnSuccess<Guid>(value => this.logger.LogInformation($"Success with value: {value}"))
-        .OnError(ex => this.logger.LogInformation($"Error: {ex.Message}"))
         .Tap(value => this.logger.LogInformation($"Tap into value: {value}"))
         .Map(value => value)
         .OnSuccess(value => this.logger.LogInformation($"Transformed value: {value}"));
