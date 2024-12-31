@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatorForge.CQRS.Queries;
+namespace MediatorForge.Queries;
 
 /// <summary>
 ///  Handle IQuery.

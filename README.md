@@ -40,10 +40,6 @@ public void ConfigureServices(IServiceCollection services)
     services.AddTransient(typeof(IPipelineBehavior<,>), typeof(AuthorizationBehavior<,>));
     services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehavior<,>));
 
-    // Register default authorizer and validator
-    services.AddTransient(typeof(IAuthorizer<>), typeof(DefaultAuthorizer<>));
-    services.AddTransient(typeof(IValidator<>), typeof(DefaultValidator<>));
-
     // Other service registrations
 }
 ```
@@ -112,49 +108,3 @@ public class ErrorHandlerMiddleware
     }
 }
 ```
-
----
-
-# MediatorForge.Adapters
-
-MediatorForge.Adapters provides a seamless integration of MediatorForge validators with custom validation systems in .NET applications. This adapter ensures consistent validation logic across different application layers, simplifying the integration process and enhancing code maintainability.
-
-## Features
-
-- **Seamless Integration**: Easily connect MediatorForge validators with your custom validation systems.
-- **Enhanced Code Maintainability**: Simplifies the integration of validation logic.
-- **Consistent Validation**: Ensures consistent validation logic across different layers.
-- **Extensible**: Allows customization of validation logic as needed.
-
-## Installation
-
-Install the package via NuGet:
-
-```bash
-dotnet add package MediatorForge.Adapters
-```
-
-## Usage
-
-After installing the package, register the adapter in your `Startup.cs` or `Program.cs`:
-
-```csharp
-public void ConfigureServices(IServiceCollection services)
-{
-    // Register MediatorForge and other necessary services
-    services.AddMediatorForge(typeof(Startup).Assembly);
-
-    // Register FluentValidatorAdapter
-    services.AddMediatorForgeFluentValidatorAdapter();
-
-    // Other service registrations
-}
-```
-
-## Documentations
-- [Docs](https://vikashchauhan51.github.io/mediator-forge/index.html)
-- [API](https://vikashchauhan51.github.io/mediator-forge/api/toc.html)
-## License
-
-This project is licensed under the MIT License.
-

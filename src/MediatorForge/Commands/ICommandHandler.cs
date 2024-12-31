@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatorForge.CQRS.Commands;
+namespace MediatorForge.Commands;
 
 /// <summary>
 /// Handle ICommand Request.

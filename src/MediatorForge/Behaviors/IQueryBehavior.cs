@@ -1,7 +1,6 @@
-﻿using MediatorForge.CQRS.Queries;
-using MediatR;
+﻿using MediatorForge.Queries;
 
-namespace MediatorForge.CQRS.Behaviors;
+namespace MediatorForge.Behaviors;
 
 /// <summary>
 /// Interface for Query Pipeline Behaviors.

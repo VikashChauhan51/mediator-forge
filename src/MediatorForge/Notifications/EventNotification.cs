@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatorForge.CQRS.Notifications;
+namespace MediatorForge.Notifications;
 
 /// <summary>
 /// The generic implementation of event notification.
@@ -13,4 +13,3 @@ public interface IEventNotification<out TEvent> : INotification where TEvent : n
     /// </summary>
     TEvent Event { get; }
 }
-

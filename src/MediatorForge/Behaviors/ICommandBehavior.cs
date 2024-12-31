@@ -1,7 +1,6 @@
-﻿using MediatorForge.CQRS.Commands;
-using MediatR;
+﻿using MediatorForge.Commands;
 
-namespace MediatorForge.CQRS.Behaviors;
+namespace MediatorForge.Behaviors;
 
 /// <summary>
 /// Interface for Command Pipeline Behaviors.

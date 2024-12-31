@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace MediatorForge.CQRS.Behaviors;
+namespace MediatorForge.Behaviors;
 
 /// <summary>
 /// Interface for Pipeline Behaviors.
