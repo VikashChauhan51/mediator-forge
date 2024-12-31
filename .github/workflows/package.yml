@@ -5,7 +5,6 @@ on:
     branches: [ "main" ]
     paths:
       - 'src/MediatorForge/**'
-      - 'src/MediatorForge.Adapters/**'
 
 
 jobs:
@@ -26,9 +25,6 @@ jobs:
       working-directory: src
     - name: Pack MediatorForge
       run: dotnet pack MediatorForge/MediatorForge.csproj --configuration Release --no-build --output nupkgs
-      working-directory: src
-    - name: Pack MediatorForge Adapters
-      run: dotnet pack MediatorForge.Adapters/MediatorForge.Adapters.csproj --configuration Release --no-build --output nupkgs
       working-directory: src
     - name: Publish
       run: dotnet nuget push nupkgs/*.nupkg --api-key ${{ secrets.NUGET_APIKEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate
