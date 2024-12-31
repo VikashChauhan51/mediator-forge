@@ -5,10 +5,12 @@ namespace MediatorForge.CQRS.Notifications;
 /// <summary>
 /// The generic implementation of event notification.
 /// </summary>
-/// <typeparam name="TEvent">The event type of <see cref="TEvent"/>.</typeparam>
-/// <param name="Event">The event data <see cref="TEvent"/>.</param>
-public record EventNotification<TEvent>
-(
-    TEvent Event
-) : INotification;
+/// <typeparam name="TEvent">The event type.</typeparam>
+public interface IEventNotification<out TEvent> : INotification where TEvent : notnull
+{
+    /// <summary>
+    /// Gets the event data.
+    /// </summary>
+    TEvent Event { get; }
+}
 
