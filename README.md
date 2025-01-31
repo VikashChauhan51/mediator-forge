@@ -1,6 +1,6 @@
 # mediator-forge
 
-MediatorForge is a robust library designed to streamline the implementation of common patterns in .NET applications. It provides integration for validation, authorization, logging, and mediator behaviors, enhancing code readability and maintainability.
+MediatorForge is a robust library designed to streamline the implementation of CQRS patterns in .NET applications. It provides integration for validation, authorization, logging, and mediator behaviors, enhancing code readability and maintainability.
 
 ## Features
 
