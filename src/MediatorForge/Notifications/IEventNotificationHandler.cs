@@ -6,7 +6,7 @@ namespace MediatorForge.Notifications;
 /// Handle IEventNotification.
 /// </summary>
 /// <typeparam name="TEvent"></typeparam>
-public interface IEventNotificationHandler<in TEvent> : INotificationHandler<IEventNotification<TEvent>>
-    where TEvent : notnull
+public interface IEventNotificationHandler<in TEvent> : INotificationHandler<TEvent>
+    where TEvent : INotification
 {
 }
