@@ -70,6 +70,7 @@ public sealed class AuthorizationBehavior<TRequest, TResponse> : IBehavior<TRequ
         var tResult = typeof(TRequest).GetGenericArguments()[0];
         var typeOfResult = tResult.GetGenericArguments()[0];
         var outcomeType = typeof(Outcome<>).MakeGenericType(typeOfResult);
+
         var constructor = outcomeType.GetConstructor(
             BindingFlags.Instance | BindingFlags.NonPublic,
             null,
@@ -95,6 +96,7 @@ public sealed class AuthorizationBehavior<TRequest, TResponse> : IBehavior<TRequ
         var tResult = typeof(TRequest).GetGenericArguments()[0];
         var typeOfResult = tResult.GetGenericArguments()[0];
         var resultType = typeof(Result<>).MakeGenericType(typeOfResult);
+
         var constructor = resultType.GetConstructor(
             BindingFlags.Instance | BindingFlags.NonPublic,
             null,

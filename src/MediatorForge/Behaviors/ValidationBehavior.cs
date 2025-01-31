@@ -73,6 +73,7 @@ public sealed class ValidationBehavior<TRequest, TResponse> :
         var tResult = typeof(TRequest).GetGenericArguments()[0];
         var typeOfResult = tResult.GetGenericArguments()[0];
         var outcomeType = typeof(Outcome<>).MakeGenericType(typeOfResult);
+
         var constructor = outcomeType.GetConstructor(
             BindingFlags.Instance | BindingFlags.NonPublic,
             null,
@@ -101,6 +102,7 @@ public sealed class ValidationBehavior<TRequest, TResponse> :
         var tResult = typeof(TRequest).GetGenericArguments()[0];
         var typeOfResult = tResult.GetGenericArguments()[0];
         var resultType = typeof(Result<>).MakeGenericType(typeOfResult);
+
         var constructor = resultType.GetConstructor(
             BindingFlags.Instance | BindingFlags.NonPublic,
             null,
