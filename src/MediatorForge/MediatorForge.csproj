@@ -1,10 +1,10 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFramework>net8.0</TargetFramework>
+		<TargetFramework>net9.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
-		<VersionPrefix>1.0.6</VersionPrefix>
+		<VersionPrefix>1.1.0</VersionPrefix>
 		<PackageId>MediatorForge</PackageId>
 		<Title>MediatorForge</Title>
 		<Authors>Vikash Chauhan</Authors>
@@ -35,7 +35,10 @@
 
 
 	<ItemGroup>
+		<PackageReference Include="FluentValidation" Version="11.11.0" />
 		<PackageReference Include="MediatR" Version="12.4.1" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
+		<PackageReference Include="ResultifyCore" Version="1.1.1" />
 	</ItemGroup>
 
 
