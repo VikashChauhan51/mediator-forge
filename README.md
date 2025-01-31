@@ -1,5 +1,10 @@
 # mediator-forge
 
+[![NuGet Version](https://img.shields.io/nuget/v/MediatorForge.svg?style=flat-square)](https://www.nuget.org/packages/MediatorForge/)
+[![NuGet Downloads](https://img.shields.io/nuget/dt/MediatorForge.svg?style=flat-square)](https://www.nuget.org/packages/MediatorForge/)
+[![Build Status](https://github.com/VikashChauhan51/mediator-forge/actions/workflows/build.yml/badge.svg)](https://github.com/VikashChauhan51/mediator-forge/actions)
+[![License](https://img.shields.io/github/license/VikashChauhan51/mediator-forge.svg?style=flat-square)](https://github.com/VikashChauhan51/mediator-forge/blob/main/LICENSE)
+
 MediatorForge is a robust library designed to streamline the implementation of CQRS patterns in .NET applications. It provides integration for validation, authorization, logging, and mediator behaviors, enhancing code readability and maintainability.
 
 ## Features
