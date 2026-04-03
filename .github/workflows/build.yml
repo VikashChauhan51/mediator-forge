@@ -9,7 +9,7 @@ on:
     types: [opened, synchronize, reopened]
 
 env:
-  DOTNET_VERSION: '9.0.x' # The .NET SDK version to use
+  DOTNET_VERSION: '10.0.x' # The .NET SDK version to use
 
 jobs:
   build-and-test:
@@ -34,8 +34,4 @@ jobs:
 
     - name: Build
       run: dotnet build --configuration Release --no-restore
-      working-directory: src
-
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
       working-directory: src

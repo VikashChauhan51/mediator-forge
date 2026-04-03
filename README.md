@@ -5,14 +5,21 @@
 [![Build Status](https://github.com/VikashChauhan51/mediator-forge/actions/workflows/build.yml/badge.svg)](https://github.com/VikashChauhan51/mediator-forge/actions)
 [![License](https://img.shields.io/github/license/VikashChauhan51/mediator-forge.svg?style=flat-square)](https://github.com/VikashChauhan51/mediator-forge/blob/main/LICENSE)
 
-MediatorForge is a robust library designed to streamline the implementation of CQRS patterns in .NET applications. It provides integration for validation, authorization, logging, and mediator behaviors, enhancing code readability and maintainability.
+
+MediatorForge is a robust library designed to streamline the implementation of CQRS (Command Query Responsibility Segregation) patterns in .NET applications. It provides:
+- Custom dispatcher for commands, queries, and event notifications
+- Integration for validation, authorization, logging, and pipeline behaviors
+- Clean separation of concerns and enhanced code maintainability
+
 
 ## Features
 
+- **Custom Dispatcher**: Central class for dispatching commands, queries, and publishing events using dependency injection.
+- **Command, Query, and Event Notification Handling**: Strongly-typed interfaces for all CQRS operations.
+- **Pipeline Behaviors**: Middleware for cross-cutting concerns (logging, validation, etc.).
 - **Fluent Validation**: Seamless integration with FluentValidation for request validation.
 - **Authorization Logic**: Secure access control with customizable authorization behaviors.
 - **Logging**: Monitor and record request processing and performance metrics.
-- **Command and Query Handling**: Simplified handling using the Mediator pattern.
 - **Result and Option Types**: Effective handling of operation outcomes.
 
 ## Installation
@@ -22,6 +29,17 @@ Install the package via NuGet:
 ```bash
 dotnet add package MediatorForge
 ```
+
+## Usage
+
+
+## Architecture Overview
+
+MediatorForge implements CQRS with the following core interfaces:
+- `IHandler<TRequest, TResponse>`: Handles commands and queries.
+- `IPipelineBehavior<TRequest, TResponse>`: Pipeline middleware for cross-cutting concerns.
+- `IEventNotification<TEvent>` / `IEventNotificationHandler<TEvent>`: For event publishing and handling (one-to-many).
+- `IDispatcher`: Central interface for dispatching commands, queries, and events.
 
 ## Usage
 
@@ -69,6 +87,7 @@ public class CreateUserCommandHandler : ICommandHandler<CreateUserCommand, UserR
 
 ```
 
+
 ### Query Interfaces
 
 Define and handle queries similarly to commands.
@@ -104,7 +123,8 @@ public class GetUserQueryHandler : IQueryHandler<GetUserQuery, UserResponse>
 
 ```
 
-### Pipeline Behaviors Interfaces
+
+### Pipeline Behaviors
 
 Define and handle pipeline behaviors using custom behavior interfaces.
 
@@ -207,14 +227,15 @@ public class CommandLoggingBehavior<TCommand, TResponse> : ICommandBehavior<TCom
 
 
 ```
+
 ### Event Notification Interfaces
 
-Define and handle event notifications using custom event notification interfaces.
+Define and handle event notifications using custom event notification interfaces. Event notifications allow you to publish events to multiple handlers (one-to-many pattern).
+
 
 #### Example:
 
-```csharp
-
+```
 public class UserRegisteredEvent
 {
     public string UserName { get; set; }
@@ -227,29 +248,23 @@ public class UserRegisteredEvent
     }
 }
 
-
-public class UserRegisteredEventNotification : IEventNotification<UserRegisteredEvent>
-{
-    public UserRegisteredEventNotification(UserRegisteredEvent @event)
-    {
-        Event = @event;
-    }
-
-    public UserRegisteredEvent Event { get; }
-}
-
-
 public class UserRegisteredEventHandler : IEventNotificationHandler<UserRegisteredEvent>
 {
-    public Task Handle(IEventNotification<UserRegisteredEvent> notification, CancellationToken cancellationToken)
+    public Task HandleAsync(IEventNotification<UserRegisteredEvent> notification, CancellationToken cancellationToken)
     {
         var @event = notification.Event;
         Console.WriteLine($"User registered: {@event.UserName} at {@event.RegisteredAt}");
         return Task.CompletedTask;
     }
 }
-
 ```
+
+To publish an event:
+```csharp
+await dispatcher.PublishAsync(new UserRegisteredEvent("alice", DateTime.UtcNow));
+```
+```
+
 
 
 ### Register Services
@@ -259,16 +274,35 @@ Add and configure the necessary services in your `Startup.cs` or `Program.cs` fi
 ```csharp
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddControllers();
-    // Add MediatR
-    services.AddMediatR(config=>
-    {
-        config.RegisterServicesFromAssembly(typeof(Program).Assembly);
-        // Add Pipeline Behaviors
-        config.AddBehavior(typeof(CommandLoggingBehavior<,>));
-        config.AddBehavior(typeof(QueryLoggingBehavior<,>));
-    });
+    // Register all handlers, pipeline behaviors, and event notification handlers
+    services.Scan(scan => scan
+        .FromAssemblyOf<Program>()
+        .AddClasses(classes => classes.AssignableTo(typeof(IHandler<,>)))
+        .AsImplementedInterfaces()
+        .WithScopedLifetime()
+        .AddClasses(classes => classes.AssignableTo(typeof(IPipelineBehavior<,>)))
+        .AsImplementedInterfaces()
+        .WithScopedLifetime()
+        .AddClasses(classes => classes.AssignableTo(typeof(IEventNotificationHandler<>)))
+        .AsImplementedInterfaces()
+        .WithScopedLifetime()
+    );
 
-    // Other service registrations
+    services.AddScoped<IDispatcher, Dispatcher>();
 }
 ```
+
+---
+
+## Dispatcher
+
+The `Dispatcher` class is the core entry point for sending commands, queries, and publishing events. It uses dependency injection to resolve handlers and pipeline behaviors. The main methods are:
+
+- `SendAsync<TCommand, TResponse>(TCommand command, ...)` — Send a command and get a response.
+- `SendAsync<TCommand>(TCommand command, ...)` — Send a command with no response (void/Unit).
+- `QueryAsync<TQuery, TResponse>(TQuery query, ...)` — Send a query and get a response.
+- `PublishAsync<TEvent>(TEvent eventData, ...)` — Publish an event to all registered handlers.
+
+---
+
+For more details, see the API documentation and source code.
