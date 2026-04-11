@@ -9,8 +9,17 @@
 [AttributeUsage(AttributeTargets.Class, AllowMultiple = false)]
 public sealed class PipelineOrderAttribute : Attribute
 {
+    /// <summary>
+    /// The order of the pipeline behavior. Lower values indicate higher priority (executed earlier in the pipeline).
+    /// This property is set through the constructor when applying the attribute to a class.
+    /// </summary>
     public int Order { get; }
 
+    /// <summary>
+    /// The constructor for the <see cref="PipelineOrderAttribute"/> class, which takes an integer parameter representing the order of the pipeline behavior.
+    /// This value is assigned to the <see cref="Order"/> property.
+    /// </summary>
+    /// <param name="order"></param>
     public PipelineOrderAttribute(int order)
     {
         Order = order;
