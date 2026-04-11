@@ -11,68 +11,56 @@ public sealed class Dispatcher(IServiceProvider serviceProvider) : IDispatcher
 {
     /// <inheritdoc/>
     /// <exception cref="ArgumentNullException">Thrown when the query is null.</exception>
-    public Task<TResponse> QueryAsync<TQuery, TResponse>(TQuery query, CancellationToken ct = default) where TQuery : Abstractions.IQuery<TResponse>
+    public async Task<TResponse> QueryAsync<TQuery, TResponse>(TQuery query, CancellationToken ct = default) where TQuery : Abstractions.IQuery<TResponse>
     {
         ArgumentNullException.ThrowIfNull(query);
+        ct.ThrowIfCancellationRequested();
+
         var handler = serviceProvider.GetRequiredService<IHandler<TQuery, TResponse>>();
+        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TQuery, TResponse>>();
 
-        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TQuery, TResponse>>().ToList();
+        var pipeline = BuildPipeline(query, behaviors, handler);
 
-        RequestHandlerDelegate<TResponse> pipeline = ct => handler.HandleAsync(query, ct);
-
-        for (var i = behaviors.Count - 1; i >= 0; i--)
-        {
-            var behavior = behaviors[i];
-            var next = pipeline;
-            pipeline = ct => behavior.HandleAsync(query, next, ct);
-        }
-
-        return pipeline(ct);
+        return await pipeline(ct).ConfigureAwait(false);
     }
 
     /// <inheritdoc/>
     /// <exception cref="ArgumentNullException">Thrown when the command is null.</exception>
-    public Task<TResponse> SendAsync<TCommand, TResponse>(TCommand command, CancellationToken ct = default) where TCommand : ICommand<TResponse>
+    public async Task<TResponse> SendAsync<TCommand, TResponse>(TCommand command, CancellationToken ct = default) where TCommand : ICommand<TResponse>
     {
         ArgumentNullException.ThrowIfNull(command);
+        ct.ThrowIfCancellationRequested();
+
         var handler = serviceProvider.GetRequiredService<IHandler<TCommand, TResponse>>();
+        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TCommand, TResponse>>();
 
-        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TCommand, TResponse>>().ToList();
+        var pipeline = BuildPipeline(command, behaviors, handler);
 
-        RequestHandlerDelegate<TResponse> pipeline = ct => handler.HandleAsync(command, ct);
-
-        for (var i = behaviors.Count - 1; i >= 0; i--)
-        {
-            var behavior = behaviors[i];
-            var next = pipeline;
-            pipeline = ct => behavior.HandleAsync(command, next, ct);
-        }
-        return pipeline(ct);
+        return await pipeline(ct).ConfigureAwait(false);
     }
 
     /// <inheritdoc/>
     /// <exception cref="ArgumentNullException">Thrown when the command is null.</exception>
-    public Task SendAsync<TCommand>(TCommand command, CancellationToken ct = default) where TCommand : Abstractions.ICommand
+    public async Task SendAsync<TCommand>(TCommand command, CancellationToken ct = default) where TCommand : Abstractions.ICommand
     {
         ArgumentNullException.ThrowIfNull(command);
+        ct.ThrowIfCancellationRequested();
+
         var handler = serviceProvider.GetRequiredService<IHandler<TCommand, Unit>>();
+        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TCommand, Unit>>();
 
-        var behaviors = serviceProvider.GetServices<IPipelineBehavior<TCommand, Unit>>().ToList();
+        var pipeline = BuildPipeline(command, behaviors, handler);
 
-        RequestHandlerDelegate<Unit> pipeline = ct => handler.HandleAsync(command, ct);
-        for (var i = behaviors.Count - 1; i >= 0; i--)
-        {
-            var behavior = behaviors[i];
-            var next = pipeline;
-            pipeline = ct => behavior.HandleAsync(command, next, ct);
-        }
-        return pipeline(ct);
+        await pipeline(ct).ConfigureAwait(false);
     }
 
     /// <inheritdoc/>
     public async Task PublishAsync<TEvent>(TEvent eventData, CancellationToken ct = default)
       where TEvent : notnull
     {
+        ArgumentNullException.ThrowIfNull(eventData);
+        ct.ThrowIfCancellationRequested();
+
         var notification = new EventNotification<TEvent>(eventData);
         var handlers = serviceProvider.GetServices<IEventNotificationHandler<TEvent>>().ToList();
 
@@ -87,13 +75,22 @@ public sealed class Dispatcher(IServiceProvider serviceProvider) : IDispatcher
         }
     }
 
-    /// <inheritdoc/>
-    public async Task PublishAllAsync<TEvent>(TEvent eventData, CancellationToken ct = default)
+    private static RequestHandlerDelegate<TResponse> BuildPipeline<TRequest, TResponse>(
+       TRequest request,
+       IEnumerable<IPipelineBehavior<TRequest, TResponse>> behaviors,
+       IHandler<TRequest, TResponse> handler)
+       where TRequest : IRequest<TResponse>
     {
-        var notification = new EventNotification<TEvent>(eventData);
-        var handlers = serviceProvider.GetServices<IEventNotificationHandler<TEvent>>().ToList();
-        var tasks = handlers.Select(h => h.HandleAsync(notification, ct));
-        await Task.WhenAll(tasks);
+        RequestHandlerDelegate<TResponse> pipeline =
+            ct => handler.HandleAsync(request, ct);
+
+        foreach (var behavior in behaviors.Reverse())
+        {
+            var next = pipeline;
+            pipeline = ct => behavior.HandleAsync(request, next, ct);
+        }
+
+        return pipeline;
     }
 
 }

@@ -1,6 +1,7 @@
+using MediatorForge.Abstractions;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
-using MediatorForge.Abstractions;
+using System.Reflection;
 
 namespace MediatorForge;
 
@@ -17,10 +18,11 @@ public static class CqrsServiceCollectionExtensions
     /// <returns>The updated service collection.</returns>
     public static IServiceCollection AddCqrs(this IServiceCollection services)
     {
-        services.AddScoped<IDispatcher, Dispatcher>();
-        services.AddScoped<ICommandDispatcher, Dispatcher>();
-        services.AddScoped<IQueryDispatcher, Dispatcher>();
-        services.AddScoped<IEventDispatcher, Dispatcher>();
+        services.TryAddScoped<Dispatcher>();
+        services.TryAddScoped<IDispatcher>(sp => sp.GetRequiredService<Dispatcher>());
+        services.TryAddScoped<ICommandDispatcher>(sp => sp.GetRequiredService<Dispatcher>());
+        services.TryAddScoped<IQueryDispatcher>(sp => sp.GetRequiredService<Dispatcher>());
+        services.TryAddScoped<IEventDispatcher>(sp => sp.GetRequiredService<Dispatcher>());
 
         return services;
     }
@@ -39,7 +41,16 @@ public static class CqrsServiceCollectionExtensions
 
         foreach (var handlerType in handlerTypes)
         {
-            services.TryAdd(new ServiceDescriptor(handlerType.InterfaceType, handlerType.ImplementationType, lifetime));
+            if (services.Any(s => s.ServiceType == handlerType.InterfaceType))
+            {
+                throw new InvalidOperationException(
+                    $"Multiple handlers found for {handlerType.InterfaceType}");
+            }
+
+            services.Add(new ServiceDescriptor(
+                handlerType.InterfaceType,
+                handlerType.ImplementationType,
+                lifetime));
         }
 
         return services;
@@ -56,11 +67,32 @@ public static class CqrsServiceCollectionExtensions
     /// <returns>The updated service collection.</returns>
     public static IServiceCollection AddPipelineBehaviorsFromAssemblyContaining<T>(this IServiceCollection services, ServiceLifetime lifetime = ServiceLifetime.Transient)
     {
-        var pipelineBehaviorTypes = new AssemblyScanner(typeof(IPipelineBehavior<,>), typeof(T).Assembly.GetTypes());
+        var pipelineBehaviorTypes = new AssemblyScanner(
+            typeof(IPipelineBehavior<,>),
+            typeof(T).Assembly.GetTypes());
 
-        foreach (var pipelineBehaviorType in pipelineBehaviorTypes)
+        var ordered = pipelineBehaviorTypes
+            .Select(x =>
+            {
+                var attr = x.ImplementationType
+                    .GetCustomAttribute<PipelineOrderAttribute>();
+
+                return new
+                {
+                    Type = x,
+                    Order = attr?.Order ?? int.MaxValue
+                };
+            })
+            .OrderBy(x => x.Order)
+            .ThenBy(x => x.Type.ImplementationType.FullName)
+            .ToList();
+
+        foreach (var item in ordered)
         {
-            services.TryAdd(new ServiceDescriptor(pipelineBehaviorType.InterfaceType, pipelineBehaviorType.ImplementationType, lifetime));
+            services.TryAddEnumerable(new ServiceDescriptor(
+                item.Type.InterfaceType,
+                item.Type.ImplementationType,
+                lifetime));
         }
 
         return services;
@@ -80,7 +112,7 @@ public static class CqrsServiceCollectionExtensions
 
         foreach (var eventHandlerType in eventHandlerTypes)
         {
-            services.TryAdd(new ServiceDescriptor(eventHandlerType.InterfaceType, eventHandlerType.ImplementationType, lifetime));
+            services.TryAddEnumerable(new ServiceDescriptor(eventHandlerType.InterfaceType, eventHandlerType.ImplementationType, lifetime));
         }
 
         return services;
